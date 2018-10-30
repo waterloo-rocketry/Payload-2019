@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">app-practice</string>
+
+    <string name="armed_label">Armed</string>
+    <string name="contact_label">Radio Contact</string>
+    <string name="card1_label">SD Card 1</string>
+    <string name="card2_label">SD Card 2</string>
+    <string name="battery_label">Battery Remaining</string>
+
+    <string name="state_label">State Estimation</string>
+    <string name="altitude_label">Altitude (AGL)</string>
+    <string name="spd_label">Speed</string>
+    <string name="apogee">Apogee</string>
+    <string name="temp_label">Temperature</string>
+
+</resources>
