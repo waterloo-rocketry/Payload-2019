@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="armed_label">Armed</string>
+    <string name="contact_label">Contact</string>
+    <string name="battery_label">Battery</string>
+    <string name="state_label">State</string>
+    <string name="altitude_label">Altitude</string>
+    <string name="spd_label">Speed</string>
+    <string name="apogee">Apogee</string>
+    <string name="temp_label">Temperature</string>
+</resources>

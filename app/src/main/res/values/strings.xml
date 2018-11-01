@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">test2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="armed_label">Armed</string>
+    <string name="contact_label">Contact</string>
+    <string name="battery_label">Battery</string>
+    <string name="state_label">State</string>
+    <string name="altitude_label">Altitude</string>
+    <string name="spd_label">Speed</string>
+    <string name="apogee">Apogee</string>
+    <string name="temp_label">Temperature</string>
+</resources>
