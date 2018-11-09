@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name STM32L4x6RxT6)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/PCB Parts/footprints.pretty")(options "")(descr STM32L4x6RxT6))
+  (lib (name ARMlib)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/PCB Parts/footprints.pretty")(options "")(descr ""))
 )

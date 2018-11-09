@@ -1,38 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:symbols
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:ARM Board-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -47,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L STM32L4x6RxT6 U1
+L symbols:STM32L4x6RxT6 U1
 U 1 1 5BE24A8B
 P 2300 1950
 F 0 "U1" H 3250 2500 60  0000 C CNN
@@ -58,7 +26,7 @@ F 3 "" H 2300 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32L4x6RxT6 U1
+L symbols:STM32L4x6RxT6 U1
 U 2 1 5BE24AAA
 P 7050 2200
 F 0 "U1" H 8000 2750 60  0000 C CNN
@@ -68,4 +36,43 @@ F 3 "" H 7050 2300 60  0000 C CNN
 	2    7050 2200
 	1    0    0    -1  
 $EndComp
+$Comp
+L ARMlib:SD_WM6698CT-ND J?
+U 1 1 5BE5108C
+P 8550 5100
+F 0 "J?" H 9028 5202 60  0000 L CNN
+F 1 "SD_WM6698CT-ND" H 9028 5096 60  0000 L CNN
+F 2 "" V 8500 5000 60  0001 C CNN
+F 3 "" V 8500 5000 60  0001 C CNN
+	1    8550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BE5134B
+P 7850 4200
+F 0 "R?" H 7920 4246 50  0000 L CNN
+F 1 "R" H 7920 4155 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 7780 4200 50  0001 C CNN
+F 3 "~" H 7850 4200 50  0001 C CNN
+	1    7850 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 4350 7850 4450
+Wire Wire Line
+	7850 4450 8050 4450
+$Comp
+L power:VDD #PWR?
+U 1 1 5BE51D76
+P 7850 3700
+F 0 "#PWR?" H 7850 3550 50  0001 C CNN
+F 1 "VDD" H 7867 3873 50  0000 C CNN
+F 2 "" H 7850 3700 50  0001 C CNN
+F 3 "" H 7850 3700 50  0001 C CNN
+	1    7850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3700 7850 4050
 $EndSCHEMATC

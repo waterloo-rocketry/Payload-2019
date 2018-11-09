@@ -1,1 +1,78 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 4
+LIBS:ARM Board-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L symbols:STM32L4x6RxT6 U1
+U 1 1 5BE24A8B
+P 2300 1950
+F 0 "U1" H 3250 2500 60  0000 C CNN
+F 1 "STM32L4x6RxT6" H 3250 2400 60  0000 C CNN
+F 2 "STM32L4x6RxT6:STM32L4x6RxT6" H 3150 2300 60  0001 C CNN
+F 3 "" H 2300 2050 60  0000 C CNN
+	1    2300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L symbols:STM32L4x6RxT6 U1
+U 2 1 5BE24AAA
+P 7050 2200
+F 0 "U1" H 8000 2750 60  0000 C CNN
+F 1 "STM32L4x6RxT6" H 8000 2650 60  0000 C CNN
+F 2 "LQFP64-10x10mm" H 7900 2550 60  0001 C CNN
+F 3 "" H 7050 2300 60  0000 C CNN
+	2    7050 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ARMlib:SD_WM6698CT-ND J?
+U 1 1 5BE5108C
+P 8550 5100
+F 0 "J?" H 9028 5202 60  0000 L CNN
+F 1 "SD_WM6698CT-ND" H 9028 5096 60  0000 L CNN
+F 2 "" V 8500 5000 60  0001 C CNN
+F 3 "" V 8500 5000 60  0001 C CNN
+	1    8550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BE5134B
+P 7850 4200
+F 0 "R?" H 7920 4246 50  0000 L CNN
+F 1 "R" H 7920 4155 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 7780 4200 50  0001 C CNN
+F 3 "~" H 7850 4200 50  0001 C CNN
+	1    7850 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5BE5197A
+P 7850 3800
+F 0 "#PWR?" H 7850 3650 50  0001 C CNN
+F 1 "VCC" H 7867 3973 50  0000 C CNN
+F 2 "" H 7850 3800 50  0001 C CNN
+F 3 "" H 7850 3800 50  0001 C CNN
+	1    7850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3800 7850 4050
+Wire Wire Line
+	7850 4350 7850 4450
+Wire Wire Line
+	7850 4450 8050 4450
+$EndSCHEMATC
