@@ -535,4 +535,8 @@ Wire Wire Line
 Connection ~ 10250 3000
 Wire Wire Line
 	10250 3000 10250 2950
+Text Notes 9850 2100 0    50   ~ 0
+TO EXTERNAL BATTERY
+Text Notes 700  1750 0    50   ~ 0
+TO TABLET
 $EndSCHEMATC

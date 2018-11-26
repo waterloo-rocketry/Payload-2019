@@ -539,4 +539,8 @@ Text Notes 9850 2100 0    50   ~ 0
 TO EXTERNAL BATTERY
 Text Notes 700  1750 0    50   ~ 0
 TO TABLET
+Text Notes 3600 4950 0    50   ~ 0
+USB TO UART
+Text Notes 7100 5350 0    50   ~ 0
+XBEE SOCKET
 $EndSCHEMATC
