@@ -809,4 +809,6 @@ Wire Wire Line
 Connection ~ 6000 7250
 Wire Wire Line
 	6000 7250 6000 7400
+Text Notes 4000 7400 0    50   ~ 0
+Ground other XTAL pins? Floating in datasheet...\n
 $EndSCHEMATC
