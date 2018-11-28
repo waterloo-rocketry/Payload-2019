@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector:Conn_Coaxial
+# Connector_Conn_Coaxial
 #
-DEF Connector:Conn_Coaxial J 0 40 Y N 1 F N
+DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
 F0 "J" 10 120 50 H V C CNN
-F1 "Connector:Conn_Coaxial" 115 0 50 V V C CNN
+F1 "Connector_Conn_Coaxial" 115 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -26,11 +26,11 @@ X Ext 2 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector:USB_A
+# Connector_USB_A
 #
-DEF Connector:USB_A J 0 40 Y Y 1 F N
+DEF Connector_USB_A J 0 40 Y Y 1 F N
 F0 "J" -200 450 50 H V L CNN
-F1 "Connector:USB_A" -200 350 50 H V L CNN
+F1 "Connector_USB_A" -200 350 50 H V L CNN
 F2 "" 150 -50 50 H I C CNN
 F3 "" 150 -50 50 H I C CNN
 $FPLIST
@@ -59,11 +59,11 @@ X Shield 5 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:C
+# Device_C
 #
-DEF Device:C C 0 10 N Y 1 F N
+DEF Device_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Device:C" 25 -100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -77,11 +77,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R
+# Device_R
 #
-DEF Device:R R 0 0 N Y 1 F N
+DEF Device_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device:R" 0 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -94,11 +94,27 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Interface_USB:FT231XS
+# Dongle-rescue_AP2114H-3.3TRG1-Regulators
 #
-DEF Interface_USB:FT231XS U 0 40 Y Y 1 F N
+DEF Dongle-rescue_AP2114H-3.3TRG1-Regulators U 0 40 Y Y 1 F N
+F0 "U" 0 150 50 H V C CNN
+F1 "Dongle-rescue_AP2114H-3.3TRG1-Regulators" 0 -150 50 H V C CNN
+F2 "" -50 100 50 H I C CNN
+F3 "" -50 100 50 H I C CNN
+DRAW
+S -250 100 200 -100 0 1 0 N
+X GND 1 -450 -50 200 R 50 50 1 1 I
+X VOUT 2 400 -50 200 L 50 50 1 1 O
+X VIN 3 -450 50 200 R 50 50 1 1 I
+X VOUT 4 400 50 200 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Interface_USB_FT231XS
+#
+DEF Interface_USB_FT231XS U 0 40 Y Y 1 F N
 F0 "U" -550 800 50 H V L CNN
-F1 "Interface_USB:FT231XS" 300 800 50 H V L CNN
+F1 "Interface_USB_FT231XS" 300 800 50 H V L CNN
 F2 "Package_SO:SSOP-20_3.9x8.7mm_P0.635mm" 600 -950 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -129,11 +145,11 @@ X ~CTS 9 700 300 150 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# RF_ZigBee:XBee_SMT
+# RF_ZigBee_XBee_SMT
 #
-DEF RF_ZigBee:XBee_SMT U 0 40 Y Y 1 F N
+DEF RF_ZigBee_XBee_SMT U 0 40 Y Y 1 F N
 F0 "U" -960 1030 50 H V C CNN
-F1 "RF_ZigBee:XBee_SMT" -820 960 50 H V C CNN
+F1 "RF_ZigBee_XBee_SMT" -820 960 50 H V C CNN
 F2 "RF_Module:Digi_XBee_SMT" 840 -1060 50 H I C CNN
 F3 "" 0 -400 50 H I C CNN
 $FPLIST
@@ -181,27 +197,11 @@ X NC 9 1000 -900 100 L 50 50 1 1 N N
 ENDDRAW
 ENDDEF
 #
-# Regulators:AP2114H-3.3TRG1
+# power_GND
 #
-DEF Regulators:AP2114H-3.3TRG1 U 0 40 Y Y 1 F N
-F0 "U" 0 150 50 H V C CNN
-F1 "Regulators:AP2114H-3.3TRG1" 0 -150 50 H V C CNN
-F2 "" -50 100 50 H I C CNN
-F3 "" -50 100 50 H I C CNN
-DRAW
-S -250 100 200 -100 0 1 0 N
-X GND 1 -450 -50 200 R 50 50 1 1 I
-X VOUT 2 400 -50 200 L 50 50 1 1 O
-X VIN 3 -450 50 200 R 50 50 1 1 I
-X VOUT 4 400 50 200 L 50 50 1 1 O
-ENDDRAW
-ENDDEF
-#
-# power:GND
-#
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
