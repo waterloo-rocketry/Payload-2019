@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -144,7 +144,7 @@ F 4 "296-50261-1-ND" H 9500 200 60  0001 C CNN "Digi-Key Part Number"
 	1    0    0    -1  
 $EndComp
 Text Notes -1450 7050 0    50   ~ 0
-TODO\n-ADD RAM\n-ADD CANBUS\n-ADD USB TO UART\n-POWER SWITCH
+TODO\n-ADD CANBUS\n-POWER SWITCH\n-3.3V Regulator\n-SD Card Capacitors\n-Connect SPIs
 Text GLabel 1800 1800 0    50   Input ~ 0
 VDD
 $Comp
@@ -408,202 +408,21 @@ Wire Wire Line
 	8550 5000 8750 5000
 Wire Wire Line
 	8550 4250 8550 4600
-$Comp
-L Interface_USB:FT230XS U?
-U 1 1 5BFE2E70
-P -1300 5450
-F 0 "U?" H -1300 6328 50  0000 C CNN
-F 1 "FT230XS" H -1300 6237 50  0000 C CNN
-F 2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" H -850 4800 50  0001 C CNN
-F 3 "http://www.ftdichip.com/Products/ICs/FT230X.html" H -1300 5450 50  0001 C CNN
-	1    -1300 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5BFE33BA
-P -3000 5700
-F 0 "C?" H -2885 5746 50  0000 L CNN
-F 1 "47pF" H -2885 5655 50  0000 L CNN
-F 2 "" H -2962 5550 50  0001 C CNN
-F 3 "47pF" H -3000 5700 50  0001 C CNN
-	1    -3000 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5BFE3641
-P -3400 5700
-F 0 "C?" H -3285 5746 50  0000 L CNN
-F 1 "47pF" H -3285 5655 50  0000 L CNN
-F 2 "" H -3362 5550 50  0001 C CNN
-F 3 "47pF" H -3400 5700 50  0001 C CNN
-	1    -3400 5700
-	1    0    0    -1  
-$EndComp
 Text GLabel 6700 3950 1    50   Input ~ 0
-VDD
+VDD33
 Text GLabel 8550 4250 1    50   Input ~ 0
-VDD
-$Comp
-L Device:R R?
-U 1 1 5BFE4F6E
-P -2450 5350
-F 0 "R?" V -2657 5350 50  0000 C CNN
-F 1 "27" V -2566 5350 50  0000 C CNN
-F 2 "" V -2520 5350 50  0001 C CNN
-F 3 "~" H -2450 5350 50  0001 C CNN
-	1    -2450 5350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5BFE50BF
-P -2700 5450
-F 0 "R?" V -2907 5450 50  0000 C CNN
-F 1 "27" V -2816 5450 50  0000 C CNN
-F 2 "" V -2770 5450 50  0001 C CNN
-F 3 "~" H -2700 5450 50  0001 C CNN
-	1    -2700 5450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	-2300 5350 -2000 5350
-Wire Wire Line
-	-2000 5450 -2550 5450
-Wire Wire Line
-	-2600 5350 -3400 5350
-Wire Wire Line
-	-3400 5350 -3400 5550
-Wire Wire Line
-	-2850 5450 -3000 5450
-Wire Wire Line
-	-3000 5450 -3000 5550
+VDD33
 $Comp
 L Connector:USB_OTG J?
 U 1 1 5BFE74D7
-P -4200 4900
-F 0 "J?" H -4145 5367 50  0000 C CNN
-F 1 "USB_OTG" H -4145 5276 50  0000 C CNN
-F 2 "" H -4050 4850 50  0001 C CNN
-F 3 " ~" H -4050 4850 50  0001 C CNN
-	1    -4200 4900
+P -3200 4550
+F 0 "J?" H -3145 5017 50  0000 C CNN
+F 1 "USB_OTG" H -3145 4926 50  0000 C CNN
+F 2 "" H -3050 4500 50  0001 C CNN
+F 3 " ~" H -3050 4500 50  0001 C CNN
+	1    -3200 4550
 	1    0    0    -1  
 $EndComp
-Text GLabel -2800 4350 1    50   Input ~ 0
-VBUS
-Wire Wire Line
-	-3900 4900 -3550 4900
-Wire Wire Line
-	-3550 4900 -3550 5450
-Wire Wire Line
-	-3550 5450 -3000 5450
-Connection ~ -3000 5450
-Wire Wire Line
-	-3900 5000 -3400 5000
-Wire Wire Line
-	-3400 5000 -3400 5350
-Connection ~ -3400 5350
-$Comp
-L Device:Ferrite_Bead FB?
-U 1 1 5BFEB171
-P -3300 4700
-F 0 "FB?" V -3574 4700 50  0000 C CNN
-F 1 "Ferrite_Bead" V -3483 4700 50  0000 C CNN
-F 2 "" V -3370 4700 50  0001 C CNN
-F 3 "~" H -3300 4700 50  0001 C CNN
-	1    -3300 4700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	-3900 4700 -3450 4700
-Wire Wire Line
-	-3150 4700 -2800 4700
-Wire Wire Line
-	-2800 4700 -2800 4350
-$Comp
-L power:GND #PWR?
-U 1 1 5BFED429
-P -3400 5900
-F 0 "#PWR?" H -3400 5650 50  0001 C CNN
-F 1 "GND" H -3395 5727 50  0000 C CNN
-F 2 "" H -3400 5900 50  0001 C CNN
-F 3 "" H -3400 5900 50  0001 C CNN
-	1    -3400 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5BFED46A
-P -3000 5900
-F 0 "#PWR?" H -3000 5650 50  0001 C CNN
-F 1 "GND" H -2995 5727 50  0000 C CNN
-F 2 "" H -3000 5900 50  0001 C CNN
-F 3 "" H -3000 5900 50  0001 C CNN
-	1    -3000 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-3000 5850 -3000 5900
-Wire Wire Line
-	-3400 5850 -3400 5900
-$Comp
-L power:GND #PWR?
-U 1 1 5BFEF140
-P -1300 6250
-F 0 "#PWR?" H -1300 6000 50  0001 C CNN
-F 1 "GND" H -1295 6077 50  0000 C CNN
-F 2 "" H -1300 6250 50  0001 C CNN
-F 3 "" H -1300 6250 50  0001 C CNN
-	1    -1300 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-1400 6150 -1400 6250
-Wire Wire Line
-	-1400 6250 -1300 6250
-Wire Wire Line
-	-1200 6150 -1200 6250
-Wire Wire Line
-	-1200 6250 -1300 6250
-Connection ~ -1300 6250
-$Comp
-L Device:C C?
-U 1 1 5BFF12C7
-P -2150 6000
-F 0 "C?" H -2035 6046 50  0000 L CNN
-F 1 "100nF" H -2035 5955 50  0000 L CNN
-F 2 "" H -2112 5850 50  0001 C CNN
-F 3 "47pF" H -2150 6000 50  0001 C CNN
-	1    -2150 6000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-2150 6250 -1400 6250
-Wire Wire Line
-	-2150 6150 -2150 6250
-Connection ~ -1400 6250
-Wire Wire Line
-	-2150 5850 -2150 5650
-Wire Wire Line
-	-2150 5650 -2000 5650
-Wire Wire Line
-	-2150 5650 -2150 5050
-Wire Wire Line
-	-2150 5050 -2000 5050
-Connection ~ -2150 5650
-Wire Wire Line
-	-1200 4750 -1200 4550
-Wire Wire Line
-	-1200 4550 -1650 4550
-Wire Wire Line
-	-2150 4550 -2150 5050
-Connection ~ -2150 5050
-Wire Wire Line
-	-2800 4700 -1400 4700
-Wire Wire Line
-	-1400 4700 -1400 4750
-Connection ~ -2800 4700
 $Comp
 L Device:C C?
 U 1 1 5BFFAB14
@@ -657,116 +476,6 @@ Wire Wire Line
 Wire Wire Line
 	-3900 6550 -4050 6550
 Connection ~ -4050 6550
-Text GLabel -1650 4350 1    50   Input ~ 0
-VCCIO
-Wire Wire Line
-	-1650 4350 -1650 4550
-Connection ~ -1650 4550
-Wire Wire Line
-	-1650 4550 -2150 4550
-Text GLabel -250 4300 1    50   Input ~ 0
-VCCIO
-$Comp
-L Device:R R?
-U 1 1 5C0048D7
-P -450 4650
-F 0 "R?" H -520 4604 50  0000 R CNN
-F 1 "10K" H -520 4695 50  0000 R CNN
-F 2 "" V -520 4650 50  0001 C CNN
-F 3 "~" H -450 4650 50  0001 C CNN
-	1    -450 4650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C004A06
-P -300 4650
-F 0 "R?" H -370 4604 50  0000 R CNN
-F 1 "10K" H -370 4695 50  0000 R CNN
-F 2 "" V -370 4650 50  0001 C CNN
-F 3 "~" H -300 4650 50  0001 C CNN
-	1    -300 4650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C004A58
-P -150 4650
-F 0 "R?" H -220 4604 50  0000 R CNN
-F 1 "10K" H -220 4695 50  0000 R CNN
-F 2 "" V -220 4650 50  0001 C CNN
-F 3 "~" H -150 4650 50  0001 C CNN
-	1    -150 4650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C004AAC
-P 50 4650
-F 0 "R?" H -20 4604 50  0000 R CNN
-F 1 "10K" H -20 4695 50  0000 R CNN
-F 2 "" V -20 4650 50  0001 C CNN
-F 3 "~" H 50  4650 50  0001 C CNN
-	1    50   4650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	-600 5050 -450 5050
-Wire Wire Line
-	-450 5050 -450 4800
-Wire Wire Line
-	-300 5150 -300 4800
-Wire Wire Line
-	-600 5150 -300 5150
-Wire Wire Line
-	-600 5250 -150 5250
-Wire Wire Line
-	-150 5250 -150 4800
-Wire Wire Line
-	-600 5350 50   5350
-Wire Wire Line
-	-450 4500 -450 4400
-Wire Wire Line
-	-450 4400 -300 4400
-Wire Wire Line
-	-250 4400 -250 4300
-Wire Wire Line
-	50   4500 50   4400
-Wire Wire Line
-	50   4400 -150 4400
-Connection ~ -250 4400
-Wire Wire Line
-	-300 4500 -300 4400
-Connection ~ -300 4400
-Wire Wire Line
-	-300 4400 -250 4400
-Wire Wire Line
-	-150 4500 -150 4400
-Connection ~ -150 4400
-Wire Wire Line
-	-150 4400 -250 4400
-Text GLabel 150  5050 2    50   Input ~ 0
-RXD
-Text GLabel 150  5150 2    50   Input ~ 0
-TXD
-Text GLabel 150  5250 2    50   Input ~ 0
-~RTS
-Text GLabel 150  5350 2    50   Input ~ 0
-~CTS
-Wire Wire Line
-	50   5350 50   4800
-Wire Wire Line
-	150  5350 50   5350
-Connection ~ 50   5350
-Wire Wire Line
-	150  5250 -150 5250
-Connection ~ -150 5250
-Wire Wire Line
-	150  5150 -300 5150
-Connection ~ -300 5150
-Wire Wire Line
-	150  5050 -450 5050
-Connection ~ -450 5050
 Wire Wire Line
 	5550 7050 5550 7250
 Wire Wire Line
@@ -809,4 +518,186 @@ Wire Wire Line
 Connection ~ 6000 7250
 Wire Wire Line
 	6000 7250 6000 7400
+Text Notes 4000 7400 0    50   ~ 0
+Ground other XTAL pins? Floating in datasheet...\n
+Text Notes -2700 4000 0    50   ~ 0
+USB to Basic UART
+Text Notes 7600 4350 0    50   ~ 0
+SD Card Logging
+$Comp
+L ARMlib:SRAM_23LC1024T-I_ST U?
+U 1 1 5BFFCC54
+P 5800 3150
+F 0 "U?" H 5900 3265 50  0000 C CNN
+F 1 "SRAM_23LC1024T-I_ST" H 5900 3174 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-8_4.4x3mm_Pitch0.65mm" H 5800 3150 50  0001 C CNN
+F 3 "" H 5800 3150 50  0001 C CNN
+	1    5800 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C000DBE
+P 5400 3700
+F 0 "#PWR?" H 5400 3450 50  0001 C CNN
+F 1 "GND" H 5405 3527 50  0000 C CNN
+F 2 "" H 5400 3700 50  0001 C CNN
+F 3 "" H 5400 3700 50  0001 C CNN
+	1    5400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3500 5400 3500
+Wire Wire Line
+	5400 3500 5400 3600
+Wire Wire Line
+	5450 3600 5400 3600
+Connection ~ 5400 3600
+Wire Wire Line
+	5400 3600 5400 3700
+Text GLabel 6550 3000 1    50   Input ~ 0
+VBUS
+Wire Wire Line
+	6550 3000 6550 3300
+Wire Wire Line
+	6550 3300 6350 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5C00D87C
+P 7500 6100
+F 0 "#PWR?" H 7500 5850 50  0001 C CNN
+F 1 "GND" H 7505 5927 50  0000 C CNN
+F 2 "" H 7500 6100 50  0001 C CNN
+F 3 "" H 7500 6100 50  0001 C CNN
+	1    7500 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 5950 7350 6050
+Wire Wire Line
+	7350 6050 7450 6050
+Wire Wire Line
+	7500 6050 7500 6100
+Wire Wire Line
+	7450 5950 7450 6050
+Connection ~ 7450 6050
+Wire Wire Line
+	7450 6050 7500 6050
+Wire Wire Line
+	7650 5950 7650 6050
+Wire Wire Line
+	7650 6050 7550 6050
+Connection ~ 7500 6050
+Wire Wire Line
+	7550 5950 7550 6050
+Connection ~ 7550 6050
+Wire Wire Line
+	7550 6050 7500 6050
+$Comp
+L power:GND #PWR?
+U 1 1 5C032AC1
+P 9350 6400
+F 0 "#PWR?" H 9350 6150 50  0001 C CNN
+F 1 "GND" H 9355 6227 50  0000 C CNN
+F 2 "" H 9350 6400 50  0001 C CNN
+F 3 "" H 9350 6400 50  0001 C CNN
+	1    9350 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 6250 9200 6350
+Wire Wire Line
+	9200 6350 9300 6350
+Wire Wire Line
+	9350 6350 9350 6400
+Wire Wire Line
+	9300 6250 9300 6350
+Connection ~ 9300 6350
+Wire Wire Line
+	9300 6350 9350 6350
+Wire Wire Line
+	9400 6250 9400 6350
+Wire Wire Line
+	9400 6350 9350 6350
+Connection ~ 9350 6350
+Wire Wire Line
+	9500 6250 9500 6350
+Wire Wire Line
+	9500 6350 9400 6350
+Connection ~ 9400 6350
+Wire Wire Line
+	8750 5750 8750 6350
+Wire Wire Line
+	8750 6350 9200 6350
+Connection ~ 9200 6350
+Wire Wire Line
+	6900 5450 6900 6050
+Wire Wire Line
+	6900 6050 7350 6050
+Connection ~ 7350 6050
+Text GLabel 5450 3400 0    50   Input ~ 0
+MISO1
+Text GLabel 6350 3600 2    50   Input ~ 0
+MOSI1
+Text GLabel 5450 3300 0    50   Input ~ 0
+~CS1
+Text GLabel 6350 3500 2    50   Input ~ 0
+SCK1
+Text GLabel 6350 3400 2    50   Input ~ 0
+~HOLD1
+Text GLabel 6900 4800 0    50   Input ~ 0
+MOSI2
+Text GLabel 6900 4900 0    50   Input ~ 0
+SCK2
+Text GLabel 6900 5000 0    50   Input ~ 0
+~CS2
+Text GLabel 8750 5100 0    50   Input ~ 0
+MOSI3
+Text GLabel 6550 4700 0    50   Input ~ 0
+MISO2
+Wire Wire Line
+	6550 4700 6700 4700
+Connection ~ 6700 4700
+Text GLabel 8350 5000 0    50   Input ~ 0
+MISO3
+Wire Wire Line
+	8350 5000 8550 5000
+Connection ~ 8550 5000
+Text GLabel 8750 5200 0    50   Input ~ 0
+SCK3
+Text GLabel 8750 5300 0    50   Input ~ 0
+~CS3
+Text Notes 5800 2900 0    50   ~ 0
+RAM
+Text GLabel 6550 5300 1    50   Input ~ 0
+VDD33
+Text GLabel 8350 5450 1    50   Input ~ 0
+VDD33
+Wire Wire Line
+	8350 5450 8350 5650
+Wire Wire Line
+	8350 5650 8750 5650
+Wire Wire Line
+	6550 5300 6550 5350
+Wire Wire Line
+	6550 5350 6900 5350
+$Sheet
+S -2050 4200 650  700 
+U 5C089FB0
+F0 "USBtoUART" 50
+F1 "USBtoUART.sch" 50
+F2 "RXD" I R -1400 4300 50 
+F3 "TXD" I R -1400 4450 50 
+F4 "~RTS" I R -1400 4600 50 
+F5 "~CTS" I R -1400 4750 50 
+F6 "USB_5V" I L -2050 4350 50 
+F7 "DM" I L -2050 4650 50 
+F8 "DP" I L -2050 4550 50 
+$EndSheet
+Wire Wire Line
+	-2900 4350 -2050 4350
+Wire Wire Line
+	-2900 4550 -2050 4550
+Wire Wire Line
+	-2900 4650 -2050 4650
 $EndSCHEMATC
