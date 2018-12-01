@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Dongle-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -25,7 +26,7 @@ F 3 "http://www.digi.com/resources/documentation/digidocs/pdfs/90002126.pdf" H 7
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulators:AP2114H-3.3TRG1 U?
+L Dongle-rescue:AP2114H-3.3TRG1-Regulators U?
 U 1 1 5BF8B9B1
 P 5950 2100
 F 0 "U?" H 5925 2375 50  0000 C CNN
@@ -402,7 +403,7 @@ L Device:C C?
 U 1 1 5BF9AE73
 P 1800 3650
 F 0 "C?" H 2000 3700 50  0000 L CNN
-F 1 "37pF" H 1950 3600 50  0000 L CNN
+F 1 "47pF" H 1950 3600 50  0000 L CNN
 F 2 "" H 1838 3500 50  0001 C CNN
 F 3 "~" H 1800 3650 50  0001 C CNN
 	1    1800 3650
@@ -443,7 +444,7 @@ L Device:C C?
 U 1 1 5BF9BD37
 P 2050 2350
 F 0 "C?" H 1750 2400 50  0000 L CNN
-F 1 "0.1uF" H 1700 2300 50  0000 L CNN
+F 1 "0.01uF" H 1700 2300 50  0000 L CNN
 F 2 "" H 2088 2200 50  0001 C CNN
 F 3 "~" H 2050 2350 50  0001 C CNN
 	1    2050 2350

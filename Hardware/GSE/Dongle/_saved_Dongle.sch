@@ -20,7 +20,7 @@ U 1 1 5BF8B008
 P 7350 3650
 F 0 "U1" H 6800 4800 50  0000 C CNN
 F 1 "XBee_SMT" H 7000 4700 50  0000 C CNN
-F 2 "RF_Module:Digi_XBee_SMT" H 8190 2590 50  0001 C CNN
+F 2 "RF_Modules:Digi_XBee_SMT" H 8190 2590 50  0001 C CNN
 F 3 "http://www.digi.com/resources/documentation/digidocs/pdfs/90002126.pdf" H 7350 3250 50  0001 C CNN
 	1    7350 3650
 	1    0    0    -1  
@@ -245,7 +245,7 @@ U 1 1 5BF8DADB
 P 3850 3500
 F 0 "U2" H 4150 4600 50  0000 C CNN
 F 1 "FT231XS" H 4250 4500 50  0000 C CNN
-F 2 "Package_SO:SSOP-20_3.9x8.7mm_P0.635mm" H 4450 2550 50  0001 C CNN
+F 2 "Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm" H 4450 2550 50  0001 C CNN
 F 3 "http://www.ftdichip.com/Products/ICs/FT231X.html" H 3850 3500 50  0001 C CNN
 	1    3850 3500
 	1    0    0    -1  
