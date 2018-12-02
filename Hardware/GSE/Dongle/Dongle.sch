@@ -199,7 +199,7 @@ U 1 1 5BF8C615
 P 9350 3650
 F 0 "J2" H 9449 3626 50  0000 L CNN
 F 1 "Conn_Coaxial" H 9449 3535 50  0000 L CNN
-F 2 "Connectors:SMA_SMD_Jack_Straight" H 9350 3650 50  0001 C CNN
+F 2 "Connectors_Molex:Molex_SMA_Jack_Edge_Mount" H 9350 3650 50  0001 C CNN
 F 3 " ~" H 9350 3650 50  0001 C CNN
 	1    9350 3650
 	1    0    0    -1  
@@ -227,17 +227,6 @@ F 2 "Connectors:USB_A" H 1000 2300 50  0001 C CNN
 F 3 " ~" H 1000 2300 50  0001 C CNN
 	1    850  2350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:USB_A J3
-U 1 1 5BF8CA16
-P 10250 2550
-F 0 "J3" H 10020 2541 50  0000 R CNN
-F 1 "USB_A" H 10020 2450 50  0000 R CNN
-F 2 "Connectors:USB_A" H 10400 2500 50  0001 C CNN
-F 3 " ~" H 10400 2500 50  0001 C CNN
-	1    10250 2550
-	-1   0    0    -1  
 $EndComp
 $Comp
 L Interface_USB:FT231XS U2
@@ -359,7 +348,7 @@ Wire Wire Line
 Wire Wire Line
 	5500 2050 5050 2050
 Connection ~ 5050 2050
-Text GLabel 9950 2350 0    50   Input ~ 0
+Text GLabel 10150 2450 0    50   Input ~ 0
 5V
 $Comp
 L Device:R R2
@@ -502,13 +491,13 @@ $EndComp
 $Comp
 L power:GND #PWR0119
 U 1 1 5BF9DE3A
-P 10250 3050
-F 0 "#PWR0119" H 10250 2800 50  0001 C CNN
-F 1 "GND" H 10255 2877 50  0000 C CNN
-F 2 "" H 10250 3050 50  0001 C CNN
-F 3 "" H 10250 3050 50  0001 C CNN
-	1    10250 3050
-	1    0    0    -1  
+P 10050 2650
+F 0 "#PWR0119" H 10050 2400 50  0001 C CNN
+F 1 "GND" H 10055 2477 50  0000 C CNN
+F 2 "" H 10050 2650 50  0001 C CNN
+F 3 "" H 10050 2650 50  0001 C CNN
+	1    10050 2650
+	-1   0    0    -1  
 $EndComp
 Text Notes 1000 1050 0    50   ~ 0
 Design heavily based on https://cdn.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Explorer-Dongle-v23.pdf
@@ -527,15 +516,6 @@ Wire Wire Line
 	850  2850 850  2750
 Text Notes 9050 3450 0    50   ~ 0
 TO ANTENNA
-Wire Wire Line
-	10250 3050 10250 3000
-Wire Wire Line
-	10250 3000 10350 3000
-Wire Wire Line
-	10350 3000 10350 2950
-Connection ~ 10250 3000
-Wire Wire Line
-	10250 3000 10250 2950
 Text Notes 9850 2100 0    50   ~ 0
 TO EXTERNAL BATTERY
 Text Notes 700  1750 0    50   ~ 0
@@ -544,4 +524,19 @@ Text Notes 3600 4950 0    50   ~ 0
 USB TO UART
 Text Notes 7100 5350 0    50   ~ 0
 XBEE SOCKET
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5C0427DA
+P 10350 2450
+F 0 "J3" H 10456 2628 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10456 2537 50  0000 C CNN
+F 2 "Payload2019_Connectors:Molex_KK_1718570002" H 10350 2450 50  0001 C CNN
+F 3 "~" H 10350 2450 50  0001 C CNN
+	1    10350 2450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2650 10050 2550
+Wire Wire Line
+	10050 2550 10150 2550
 $EndSCHEMATC
