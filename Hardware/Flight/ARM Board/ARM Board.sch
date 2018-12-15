@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ARM Board-cache
 EELAYER 26 0
 EELAYER END
 $Descr User 19685 19685
@@ -15,18 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols U1
-U 2 1 5BE24AAA
-P 9500 3100
-F 0 "U1" H 10450 3650 60  0000 C CNN
-F 1 "STM32L4x6RxT6" H 10450 3550 60  0000 C CNN
-F 2 "STM32L4x6RxT6:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
-F 3 "" H 9500 3200 60  0000 C CNN
-	2    9500 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L ARM-Board-rescue:SD_WM6698CT-ND-ARMlib J3
+L Payload_Connections:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J3
 U 1 1 5BE5108C
 P 15550 9150
 F 0 "J3" H 16028 9252 60  0000 L CNN
@@ -54,7 +42,7 @@ Wire Wire Line
 Wire Wire Line
 	14850 7750 14850 8100
 $Comp
-L ARM-Board-rescue:Conn_01x20_Female-ARMlib J4
+L Payload_Connections:Conn_01x20_Female J4
 U 1 1 5BE939D5
 P 1450 9250
 F 0 "J4" H 1444 7975 50  0000 C CNN
@@ -65,7 +53,7 @@ F 3 "~" H 1500 9200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L ARM-Board-rescue:Conn_01x20_Female-ARMlib J2
+L Payload_Connections:Conn_01x20_Female J2
 U 1 1 5BE93A8D
 P 1400 5900
 F 0 "J2" H 1394 4625 50  0000 C CNN
@@ -109,7 +97,7 @@ F 3 "~" H 10800 8950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ARM-Board-rescue:MSP430FR2355-MSP430FR2355 U2
+L Payload_Microcontrollers:MSP430FR2355-MSP430FR2355-ARM-Board-rescue U2
 U 1 1 5BF776E6
 P 15750 3550
 F 0 "U2" H 15800 5037 60  0000 C CNN
@@ -270,13 +258,7 @@ Wire Wire Line
 Wire Wire Line
 	8650 3500 9100 3500
 Wire Wire Line
-	9500 3700 9500 3600
-Wire Wire Line
-	9500 3600 9500 3500
-Connection ~ 9500 3600
-Wire Wire Line
 	9500 3500 9300 3500
-Connection ~ 9500 3500
 Connection ~ 9100 3500
 Wire Wire Line
 	9300 3500 9300 3200
@@ -358,7 +340,7 @@ Wire Wire Line
 	9300 3200 9300 3000
 Connection ~ 11450 3800
 $Comp
-L ARM-Board-rescue:SD_WM6698CT-ND-ARMlib J?
+L Payload_Connections:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J?
 U 1 1 5BFE231B
 P 17400 9450
 F 0 "J?" H 17878 9552 60  0000 L CNN
@@ -485,12 +467,8 @@ $EndComp
 Wire Wire Line
 	10900 8300 11000 8300
 Wire Wire Line
-	11000 8300 11000 8950
-Wire Wire Line
 	10900 8950 11000 8950
 Connection ~ 11000 8950
-Wire Wire Line
-	11000 8950 11000 9100
 Text Notes 9000 9100 0    50   ~ 0
 Ground other XTAL pins? Floating in datasheet...\n
 Text Notes 4900 4450 0    50   ~ 0
@@ -498,7 +476,7 @@ USB to Basic UART
 Text Notes 15750 8150 0    50   ~ 0
 SD Card Logging
 $Comp
-L ARMlib:SRAM_23LC1024T-I_ST U?
+L Payload_Microcontrollers:SRAM_23LC1024T-I_ST-ARMlib U?
 U 1 1 5BFFCC54
 P 15900 6550
 F 0 "U?" H 16000 6665 50  0000 C CNN
@@ -674,7 +652,7 @@ Wire Wire Line
 Wire Wire Line
 	4400 5200 5250 5200
 $Comp
-L symbols:STM32L4x6RxT6 U?
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U?
 U 1 1 5C039DAA
 P 7950 5350
 F 0 "U?" H 9550 5837 60  0000 C CNN
@@ -776,7 +754,7 @@ Connection ~ 4700 4900
 Wire Wire Line
 	4700 4900 5250 4900
 $Comp
-L Regulators:LD39200PU33R VR?
+L Payload_Regulators:LD39200PU33R VR?
 U 1 1 5C09F3A5
 P 4100 2250
 F 0 "VR?" H 4225 2375 50  0000 C CNN
@@ -991,7 +969,7 @@ Connection ~ 2100 2350
 Wire Wire Line
 	2100 2350 2100 2900
 $Comp
-L Payload_Connectors:Harwin_M80-5400642 J?
+L Payload_Connections:Harwin_M80-5400642 J?
 U 1 1 5C184B36
 P 3650 6800
 F 0 "J?" H 3631 6865 50  0000 C CNN
@@ -1002,7 +980,7 @@ F 3 "" H 3650 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L canhw:MCP2562 U?
+L Payload_Canhw:MCP2562-canhw U?
 U 1 1 5C184EB2
 P 5300 7100
 F 0 "U?" H 5275 7365 50  0000 C CNN
@@ -1154,4 +1132,19 @@ Wire Wire Line
 Connection ~ 7550 6750
 Wire Wire Line
 	7550 6750 7950 6750
+$Comp
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols-ARM-Board-rescue U?
+U 2 1 5C15893F
+P 9500 3100
+F 0 "U?" H 10400 3487 60  0000 C CNN
+F 1 "STM32L4x6RxT6-symbols-ARM-Board-rescue" H 10400 3381 60  0000 C CNN
+F 2 "LQFP64-10x10mm" H 10350 3450 60  0001 C CNN
+F 3 "" H 9500 3200 60  0000 C CNN
+	2    9500 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11000 8900 11000 8950
+Wire Wire Line
+	11000 8950 11000 9100
 $EndSCHEMATC

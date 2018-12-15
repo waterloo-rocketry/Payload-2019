@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ARM Board-cache
 EELAYER 26 0
 EELAYER END
 $Descr User 19685 19685
@@ -14,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols U1
-U 2 1 5BE24AAA
-P 9500 3100
-F 0 "U1" H 10450 3650 60  0000 C CNN
-F 1 "STM32L4x6RxT6" H 10450 3550 60  0000 C CNN
-F 2 "STM32L4x6RxT6:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
-F 3 "" H 9500 3200 60  0000 C CNN
-	2    9500 3100
-	1    0    0    -1  
-$EndComp
 $Comp
 L ARM-Board-rescue:SD_WM6698CT-ND-ARMlib J3
 U 1 1 5BE5108C
@@ -270,13 +258,7 @@ Wire Wire Line
 Wire Wire Line
 	8650 3500 9100 3500
 Wire Wire Line
-	9500 3700 9500 3600
-Wire Wire Line
-	9500 3600 9500 3500
-Connection ~ 9500 3600
-Wire Wire Line
 	9500 3500 9300 3500
-Connection ~ 9500 3500
 Connection ~ 9100 3500
 Wire Wire Line
 	9300 3500 9300 3200
@@ -776,7 +758,7 @@ Connection ~ 4700 4900
 Wire Wire Line
 	4700 4900 5250 4900
 $Comp
-L Regulators:LD39200PU33R VR?
+L Payload_Regulators:LD39200PU33R VR?
 U 1 1 5C09F3A5
 P 4100 2250
 F 0 "VR?" H 4225 2375 50  0000 C CNN
@@ -1114,7 +1096,7 @@ U 1 1 5C1FDFEF
 P 2750 2350
 F 0 "SW?" H 2750 2585 50  0000 C CNN
 F 1 "SW_SPST" H 2750 2494 50  0000 C CNN
-F 2 "" H 2750 2350 50  0001 C CNN
+F 2 "ARMlib:SPST_GF-123-0054" H 2750 2350 50  0001 C CNN
 F 3 "" H 2750 2350 50  0001 C CNN
 	1    2750 2350
 	1    0    0    -1  
@@ -1154,4 +1136,15 @@ Wire Wire Line
 Connection ~ 7550 6750
 Wire Wire Line
 	7550 6750 7950 6750
+$Comp
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols-ARM-Board-rescue U?
+U 2 1 5C15893F
+P 9500 3100
+F 0 "U?" H 10400 3487 60  0000 C CNN
+F 1 "STM32L4x6RxT6-symbols-ARM-Board-rescue" H 10400 3381 60  0000 C CNN
+F 2 "LQFP64-10x10mm" H 10350 3450 60  0001 C CNN
+F 3 "" H 9500 3200 60  0000 C CNN
+	2    9500 3100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
