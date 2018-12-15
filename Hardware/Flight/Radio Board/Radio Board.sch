@@ -1,0 +1,202 @@
+EESchema Schematic File Version 4
+LIBS:Radio Board-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_AM_FM:RFM95W-915S2 U?
+U 1 1 5C146D43
+P 5850 3700
+F 0 "U?" H 5850 4378 50  0000 C CNN
+F 1 "RFM95W-915S2" H 5850 4287 50  0000 C CNN
+F 2 "" H 2550 5350 50  0001 C CNN
+F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 2550 5350 50  0001 C CNN
+	1    5850 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_AM_FM:RFM95W-915S2 U?
+U 1 1 5C146ECD
+P 4250 3600
+F 0 "U?" H 4250 4278 50  0000 C CNN
+F 1 "RFM95W-915S2" H 4250 4187 50  0000 C CNN
+F 2 "" H 950 5250 50  0001 C CNN
+F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 950 5250 50  0001 C CNN
+	1    4250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Connections:Conn_01x20_Female J?
+U 1 1 5C146FED
+P 1550 4200
+F 0 "J?" H 1727 4141 50  0000 L CNN
+F 1 "Conn_01x20_Female" H 1727 4050 50  0000 L CNN
+F 2 "" H 1600 4150 50  0001 C CNN
+F 3 "" H 1600 4150 50  0001 C CNN
+	1    1550 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C150906
+P 1950 5200
+F 0 "#PWR?" H 1950 4950 50  0001 C CNN
+F 1 "GND" H 1955 5027 50  0000 C CNN
+F 2 "" H 1950 5200 50  0001 C CNN
+F 3 "" H 1950 5200 50  0001 C CNN
+	1    1950 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5200 1950 5050
+Wire Wire Line
+	1950 5050 1700 5050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C15098F
+P 1950 2950
+F 0 "#PWR?" H 1950 2800 50  0001 C CNN
+F 1 "+3V3" H 1965 3123 50  0000 C CNN
+F 2 "" H 1950 2950 50  0001 C CNN
+F 3 "" H 1950 2950 50  0001 C CNN
+	1    1950 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3250 1950 3250
+Wire Wire Line
+	1950 3250 1950 2950
+Text GLabel 1700 4550 2    50   Input ~ 0
+MISO
+Text GLabel 1700 4450 2    50   Input ~ 0
+MOSI
+Text GLabel 1700 4350 2    50   Input ~ 0
+SCK
+Text GLabel 1700 4250 2    50   Input ~ 0
+CS1
+Text GLabel 1700 4150 2    50   Input ~ 0
+CS2
+Text GLabel 1700 4050 2    50   Input ~ 0
+INT1
+Text GLabel 1700 3950 2    50   Input ~ 0
+INT2
+$Comp
+L power:GND #PWR?
+U 1 1 5C150CB3
+P 4150 4200
+F 0 "#PWR?" H 4150 3950 50  0001 C CNN
+F 1 "GND" H 4155 4027 50  0000 C CNN
+F 2 "" H 4150 4200 50  0001 C CNN
+F 3 "" H 4150 4200 50  0001 C CNN
+	1    4150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C150CCA
+P 4250 4200
+F 0 "#PWR?" H 4250 3950 50  0001 C CNN
+F 1 "GND" H 4255 4027 50  0000 C CNN
+F 2 "" H 4250 4200 50  0001 C CNN
+F 3 "" H 4250 4200 50  0001 C CNN
+	1    4250 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C150CDB
+P 4350 4200
+F 0 "#PWR?" H 4350 3950 50  0001 C CNN
+F 1 "GND" H 4355 4027 50  0000 C CNN
+F 2 "" H 4350 4200 50  0001 C CNN
+F 3 "" H 4350 4200 50  0001 C CNN
+	1    4350 4200
+	1    0    0    -1  
+$EndComp
+Text GLabel 4750 4000 2    50   Input ~ 0
+INT1
+Text GLabel 3750 3400 0    50   Input ~ 0
+MOSI
+Text GLabel 3750 3500 0    50   Input ~ 0
+MISO
+Text GLabel 3750 3600 0    50   Input ~ 0
+CS1
+Text GLabel 3750 3300 0    50   Input ~ 0
+SCK
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C150D3B
+P 4250 3100
+F 0 "#PWR?" H 4250 2950 50  0001 C CNN
+F 1 "+3V3" H 4265 3273 50  0000 C CNN
+F 2 "" H 4250 3100 50  0001 C CNN
+F 3 "" H 4250 3100 50  0001 C CNN
+	1    4250 3100
+	1    0    0    -1  
+$EndComp
+Text GLabel 6350 4100 2    50   Input ~ 0
+INT2
+$Comp
+L power:GND #PWR?
+U 1 1 5C150D5D
+P 5750 4300
+F 0 "#PWR?" H 5750 4050 50  0001 C CNN
+F 1 "GND" H 5755 4127 50  0000 C CNN
+F 2 "" H 5750 4300 50  0001 C CNN
+F 3 "" H 5750 4300 50  0001 C CNN
+	1    5750 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C150D6E
+P 5850 4300
+F 0 "#PWR?" H 5850 4050 50  0001 C CNN
+F 1 "GND" H 5855 4127 50  0000 C CNN
+F 2 "" H 5850 4300 50  0001 C CNN
+F 3 "" H 5850 4300 50  0001 C CNN
+	1    5850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C150D7F
+P 5950 4300
+F 0 "#PWR?" H 5950 4050 50  0001 C CNN
+F 1 "GND" H 5955 4127 50  0000 C CNN
+F 2 "" H 5950 4300 50  0001 C CNN
+F 3 "" H 5950 4300 50  0001 C CNN
+	1    5950 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 3600 0    50   Input ~ 0
+MISO
+Text GLabel 5350 3500 0    50   Input ~ 0
+MOSI
+Text GLabel 5350 3400 0    50   Input ~ 0
+SCK
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C150DBC
+P 5850 3200
+F 0 "#PWR?" H 5850 3050 50  0001 C CNN
+F 1 "+3V3" H 5865 3373 50  0000 C CNN
+F 2 "" H 5850 3200 50  0001 C CNN
+F 3 "" H 5850 3200 50  0001 C CNN
+	1    5850 3200
+	1    0    0    -1  
+$EndComp
+Text Notes 7400 4150 0    50   ~ 0
+TODO\nRESET PINS\nANTENNAS
+$EndSCHEMATC
