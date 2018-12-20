@@ -1,6 +1,9 @@
 (fp_lib_table
   (lib (name STM32L4x6RxT6)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/PCB Parts/footprints.pretty")(options "")(descr STM32L4x6RxT6))
-  (lib (name ARMlib)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/PCB Parts/footprints.pretty")(options "")(descr ""))
   (lib (name canhw_footprints)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/canhw/lib/canhw_footprints.pretty")(options "")(descr ""))
   (lib (name Payload_Connectors)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/footprints/Payload_Connectors.pretty")(options "")(descr ""))
+  (lib (name ARMlib)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/Schematic Parts")(options "")(descr ""))
+  (lib (name rescue-backup)(type KiCad)(uri "${KIPRJMOD}/rescue-backup/ARM Board-cache-2018-11-08-21-56-55.lib")(options "")(descr ""))
+  (lib (name Payload_standard)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/footprints/Payload_StandardPackages.pretty")(options "")(descr ""))
+  (lib (name Payload_XTAL)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/footprints/Payload_Oscillators.pretty")(options "")(descr ""))
 )
