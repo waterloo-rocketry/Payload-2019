@@ -91,8 +91,6 @@ Wire Wire Line
 	5000 3500 4850 3500
 Wire Wire Line
 	4850 3500 4850 3600
-Text GLabel 5050 2400 1    50   Input ~ 0
-VBUS
 Connection ~ 4850 3500
 $Comp
 L Device:Ferrite_Bead FB?
@@ -109,10 +107,6 @@ F 3 "~" H 4550 2750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3950 2750 4400 2750
-Wire Wire Line
-	4700 2750 5050 2750
-Wire Wire Line
-	5050 2750 5050 2400
 $Comp
 L power:GND #PWR?
 U 1 1 5C08A12E
@@ -200,10 +194,7 @@ Wire Wire Line
 	5700 2600 5700 3100
 Connection ~ 5700 3100
 Wire Wire Line
-	5050 2750 6450 2750
-Wire Wire Line
 	6450 2750 6450 2800
-Connection ~ 5050 2750
 Text GLabel 6200 2400 1    50   Input ~ 0
 VCCIO
 Wire Wire Line
@@ -325,12 +316,25 @@ Text HLabel 8000 3400 2    50   Input ~ 0
 Text HLabel 3950 2750 0    50   Input ~ 0
 USB_5V
 Text HLabel 3950 3400 0    50   Input ~ 0
-DM
+D_M
 Text HLabel 3950 3500 0    50   Input ~ 0
-DP
+D_P
 Wire Wire Line
 	3950 3500 4850 3500
 Wire Wire Line
 	3950 3400 4450 3400
 Connection ~ 4450 3400
+Wire Wire Line
+	4700 2750 5200 2750
+Text GLabel 5200 2250 1    50   Input ~ 0
+VBUS
+Wire Wire Line
+	5200 2250 5200 2750
+Connection ~ 5200 2750
+Wire Wire Line
+	5200 2750 6450 2750
+Text Label 5650 3400 0    50   ~ 0
+USBD-
+Text Label 5600 3500 0    50   ~ 0
+USBD+
 $EndSCHEMATC

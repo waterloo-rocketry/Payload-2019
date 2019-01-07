@@ -48,7 +48,7 @@ U 1 1 5BE939D5
 P 1450 9250
 F 0 "J4" H 1444 7975 50  0000 C CNN
 F 1 "Conn_01x20_Female" H 1444 8066 50  0000 C CNN
-F 2 "Payload_Connectors:IO_Connector" H 1500 9200 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x10_Pitch2.54mm" H 1500 9200 50  0001 C CNN
 F 3 "~" H 1500 9200 50  0001 C CNN
 	1    1450 9250
 	-1   0    0    1   
@@ -570,15 +570,13 @@ SCK1
 Text GLabel 13250 5800 2    50   Input ~ 0
 ~HOLD1
 Text GLabel 11850 7600 0    50   Input ~ 0
-MOSI2
+MOSI3
 Text GLabel 11850 7700 0    50   Input ~ 0
-SCK2
-Text GLabel 11850 7800 0    50   Input ~ 0
-~CS2
+SCK3
 Text GLabel 13700 7900 0    50   Input ~ 0
 MOSI3
 Text GLabel 11500 7500 0    50   Input ~ 0
-MISO2
+MISO3
 Wire Wire Line
 	11500 7500 11650 7500
 Connection ~ 11650 7500
@@ -593,7 +591,7 @@ Text GLabel 13700 8100 0    50   Input ~ 0
 ~CS3
 Text Notes 12700 5300 0    50   ~ 0
 RAM
-Text GLabel 11500 8100 1    50   Input ~ 0
+Text GLabel 11050 7600 1    50   Input ~ 0
 VDD33
 Text GLabel 13300 8250 1    50   Input ~ 0
 VDD33
@@ -601,10 +599,6 @@ Wire Wire Line
 	13300 8250 13300 8450
 Wire Wire Line
 	13300 8450 13700 8450
-Wire Wire Line
-	11500 8100 11500 8150
-Wire Wire Line
-	11500 8150 11850 8150
 $Sheet
 S 5250 4750 650  700 
 U 5C089FB0
@@ -615,8 +609,8 @@ F3 "TXD" I R 5900 5000 50
 F4 "~RTS" I R 5900 5150 50 
 F5 "~CTS" I R 5900 5300 50 
 F6 "USB_5V" I L 5250 4900 50 
-F7 "DM" I L 5250 5200 50 
-F8 "DP" I L 5250 5100 50 
+F7 "D_M" I L 5250 5200 50 
+F8 "D_P" I L 5250 5100 50 
 $EndSheet
 Wire Wire Line
 	4400 5100 5250 5100
@@ -647,7 +641,7 @@ Text GLabel 7950 5950 0    50   Input ~ 0
 SCK1
 Text GLabel 9900 6950 2    50   Input ~ 0
 MISO2
-Text GLabel 9900 6550 2    50   Input ~ 0
+Text GLabel 7950 6350 0    50   Input ~ 0
 SCK2
 Text GLabel 9900 6750 2    50   Input ~ 0
 ~CS2
@@ -657,7 +651,7 @@ Text GLabel 7950 8350 0    50   Input ~ 0
 MISO3
 Text GLabel 7950 8250 0    50   Input ~ 0
 SCK3
-Text GLabel 7950 5850 0    50   Input ~ 0
+Text GLabel 7950 7950 0    50   Input ~ 0
 ~CS3
 Text GLabel 7950 8450 0    50   Input ~ 0
 MOSI3
@@ -676,7 +670,7 @@ Wire Wire Line
 	1600 10100 1750 10100
 Wire Wire Line
 	1750 10100 1750 10250
-Text GLabel 7950 6250 0    50   Input ~ 0
+Text GLabel 7950 5850 0    50   Input ~ 0
 ~HOLD1
 Text GLabel 1750 8000 1    50   Input ~ 0
 VDD5_IN
@@ -690,8 +684,6 @@ Wire Wire Line
 	1600 8300 1950 8300
 Wire Wire Line
 	1950 8000 1950 8300
-Text GLabel 4700 4700 1    50   Input ~ 0
-VBUS
 $Comp
 L ARM-Board-rescue:LD39200PU33R-Payload_Regulators VR1
 U 1 1 5C09F3A5
@@ -996,45 +988,12 @@ Text GLabel 7050 6450 0    50   Input ~ 0
 ~CAN_EN
 Connection ~ 3250 2350
 $Comp
-L Switch:SW_SPST SW1
-U 1 1 5C1FDFEF
-P 2350 3450
-F 0 "SW1" H 2350 3685 50  0000 C CNN
-F 1 "SW_SPST" H 2350 3594 50  0000 C CNN
-F 2 "" H 2350 3450 50  0001 C CNN
-F 3 "" H 2350 3450 50  0001 C CNN
-	1    2350 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5C2102C6
-P 7200 6750
-F 0 "R4" H 7270 6796 50  0000 L CNN
-F 1 "DNP" H 7270 6705 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 7130 6750 50  0001 C CNN
-F 3 "~" H 7200 6750 50  0001 C CNN
-	1    7200 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0122
-U 1 1 5C21041D
-P 7200 7000
-F 0 "#PWR0122" H 7200 6750 50  0001 C CNN
-F 1 "GND" H 7205 6827 50  0000 C CNN
-F 2 "" H 7200 7000 50  0001 C CNN
-F 3 "" H 7200 7000 50  0001 C CNN
-	1    7200 7000
-	1    0    0    -1  
-$EndComp
-$Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols-ARM-Board-rescue-Payload_Microcontrollers U1
+L ARM-Board-rescue:STM32L4x6RxT6-symbols-ARM-Board-rescue-Payload_Microcontrollers U2
 U 2 1 5C15893F
 P 9500 3100
-F 0 "U1" H 10400 3487 60  0000 C CNN
-F 1 "STM32L4x6RxT6-symbols-ARM-Board-rescue" H 10400 3381 60  0000 C CNN
-F 2 "LQFP64-10x10mm" H 10350 3450 60  0001 C CNN
+F 0 "U2" H 10400 3487 60  0000 C CNN
+F 1 "STM32L4x6RxT6" H 10400 3381 60  0000 C CNN
+F 2 "Payload_standard:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
 F 3 "" H 9500 3200 60  0000 C CNN
 	2    9500 3100
 	1    0    0    -1  
@@ -1067,8 +1026,6 @@ Wire Wire Line
 Wire Wire Line
 	2100 3550 2100 3450
 Wire Wire Line
-	2100 3450 2150 3450
-Wire Wire Line
 	1750 3000 2100 3000
 Wire Wire Line
 	2100 3000 2100 3450
@@ -1081,8 +1038,6 @@ Text GLabel 700  2150 1    50   Input ~ 0
 VDD33_USB
 Text GLabel 2750 3450 2    50   Input ~ 0
 VDD33
-Wire Wire Line
-	2550 3450 2650 3450
 Wire Wire Line
 	10150 5300 10150 5550
 Wire Wire Line
@@ -1121,12 +1076,6 @@ Text GLabel 10200 5650 2    50   Input ~ 0
 UART_~RTS
 Wire Wire Line
 	10200 5650 9900 5650
-Wire Wire Line
-	7050 6450 7200 6450
-Wire Wire Line
-	7200 6600 7200 6450
-Wire Wire Line
-	7200 6900 7200 7000
 Text GLabel 7750 7150 0    50   Input ~ 0
 SCL
 Text GLabel 7750 7250 0    50   Input ~ 0
@@ -1217,35 +1166,23 @@ Text GLabel 7900 8150 0    50   Input ~ 0
 JTDI
 Wire Wire Line
 	7900 8150 7950 8150
-Text GLabel 2000 5350 2    50   Input ~ 0
+Text GLabel 2000 5150 2    50   Input ~ 0
 JTDI
 Text GLabel 7850 6850 0    50   Input ~ 0
 JTCK_SWCLK
 Wire Wire Line
 	7850 6850 7950 6850
-Wire Wire Line
-	7950 6450 7200 6450
-Connection ~ 7200 6450
 Text GLabel 7850 6750 0    50   Input ~ 0
 JTMS_SWDIO
 Wire Wire Line
 	7850 6750 7950 6750
-Text GLabel 2000 5450 2    50   Input ~ 0
+Text GLabel 1550 5750 2    50   Input ~ 0
 JTMS_SWDIO
-Text GLabel 2000 5550 2    50   Input ~ 0
+Text GLabel 1550 5550 2    50   Input ~ 0
 JTCK_SWCLK
-Wire Wire Line
-	4400 4900 4700 4900
-Wire Wire Line
-	4700 4700 4700 4900
-Connection ~ 4700 4900
-Wire Wire Line
-	4700 4900 5250 4900
-Text GLabel 2000 5250 2    50   Input ~ 0
+Text GLabel 1700 4950 2    50   Input ~ 0
 JTRST
-Text GLabel 2000 5050 2    50   Input ~ 0
-VBUS
-Text GLabel 2000 5150 2    50   Input ~ 0
+Text GLabel 2100 5850 2    50   Input ~ 0
 VTREF
 Text GLabel 2800 3750 2    50   Input ~ 0
 VTREF
@@ -1256,21 +1193,19 @@ Wire Wire Line
 Connection ~ 2650 3450
 Wire Wire Line
 	2650 3450 2750 3450
-Text GLabel 2000 5650 2    50   Input ~ 0
+Text GLabel 2000 5350 2    50   Input ~ 0
 JTDO_SWO
 $Comp
 L power:GND #PWR0123
 U 1 1 5C452C69
-P 2100 5900
-F 0 "#PWR0123" H 2100 5650 50  0001 C CNN
-F 1 "GND" H 2105 5727 50  0000 C CNN
-F 2 "" H 2100 5900 50  0001 C CNN
-F 3 "" H 2100 5900 50  0001 C CNN
-	1    2100 5900
+P 2600 5750
+F 0 "#PWR0123" H 2600 5500 50  0001 C CNN
+F 1 "GND" H 2605 5577 50  0000 C CNN
+F 2 "" H 2600 5750 50  0001 C CNN
+F 3 "" H 2600 5750 50  0001 C CNN
+	1    2600 5750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1550 5050 2000 5050
 Text GLabel 7250 4700 1    50   Input ~ 0
 ~RST
 $Comp
@@ -1294,23 +1229,11 @@ Connection ~ 7700 5350
 Wire Wire Line
 	2000 5150 1550 5150
 Wire Wire Line
-	2000 5250 1550 5250
-Wire Wire Line
 	1550 5350 2000 5350
-Wire Wire Line
-	1550 5450 2000 5450
-Wire Wire Line
-	1550 5550 2000 5550
-Wire Wire Line
-	1550 5650 2000 5650
-Text GLabel 2450 5750 2    50   Input ~ 0
+Text GLabel 1750 4850 2    50   Input ~ 0
 ~RST
 Wire Wire Line
-	2450 5750 1550 5750
-Wire Wire Line
 	1550 5850 2100 5850
-Wire Wire Line
-	2100 5850 2100 5900
 Wire Wire Line
 	7750 7250 7950 7250
 Wire Wire Line
@@ -1380,9 +1303,89 @@ U 1 1 5C659B91
 P 1350 5450
 F 0 "J2" H 1270 4725 50  0000 C CNN
 F 1 "Conn_01x10" H 1270 4816 50  0000 C CNN
-F 2 "Payload_Connectors:JTAG_CONN_20021311-00010T4LF" H 1350 5450 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 1350 5450 50  0001 C CNN
 F 3 "~" H 1350 5450 50  0001 C CNN
 	1    1350 5450
 	-1   0    0    1   
 $EndComp
+Text GLabel 1750 9500 2    50   Input ~ 0
+MOSI2
+Text GLabel 1750 9400 2    50   Input ~ 0
+SCK2
+Text GLabel 1750 9300 2    50   Input ~ 0
+~CS2
+Text GLabel 1750 9600 2    50   Input ~ 0
+MISO2
+Wire Wire Line
+	1750 9300 1600 9300
+Wire Wire Line
+	1750 9400 1600 9400
+Wire Wire Line
+	1750 9500 1600 9500
+Wire Wire Line
+	1750 9600 1600 9600
+Wire Wire Line
+	11050 7600 11050 8150
+Wire Wire Line
+	11050 8150 11850 8150
+Text GLabel 11850 7800 0    50   Input ~ 0
+~CS3_2
+Text GLabel 7950 8050 0    50   Input ~ 0
+~CS3_2
+Text GLabel 1750 9200 2    50   Input ~ 0
+~CS2_2
+Wire Wire Line
+	1600 9200 1750 9200
+Text GLabel 9900 6650 2    50   Input ~ 0
+~CS2_2
+$Comp
+L Molex_Nano:1053131202 J7
+U 1 1 5C3240C2
+P 2450 3800
+F 0 "J7" V 2348 3930 50  0000 L CNN
+F 1 "1053131202" V 2439 3930 50  0000 L CNN
+F 2 "Payload_Connectors:MOLEX_1053131202" H 2450 3800 50  0001 L BNN
+F 3 "Molex, LLC" H 2450 3800 50  0001 L BNN
+F 4 "None" H 2450 3800 50  0001 L BNN "Field4"
+F 5 "WM14972-ND" H 2450 3800 50  0001 L BNN "Field5"
+F 6 "https://www.digikey.ca/product-detail/en/molex-llc/1053131202/WM14972-ND/6131614?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2450 3800 50  0001 L BNN "Field6"
+F 7 "Nano-Fit Right Angle Header; Through Hole; 2.50mm; Single Row; 2 Circuit; Gold Plated" H 2450 3800 50  0001 L BNN "Field7"
+F 8 "1053131202" H 2450 3800 50  0001 L BNN "Field8"
+	1    2450 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 3450 2350 3600
+Wire Wire Line
+	2100 3450 2350 3450
+Wire Wire Line
+	2450 3600 2450 3450
+Wire Wire Line
+	2450 3450 2650 3450
+Wire Wire Line
+	4400 4900 5250 4900
+Wire Wire Line
+	7050 6450 7950 6450
+Text Label 4850 5100 0    50   ~ 0
+D+
+Text Label 4900 5200 0    50   ~ 0
+D-
+Wire Wire Line
+	2600 5650 2600 5750
+Wire Wire Line
+	1550 5650 2600 5650
+Wire Wire Line
+	2600 5450 2600 5650
+Wire Wire Line
+	1550 5450 2600 5450
+Connection ~ 2600 5650
+Wire Wire Line
+	1550 4950 1600 4950
+Wire Wire Line
+	1750 4850 1600 4850
+Wire Wire Line
+	1600 4850 1600 4950
+Connection ~ 1600 4950
+Wire Wire Line
+	1600 4950 1700 4950
 $EndSCHEMATC

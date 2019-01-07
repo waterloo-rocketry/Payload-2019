@@ -6,4 +6,6 @@
   (lib (name rescue-backup)(type KiCad)(uri "${KIPRJMOD}/rescue-backup/ARM Board-cache-2018-11-08-21-56-55.lib")(options "")(descr ""))
   (lib (name Payload_standard)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/footprints/Payload_StandardPackages.pretty")(options "")(descr ""))
   (lib (name Payload_XTAL)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/footprints/Payload_Oscillators.pretty")(options "")(descr ""))
+  (lib (name symbols)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/symbols")(options "")(descr ""))
+  (lib (name MOLEX_1053131202)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Payload-2019/Hardware/libs/footprints/Payload_Connectors.pretty/MOLEX_1053131202.mod")(options "")(descr ""))
 )
