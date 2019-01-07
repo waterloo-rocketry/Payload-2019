@@ -482,8 +482,6 @@ Wire Wire Line
 Text GLabel 13450 5400 1    50   Input ~ 0
 VDD33
 Wire Wire Line
-	13450 5400 13450 5700
-Wire Wire Line
 	13450 5700 13250 5700
 $Comp
 L power:GND #PWR0111
@@ -617,7 +615,7 @@ Wire Wire Line
 Wire Wire Line
 	4400 5200 5250 5200
 $Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols-Payload_Microcontrollers U2
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U2
 U 1 1 5C039DAA
 P 7950 5350
 F 0 "U2" H 9550 5837 60  0000 C CNN
@@ -685,7 +683,7 @@ Wire Wire Line
 Wire Wire Line
 	1950 8000 1950 8300
 $Comp
-L ARM-Board-rescue:LD39200PU33R-Payload_Regulators VR1
+L Payload_Regulators:LD39200PU33R VR1
 U 1 1 5C09F3A5
 P 4100 2250
 F 0 "VR1" H 4225 2375 50  0000 C CNN
@@ -987,17 +985,6 @@ Text GLabel 4850 7100 0    50   Input ~ 0
 Text GLabel 7050 6450 0    50   Input ~ 0
 ~CAN_EN
 Connection ~ 3250 2350
-$Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols-ARM-Board-rescue-Payload_Microcontrollers U2
-U 2 1 5C15893F
-P 9500 3100
-F 0 "U2" H 10400 3487 60  0000 C CNN
-F 1 "STM32L4x6RxT6" H 10400 3381 60  0000 C CNN
-F 2 "Payload_standard:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
-F 3 "" H 9500 3200 60  0000 C CNN
-	2    9500 3100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	700  3000 1350 3000
 Wire Wire Line
@@ -1339,7 +1326,7 @@ Wire Wire Line
 Text GLabel 9900 6650 2    50   Input ~ 0
 ~CS2_2
 $Comp
-L Molex_Nano:1053131202 J7
+L ARM-Board-rescue:1053131202-Molex_Nano J7
 U 1 1 5C3240C2
 P 2450 3800
 F 0 "J7" V 2348 3930 50  0000 L CNN
@@ -1388,4 +1375,28 @@ Wire Wire Line
 Connection ~ 1600 4950
 Wire Wire Line
 	1600 4950 1700 4950
+$Comp
+L power:GND #PWR?
+U 1 1 5C3F5323
+P 4250 2900
+F 0 "#PWR?" H 4250 2650 50  0001 C CNN
+F 1 "GND" H 4255 2727 50  0000 C CNN
+F 2 "" H 4250 2900 50  0001 C CNN
+F 3 "" H 4250 2900 50  0001 C CNN
+	1    4250 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U2
+U 2 1 5C15893F
+P 9500 3100
+F 0 "U2" H 10400 3487 60  0000 C CNN
+F 1 "STM32L4x6RxT6" H 10400 3381 60  0000 C CNN
+F 2 "Payload_standard:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
+F 3 "" H 9500 3200 60  0000 C CNN
+	2    9500 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13450 5400 13450 5700
 $EndSCHEMATC
