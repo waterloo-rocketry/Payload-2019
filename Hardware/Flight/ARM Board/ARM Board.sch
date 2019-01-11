@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Payload_Connectors:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J3
-U 1 1 5BE5108C
-P 12350 8150
-F 0 "J3" H 12828 8252 60  0000 L CNN
-F 1 "SD_WM6698CT-ND" H 12828 8146 60  0000 L CNN
-F 2 "Payload_Connectors:MICROSD_WM6698CT-ND" V 12300 8050 60  0001 C CNN
-F 3 "" V 12300 8050 60  0001 C CNN
-	1    12350 8150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5BE5134B
 P 11650 7250
@@ -42,17 +31,6 @@ Wire Wire Line
 	11650 7500 11850 7500
 Wire Wire Line
 	11650 6750 11650 7100
-$Comp
-L Payload_Connectors:Conn_01x20_Female J4
-U 1 1 5BE939D5
-P 1450 9250
-F 0 "J4" H 1444 7975 50  0000 C CNN
-F 1 "Conn_01x20_Female" H 1444 8066 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x10_Pitch2.54mm" H 1500 9200 50  0001 C CNN
-F 3 "~" H 1500 9200 50  0001 C CNN
-	1    1450 9250
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:Crystal_GND23 Y1
 U 1 1 5BF7653E
@@ -316,17 +294,6 @@ Wire Wire Line
 	9300 3200 9300 3000
 Connection ~ 11450 3800
 $Comp
-L Payload_Connectors:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J6
-U 1 1 5BFE231B
-P 14200 8450
-F 0 "J6" H 14678 8552 60  0000 L CNN
-F 1 "SD_WM6698CT-ND" H 14678 8446 60  0000 L CNN
-F 2 "Payload_Connectors:MICROSD_WM6698CT-ND" V 14150 8350 60  0001 C CNN
-F 3 "" V 14150 8350 60  0001 C CNN
-	1    14200 8450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R8
 U 1 1 5BFE2321
 P 13500 7550
@@ -449,17 +416,6 @@ USB to Basic UART
 Text Notes 12550 7150 0    50   ~ 0
 SD Card Logging
 $Comp
-L Payload_Microcontrollers:SRAM_23LC1024T-I_ST-ARMlib U3
-U 1 1 5BFFCC54
-P 12700 5550
-F 0 "U3" H 12800 5665 50  0000 C CNN
-F 1 "SRAM_23LC1024T-I_ST" H 12800 5574 50  0000 C CNN
-F 2 "Housings_SSOP:TSSOP-8_4.4x3mm_Pitch0.65mm" H 12700 5550 50  0001 C CNN
-F 3 "" H 12700 5550 50  0001 C CNN
-	1    12700 5550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0110
 U 1 1 5C000DBE
 P 12300 6100
@@ -558,35 +514,35 @@ Wire Wire Line
 	11850 8850 12300 8850
 Connection ~ 12300 8850
 Text GLabel 12350 5800 0    50   Input ~ 0
-MISO1
-Text GLabel 13250 6000 2    50   Input ~ 0
-MOSI1
-Text GLabel 12350 5700 0    50   Input ~ 0
-~CS1
-Text GLabel 13250 5900 2    50   Input ~ 0
-SCK1
-Text GLabel 13250 5800 2    50   Input ~ 0
-~HOLD1
-Text GLabel 11850 7600 0    50   Input ~ 0
-MOSI3
-Text GLabel 11850 7700 0    50   Input ~ 0
-SCK3
-Text GLabel 13700 7900 0    50   Input ~ 0
-MOSI3
-Text GLabel 11500 7500 0    50   Input ~ 0
 MISO3
+Text GLabel 13250 6000 2    50   Input ~ 0
+MOSI3
+Text GLabel 12350 5700 0    50   Input ~ 0
+~CS3
+Text GLabel 13250 5900 2    50   Input ~ 0
+SCK3
+Text GLabel 13250 5800 2    50   Input ~ 0
+~HOLD3
+Text GLabel 11850 7600 0    50   Input ~ 0
+MOSI1
+Text GLabel 11850 7700 0    50   Input ~ 0
+SCK1
+Text GLabel 13700 7900 0    50   Input ~ 0
+MOSI1
+Text GLabel 11500 7500 0    50   Input ~ 0
+MISO1
 Wire Wire Line
 	11500 7500 11650 7500
 Connection ~ 11650 7500
 Text GLabel 13300 7800 0    50   Input ~ 0
-MISO3
+MISO1
 Wire Wire Line
 	13300 7800 13500 7800
 Connection ~ 13500 7800
 Text GLabel 13700 8000 0    50   Input ~ 0
-SCK3
+SCK1
 Text GLabel 13700 8100 0    50   Input ~ 0
-~CS3
+~CS1
 Text Notes 12700 5300 0    50   ~ 0
 RAM
 Text GLabel 11050 7600 1    50   Input ~ 0
@@ -614,22 +570,11 @@ Wire Wire Line
 	4400 5100 5250 5100
 Wire Wire Line
 	4400 5200 5250 5200
-$Comp
-L Payload_Microcontrollers:STM32L4x6RxT6-symbols U2
-U 1 1 5C039DAA
-P 7950 5350
-F 0 "U2" H 9550 5837 60  0000 C CNN
-F 1 "STM32L4x6RxT6" H 9550 5731 60  0000 C CNN
-F 2 "Payload_standard:STM32L4x6RxT6" H 8800 5700 60  0001 C CNN
-F 3 "" H 7950 5450 60  0000 C CNN
-	1    7950 5350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9900 8500 10150 8500
 Wire Wire Line
 	9900 8600 10150 8600
-Text GLabel 10150 5300 1    50   Input ~ 0
+Text GLabel 7950 5850 0    50   Input ~ 0
 ~CS1
 Text GLabel 7950 6050 0    50   Input ~ 0
 MISO1
@@ -639,7 +584,7 @@ Text GLabel 7950 5950 0    50   Input ~ 0
 SCK1
 Text GLabel 9900 6950 2    50   Input ~ 0
 MISO2
-Text GLabel 7950 6350 0    50   Input ~ 0
+Text GLabel 9900 6550 2    50   Input ~ 0
 SCK2
 Text GLabel 9900 6750 2    50   Input ~ 0
 ~CS2
@@ -649,7 +594,7 @@ Text GLabel 7950 8350 0    50   Input ~ 0
 MISO3
 Text GLabel 7950 8250 0    50   Input ~ 0
 SCK3
-Text GLabel 7950 7950 0    50   Input ~ 0
+Text GLabel 9900 6150 2    50   Input ~ 0
 ~CS3
 Text GLabel 7950 8450 0    50   Input ~ 0
 MOSI3
@@ -668,8 +613,8 @@ Wire Wire Line
 	1600 10100 1750 10100
 Wire Wire Line
 	1750 10100 1750 10250
-Text GLabel 7950 5850 0    50   Input ~ 0
-~HOLD1
+Text GLabel 9900 6050 2    50   Input ~ 0
+~HOLD3
 Text GLabel 1750 8000 1    50   Input ~ 0
 VDD5_IN
 Text GLabel 1950 8000 1    50   Input ~ 0
@@ -682,17 +627,6 @@ Wire Wire Line
 	1600 8300 1950 8300
 Wire Wire Line
 	1950 8000 1950 8300
-$Comp
-L Payload_Regulators:LD39200PU33R VR1
-U 1 1 5C09F3A5
-P 4100 2250
-F 0 "VR1" H 4225 2375 50  0000 C CNN
-F 1 "LD39200PU33R" H 4225 2284 50  0000 C CNN
-F 2 "Housings_DFN_QFN:DFN-6-1EP_3x3mm_Pitch0.95mm" H 4100 2250 50  0001 C CNN
-F 3 "" H 4100 2250 50  0001 C CNN
-	1    4100 2250
-	1    0    0    -1  
-$EndComp
 Text GLabel 5300 2350 2    50   Input ~ 0
 VDD33_USB
 Wire Wire Line
@@ -867,28 +801,6 @@ Wire Wire Line
 Wire Wire Line
 	7800 2250 7650 2250
 Connection ~ 7650 2250
-$Comp
-L Payload_Connectors:Harwin_M80-5400642 J5
-U 1 1 5C184B36
-P 3650 6800
-F 0 "J5" H 3631 6865 50  0000 C CNN
-F 1 "Harwin_M80-5400642" H 3631 6774 50  0000 C CNN
-F 2 "canhw_footprints:connector_Harwin_M80-5000642" H 3650 6800 50  0001 C CNN
-F 3 "" H 3650 6800 50  0001 C CNN
-	1    3650 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Payload_Canhw:MCP2562-canhw U4
-U 1 1 5C184EB2
-P 5300 7100
-F 0 "U4" H 5275 7365 50  0000 C CNN
-F 1 "MCP2562" H 5275 7274 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5300 7100 50  0001 C CNN
-F 3 "http://hades.mech.northwestern.edu/images/5/5e/MCP2562.pdf" H 5300 7100 50  0001 C CNN
-	1    5300 7100
-	-1   0    0    -1  
-$EndComp
 Text GLabel 5800 7300 2    50   Input ~ 0
 CANTX
 Text GLabel 5800 7400 2    50   Input ~ 0
@@ -1026,10 +938,6 @@ VDD33_USB
 Text GLabel 2750 3450 2    50   Input ~ 0
 VDD33
 Wire Wire Line
-	10150 5300 10150 5550
-Wire Wire Line
-	10150 5550 9900 5550
-Wire Wire Line
 	11000 8950 11000 9100
 Text GLabel 6150 4850 2    50   Input ~ 0
 UART_RX
@@ -1047,22 +955,22 @@ Wire Wire Line
 	6150 5000 5900 5000
 Wire Wire Line
 	6150 4850 5900 4850
-Text GLabel 7700 7550 0    50   Input ~ 0
+Text GLabel 7700 5750 0    50   Input ~ 0
 UART_RX
-Text GLabel 7700 7650 0    50   Input ~ 0
+Text GLabel 7700 5650 0    50   Input ~ 0
 UART_TX
 Wire Wire Line
-	7700 7650 7950 7650
+	7700 5650 7950 5650
 Wire Wire Line
-	7700 7550 7950 7550
-Text GLabel 10250 6850 2    50   Input ~ 0
+	7700 5750 7950 5750
+Text GLabel 7600 5450 0    50   Input ~ 0
 UART_~CTS
 Wire Wire Line
-	9900 6850 10250 6850
-Text GLabel 10200 5650 2    50   Input ~ 0
+	7950 5450 7600 5450
+Text GLabel 7650 5550 0    50   Input ~ 0
 UART_~RTS
 Wire Wire Line
-	10200 5650 9900 5650
+	7650 5550 7950 5550
 Text GLabel 7750 7150 0    50   Input ~ 0
 SCL
 Text GLabel 7750 7250 0    50   Input ~ 0
@@ -1210,8 +1118,6 @@ Wire Wire Line
 	7250 4700 7250 4850
 Wire Wire Line
 	7250 5150 7250 5350
-Wire Wire Line
-	7250 5350 7700 5350
 Connection ~ 7700 5350
 Wire Wire Line
 	2000 5150 1550 5150
@@ -1316,31 +1222,13 @@ Wire Wire Line
 Wire Wire Line
 	11050 8150 11850 8150
 Text GLabel 11850 7800 0    50   Input ~ 0
-~CS3_2
-Text GLabel 7950 8050 0    50   Input ~ 0
-~CS3_2
+~CS1_2
 Text GLabel 1750 9200 2    50   Input ~ 0
 ~CS2_2
 Wire Wire Line
 	1600 9200 1750 9200
 Text GLabel 9900 6650 2    50   Input ~ 0
 ~CS2_2
-$Comp
-L ARM-Board-rescue:1053131202-Molex_Nano J7
-U 1 1 5C3240C2
-P 2450 3800
-F 0 "J7" V 2348 3930 50  0000 L CNN
-F 1 "1053131202" V 2439 3930 50  0000 L CNN
-F 2 "Payload_Connectors:MOLEX_1053131202" H 2450 3800 50  0001 L BNN
-F 3 "Molex, LLC" H 2450 3800 50  0001 L BNN
-F 4 "None" H 2450 3800 50  0001 L BNN "Field4"
-F 5 "WM14972-ND" H 2450 3800 50  0001 L BNN "Field5"
-F 6 "https://www.digikey.ca/product-detail/en/molex-llc/1053131202/WM14972-ND/6131614?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2450 3800 50  0001 L BNN "Field6"
-F 7 "Nano-Fit Right Angle Header; Through Hole; 2.50mm; Single Row; 2 Circuit; Gold Plated" H 2450 3800 50  0001 L BNN "Field7"
-F 8 "1053131202" H 2450 3800 50  0001 L BNN "Field8"
-	1    2450 3800
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2350 3450 2350 3600
 Wire Wire Line
@@ -1376,27 +1264,145 @@ Connection ~ 1600 4950
 Wire Wire Line
 	1600 4950 1700 4950
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0114
 U 1 1 5C3F5323
 P 4250 2900
-F 0 "#PWR?" H 4250 2650 50  0001 C CNN
+F 0 "#PWR0114" H 4250 2650 50  0001 C CNN
 F 1 "GND" H 4255 2727 50  0000 C CNN
 F 2 "" H 4250 2900 50  0001 C CNN
 F 3 "" H 4250 2900 50  0001 C CNN
 	1    4250 2900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	13450 5400 13450 5700
 $Comp
-L Payload_Microcontrollers:STM32L4x6RxT6-symbols U2
-U 2 1 5C15893F
+L Payload_Regulators:LD39200PU33R VR1
+U 1 1 5C3883E7
+P 4100 2250
+F 0 "VR1" H 4225 2375 50  0000 C CNN
+F 1 "LD39200PU33R" H 4225 2284 50  0000 C CNN
+F 2 "Housings_DFN_QFN:DFN-6-1EP_3x3mm_Pitch0.95mm" H 4100 2250 50  0001 C CNN
+F 3 "" H 4100 2250 50  0001 C CNN
+	1    4100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U1
+U 1 1 5C399EA6
+P 7950 5350
+F 0 "U1" H 8925 5837 60  0000 C CNN
+F 1 "STM32L4x6RxT6-symbols" H 8925 5731 60  0000 C CNN
+F 2 "Payload_StandardPackages:STM32L4x6RxT6" H 8800 5700 60  0001 C CNN
+F 3 "" H 7950 5450 60  0000 C CNN
+	1    7950 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Canhw:MCP2562-canhw U3
+U 1 1 5C39AF46
+P 5350 7100
+F 0 "U3" H 5325 7365 50  0000 C CNN
+F 1 "MCP2562-canhw" H 5325 7274 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5350 7100 50  0001 C CNN
+F 3 "" H 5350 7100 50  0001 C CNN
+	1    5350 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Connectors:Harwin_M80-5400642 J4
+U 1 1 5C39B5CA
+P 3650 6800
+F 0 "J4" H 3631 6865 50  0000 C CNN
+F 1 "Harwin_M80-5400642" H 3631 6774 50  0000 C CNN
+F 2 "Payload_Connectors:connector_Harwin_M80-5000642" H 3650 6800 50  0001 C CNN
+F 3 "" H 3650 6800 50  0001 C CNN
+	1    3650 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Connectors:Conn_01x20_Female J7
+U 1 1 5C39BC26
+P 1450 9250
+F 0 "J7" H 1444 7975 50  0000 C CNN
+F 1 "Conn_01x20_Female" H 1444 8066 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x10_Pitch2.54mm" H 1500 9200 50  0001 C CNN
+F 3 "" H 1500 9200 50  0001 C CNN
+	1    1450 9250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U1
+U 2 1 5C39C6F4
 P 9500 3100
-F 0 "U2" H 10400 3487 60  0000 C CNN
-F 1 "STM32L4x6RxT6" H 10400 3381 60  0000 C CNN
-F 2 "Payload_standard:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
+F 0 "U1" H 10400 3487 60  0000 C CNN
+F 1 "STM32L4x6RxT6-symbols" H 10400 3381 60  0000 C CNN
+F 2 "Payload_StandardPackages:STM32L4x6RxT6" H 10350 3450 60  0001 C CNN
 F 3 "" H 9500 3200 60  0000 C CNN
 	2    9500 3100
 	1    0    0    -1  
 $EndComp
+$Comp
+L Payload_Connectors:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J6
+U 1 1 5C39D0BB
+P 14200 8450
+F 0 "J6" H 14678 8552 60  0000 L CNN
+F 1 "SD_WM6698CT-ND-ARMlib-ARM-Board-rescue" H 14678 8446 60  0000 L CNN
+F 2 "Payload_Connectors:MICROSD_WM6698CT-ND" V 14150 8350 60  0001 C CNN
+F 3 "" V 14150 8350 60  0001 C CNN
+	1    14200 8450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Connectors:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J5
+U 1 1 5C39D81A
+P 12350 8150
+F 0 "J5" H 12828 8252 60  0000 L CNN
+F 1 "SD_WM6698CT-ND-ARMlib-ARM-Board-rescue" H 12828 8146 60  0000 L CNN
+F 2 "Payload_Connectors:MICROSD_WM6698CT-ND" V 12300 8050 60  0001 C CNN
+F 3 "" V 12300 8050 60  0001 C CNN
+	1    12350 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Microcontrollers:SRAM_23LC1024T-I_ST-ARMlib U2
+U 1 1 5C39E125
+P 12700 5550
+F 0 "U2" H 12800 5665 50  0000 C CNN
+F 1 "SRAM_23LC1024T-I_ST-ARMlib" H 12800 5574 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-8_4.4x3mm_Pitch0.65mm" H 12700 5550 50  0001 C CNN
+F 3 "" H 12700 5550 50  0001 C CNN
+	1    12700 5550
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	13450 5400 13450 5700
+	7250 5350 7700 5350
+$Comp
+L Molex_Nano:1053131202 J3
+U 1 1 5C4A9E40
+P 2450 3800
+F 0 "J3" V 2348 3930 50  0000 L CNN
+F 1 "1053131202" V 2439 3930 50  0000 L CNN
+F 2 "Payload_Connectors:MOLEX_1053131202" H 2450 3800 50  0001 L BNN
+F 3 "Molex, LLC" H 2450 3800 50  0001 L BNN
+F 4 "None" H 2450 3800 50  0001 L BNN "Field4"
+F 5 "WM14972-ND" H 2450 3800 50  0001 L BNN "Field5"
+F 6 "https://www.digikey.ca/product-detail/en/molex-llc/1053131202/WM14972-ND/6131614?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2450 3800 50  0001 L BNN "Field6"
+F 7 "Nano-Fit Right Angle Header; Through Hole; 2.50mm; Single Row; 2 Circuit; Gold Plated" H 2450 3800 50  0001 L BNN "Field7"
+F 8 "1053131202" H 2450 3800 50  0001 L BNN "Field8"
+	1    2450 3800
+	0    1    1    0   
+$EndComp
+Text GLabel 2050 5050 2    50   Input ~ 0
+PH3-BOOT0
+Wire Wire Line
+	2050 5050 1550 5050
+Text GLabel 10050 7350 2    50   Input ~ 0
+PH3-BOOT0
+Wire Wire Line
+	10050 7350 9900 7350
+Text GLabel 7950 6250 0    50   Input ~ 0
+~CS1_2
+Text GLabel 1550 5250 2    50   Input ~ 0
+VTREF
 $EndSCHEMATC
