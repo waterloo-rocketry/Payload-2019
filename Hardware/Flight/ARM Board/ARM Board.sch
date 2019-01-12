@@ -584,9 +584,9 @@ Text GLabel 7950 5950 0    50   Input ~ 0
 SCK1
 Text GLabel 9900 6950 2    50   Input ~ 0
 MISO2
-Text GLabel 9900 6550 2    50   Input ~ 0
+Text GLabel 7950 6350 0    50   Input ~ 0
 SCK2
-Text GLabel 9900 6750 2    50   Input ~ 0
+Text GLabel 7950 6250 0    50   Input ~ 0
 ~CS2
 Text GLabel 9900 7050 2    50   Input ~ 0
 MOSI2
@@ -1227,7 +1227,7 @@ Text GLabel 1750 9200 2    50   Input ~ 0
 ~CS2_2
 Wire Wire Line
 	1600 9200 1750 9200
-Text GLabel 9900 6650 2    50   Input ~ 0
+Text GLabel 9900 6850 2    50   Input ~ 0
 ~CS2_2
 Wire Wire Line
 	2350 3450 2350 3600
@@ -1401,7 +1401,7 @@ Text GLabel 10050 7350 2    50   Input ~ 0
 PH3-BOOT0
 Wire Wire Line
 	10050 7350 9900 7350
-Text GLabel 7950 6250 0    50   Input ~ 0
+Text GLabel 7950 7550 0    50   Input ~ 0
 ~CS1_2
 Text GLabel 1550 5250 2    50   Input ~ 0
 VTREF
