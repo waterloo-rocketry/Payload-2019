@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:text="back"/>
+
+    <TextView
+        android:id="@+id/radio_contact_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/back_button"
+        android:layout_centerHorizontal="true"
+        android:text="RADIO CONTACT: "
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/last_contact_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="LAST CONTACT: "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/average_ping_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:text="AVERAGE PING: "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/greendot"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/radio_contact_text"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/radio_contact_text"
+        android:src="@drawable/greendot" />
+
+
+    <ImageView
+        android:id="@+id/reddot"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/radio_contact_text"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/radio_contact_text"
+        android:src="@drawable/reddot" />
+
+    <Button
+        android:id="@+id/button_send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="195dp"
+        android:text="Send Custom Message" />
+
+    <EditText
+        android:id="@+id/radio_contact_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_send_message"
+        android:inputType="text" />
+
+
+
+</RelativeLayout>

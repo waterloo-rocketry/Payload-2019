@@ -1,191 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
 
-
-
-    <!-- for left side !-->
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="32px"
-        android:layout_marginLeft="32px"
-        android:layout_marginRight="32px"
-        android:layout_marginTop="32px"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
-        app:layout_constraintStart_toStartOf="parent">
+    >
 
-        <Button
-            android:id="@+id/armed_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/armed_label"
-            app:layout_constraintBottom_toTopOf="@+id/contact_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/contact_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/contact_label"
-            app:layout_constraintBottom_toTopOf="@+id/button5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/armed_button" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="Button"
-            app:layout_constraintBottom_toTopOf="@+id/battery_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contact_button" />
-
-        <Button
-            android:id="@+id/battery_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:onClick="sendMessage"
-            android:text="@string/battery_label"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
 
 
-    <!-- for middle side !-->
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="32px"
-        android:layout_marginLeft="32px"
-        android:layout_marginRight="32px"
-        android:layout_marginTop="32px"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="Button"
-            app:layout_constraintBottom_toTopOf="@+id/mapView2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_weight="1" />
-
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
-            app:layout_constraintVertical_weight="4" />
-
-    </android.support.constraint.ConstraintLayout>
-
-
-    <!-- for middle side !-->
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout4"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="32px"
-        android:layout_marginLeft="32px"
-        android:layout_marginRight="32px"
-        android:layout_marginTop="32px"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout">
-
-        <Button
-            android:id="@+id/state_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/state_label"
-            app:layout_constraintBottom_toTopOf="@+id/altitude_button"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/altitude_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/altitude_label"
-            app:layout_constraintBottom_toTopOf="@+id/spd_button"
-            app:layout_constraintTop_toBottomOf="@+id/state_button" />
-
-        <Button
-            android:id="@+id/spd_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/spd_label"
-            app:layout_constraintBottom_toTopOf="@+id/apogee_button"
-            app:layout_constraintTop_toBottomOf="@+id/altitude_button" />
-
-        <Button
-            android:id="@+id/apogee_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/apogee"
-            app:layout_constraintBottom_toTopOf="@+id/temp_button"
-            app:layout_constraintTop_toBottomOf="@+id/spd_button" />
-
-        <Button
-            android:id="@+id/temp_button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/temp_label"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/apogee_button" />
-
-    </android.support.constraint.ConstraintLayout>
-
-
-    <!-- for right side !-->
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="32px"
-        android:layout_marginLeft="32px"
-        android:layout_marginRight="32px"
-        android:layout_marginTop="32px"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout4">
-
-        <TableLayout
-            android:id="@+id/tableLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout>
-
-    </android.support.constraint.ConstraintLayout>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">app-practice</string>
+    <string name="app_name">Payload GSE</string>
 
     <string name="armed_label">Armed</string>
     <string name="contact_label">Radio Contact</string>

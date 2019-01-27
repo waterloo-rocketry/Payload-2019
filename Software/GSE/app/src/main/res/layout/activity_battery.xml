@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:text="back"/>
+
+    <TextView
+        android:id="@+id/Battery_Remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/back_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="81dp"
+        android:text="BATTERY REMAINING"
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Battery_percentage_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/back_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp"
+        android:text="NANT "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Battery_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Battery_Remaining"
+        android:layout_centerHorizontal="true"
+        android:text="BATTERY 1"
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:id="@+id/battery_percentage_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_button"
+        android:layout_toEndOf="@+id/greendot1"
+        android:text="NAN1 "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Charging_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Battery_1"
+        android:layout_centerHorizontal="true"
+        android:text="CHARGING "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/battery_temp_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/greendot1"
+        android:layout_toEndOf="@+id/greendot1"
+        android:text="NANTEMP1 "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/greendot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Charging_1"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Battery_1"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/reddot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Charging_1"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Battery_1"
+        android:src="@drawable/reddot" />
+
+    <TextView
+        android:id="@+id/Temperature_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Charging_1"
+        android:layout_centerHorizontal="true"
+        android:text="Temperature "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_disconnect_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text="DISCONNECT" />
+
+
+    <TextView
+        android:id="@+id/Battery_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_disconnect_1"
+        android:layout_centerHorizontal="true"
+        android:text="BATTERY 2"
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:id="@+id/battery_percentage_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_disconnect_1"
+        android:layout_toEndOf="@+id/greendot1"
+        android:text="NAN2 "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Charging_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Battery_2"
+        android:layout_centerHorizontal="true"
+        android:text="CHARGING "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/greendot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Charging_2"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Battery_2"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/reddot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Charging_2"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Battery_2"
+        android:src="@drawable/reddot" />
+
+    <TextView
+        android:id="@+id/Temperature_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Charging_2"
+        android:layout_centerHorizontal="true"
+        android:text="Temperature "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/battery_temp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Charging_2"
+        android:layout_toEndOf="@+id/greendot1"
+        android:text="NANTMEP2 "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_disconnect_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="247dp"
+        android:text="DISCONNECT" />
+
+
+</RelativeLayout>

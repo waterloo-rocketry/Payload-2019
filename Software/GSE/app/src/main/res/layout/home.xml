@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <!-- for left side !-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="32px"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/armed_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/armed_label"
+            app:layout_constraintBottom_toTopOf="@+id/contact_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/armreddot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reddot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/contact_button"
+            app:layout_constraintEnd_toEndOf="@+id/armed_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/armgreendot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/greendot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/contact_button"
+            app:layout_constraintEnd_toEndOf="@+id/armed_button"></ImageView>
+
+        <Button
+            android:id="@+id/contact_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/contact_label"
+            app:layout_constraintBottom_toTopOf="@+id/sd_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/armed_button" />
+
+        <ImageView
+            android:id="@+id/radioreddot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reddot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/sd_button"
+            app:layout_constraintEnd_toEndOf="@+id/contact_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/radiogreendot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/greendot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/sd_button"
+            app:layout_constraintEnd_toEndOf="@+id/contact_button"></ImageView>
+
+        <Button
+            android:id="@+id/sd_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="SD Card 1&#10;SD Card 2"
+            app:layout_constraintBottom_toTopOf="@+id/battery_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_button" />
+
+        <ImageView
+            android:id="@+id/sd1reddot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/reddot"
+            android:translationZ="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sd_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/sd1greendot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/greendot"
+            android:translationZ="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sd_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/sd2reddot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reddot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/battery_button"
+            app:layout_constraintEnd_toEndOf="@+id/sd_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/sd2greendot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/greendot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/battery_button"
+            app:layout_constraintEnd_toEndOf="@+id/sd_button"></ImageView>
+
+        <Button
+            android:id="@+id/battery_button"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="sendMessage"
+            android:text="@string/battery_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sd_button" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!-- for middle side !-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="32px"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/diagnostics_button"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="DIAGNOSTICS"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="3"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/diagnosticsreddot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reddot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/diagnostics_button"
+            app:layout_constraintEnd_toEndOf="@+id/diagnostics_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/diagnosticsgreendot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/greendot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/diagnostics_button"
+            app:layout_constraintEnd_toEndOf="@+id/diagnostics_button"></ImageView>
+
+        <ImageView
+            android:id="@+id/diagnosticsyellowdot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/yellowdot"
+            android:translationZ="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/diagnostics_button"
+            app:layout_constraintEnd_toEndOf="@+id/diagnostics_button"></ImageView>
+
+       <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diagnostics_button"
+            app:layout_constraintVertical_weight="10" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!-- for middle side !-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="32px"
+        android:layout_marginLeft="32px"
+        android:layout_marginRight="32px"
+        android:layout_marginTop="32px"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+        <Button
+            android:id="@+id/state_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/state_label"
+            app:layout_constraintBottom_toTopOf="@+id/altitude_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/altitude_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/altitude_label"
+            app:layout_constraintBottom_toTopOf="@+id/spd_button"
+            app:layout_constraintTop_toBottomOf="@+id/state_button" />
+
+        <Button
+            android:id="@+id/spd_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/spd_label"
+            app:layout_constraintBottom_toTopOf="@+id/apogee_button"
+            app:layout_constraintTop_toBottomOf="@+id/altitude_button" />
+
+        <Button
+            android:id="@+id/apogee_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/apogee"
+            app:layout_constraintBottom_toTopOf="@+id/temp_button"
+            app:layout_constraintTop_toBottomOf="@+id/spd_button" />
+
+        <Button
+            android:id="@+id/temp_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="TEMPERATURE : XXXC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apogee_button" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!-- for right side !-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="32px"
+        android:layout_marginBottom="10dp"
+        android:background="#c5a9c9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/experiment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:text="EXPERIMENT"
+            app:layout_constraintBottom_toTopOf="@+id/acceleration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/acceleration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACCELERATION"
+            app:layout_constraintBottom_toTopOf="@+id/rollrate"
+            app:layout_constraintTop_toBottomOf="@+id/experiment"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/rollrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROLL RATE"
+            app:layout_constraintBottom_toTopOf="@+id/magneticfield"
+            app:layout_constraintTop_toBottomOf="@+id/acceleration"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/experimentrunning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXPERIMENT RUNNING"
+            app:layout_constraintBottom_toTopOf="@+id/solenoid"
+            app:layout_constraintTop_toBottomOf="@+id/flowrate2"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/magneticfield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAGNETIC FIELD"
+            app:layout_constraintBottom_toTopOf="@+id/flowrate1"
+            app:layout_constraintTop_toBottomOf="@+id/rollrate"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/flowrate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FLOW RATE 1"
+            app:layout_constraintBottom_toTopOf="@+id/flowrate2"
+            app:layout_constraintTop_toBottomOf="@+id/magneticfield"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/flowrate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FLOW RATE 2"
+            app:layout_constraintBottom_toTopOf="@+id/experimentrunning"
+            app:layout_constraintTop_toBottomOf="@+id/flowrate1"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/solenoid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOLENOID CURRENT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experimentrunning"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/exprunreddot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/experimentrunning"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/experimentrunning"
+            app:srcCompat="@drawable/reddot" />
+
+        <ImageView
+            android:id="@+id/exprungreendot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/experimentrunning"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/experimentrunning"
+            app:srcCompat="@drawable/greendot" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
