@@ -1227,7 +1227,7 @@ Text GLabel 1750 9200 2    50   Input ~ 0
 ~CS2_2
 Wire Wire Line
 	1600 9200 1750 9200
-Text GLabel 9900 6650 2    50   Input ~ 0
+Text GLabel 9900 6850 2    50   Input ~ 0
 ~CS2_2
 Wire Wire Line
 	2350 3450 2350 3600
@@ -1277,7 +1277,7 @@ $EndComp
 Wire Wire Line
 	13450 5400 13450 5700
 $Comp
-L Payload_Regulators:LD39200PU33R VR1
+L ARM-Board-rescue:LD39200PU33R-Payload_Regulators VR1
 U 1 1 5C3883E7
 P 4100 2250
 F 0 "VR1" H 4225 2375 50  0000 C CNN
@@ -1288,7 +1288,7 @@ F 3 "" H 4100 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Microcontrollers:STM32L4x6RxT6-symbols U1
+L ARM-Board-rescue:STM32L4x6RxT6-symbols-Payload_Microcontrollers U1
 U 1 1 5C399EA6
 P 7950 5350
 F 0 "U1" H 8925 5837 60  0000 C CNN
@@ -1299,7 +1299,7 @@ F 3 "" H 7950 5450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Canhw:MCP2562-canhw U3
+L ARM-Board-rescue:MCP2562-canhw-Payload_Canhw U3
 U 1 1 5C39AF46
 P 5350 7100
 F 0 "U3" H 5325 7365 50  0000 C CNN
@@ -1310,7 +1310,7 @@ F 3 "" H 5350 7100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Connectors:Harwin_M80-5400642 J4
+L ARM-Board-rescue:Harwin_M80-5400642-Payload_Connectors J4
 U 1 1 5C39B5CA
 P 3650 6800
 F 0 "J4" H 3631 6865 50  0000 C CNN
@@ -1321,7 +1321,7 @@ F 3 "" H 3650 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Connectors:Conn_01x20_Female J7
+L ARM-Board-rescue:Conn_01x20_Female-Payload_Connectors J7
 U 1 1 5C39BC26
 P 1450 9250
 F 0 "J7" H 1444 7975 50  0000 C CNN
@@ -1332,7 +1332,7 @@ F 3 "" H 1500 9200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Payload_Microcontrollers:STM32L4x6RxT6-symbols U1
+L ARM-Board-rescue:STM32L4x6RxT6-symbols-Payload_Microcontrollers U1
 U 2 1 5C39C6F4
 P 9500 3100
 F 0 "U1" H 10400 3487 60  0000 C CNN
@@ -1343,7 +1343,7 @@ F 3 "" H 9500 3200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Connectors:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J6
+L ARM-Board-rescue:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue-Payload_Connectors J6
 U 1 1 5C39D0BB
 P 14200 8450
 F 0 "J6" H 14678 8552 60  0000 L CNN
@@ -1354,7 +1354,7 @@ F 3 "" V 14150 8350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Connectors:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue J5
+L ARM-Board-rescue:SD_WM6698CT-ND-ARMlib-ARM-Board-rescue-Payload_Connectors J5
 U 1 1 5C39D81A
 P 12350 8150
 F 0 "J5" H 12828 8252 60  0000 L CNN
@@ -1365,7 +1365,7 @@ F 3 "" V 12300 8050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Microcontrollers:SRAM_23LC1024T-I_ST-ARMlib U2
+L ARM-Board-rescue:SRAM_23LC1024T-I_ST-ARMlib-Payload_Microcontrollers U2
 U 1 1 5C39E125
 P 12700 5550
 F 0 "U2" H 12800 5665 50  0000 C CNN
@@ -1378,7 +1378,7 @@ $EndComp
 Wire Wire Line
 	7250 5350 7700 5350
 $Comp
-L Molex_Nano:1053131202 J3
+L ARM-Board-rescue:1053131202-Molex_Nano J3
 U 1 1 5C4A9E40
 P 2450 3800
 F 0 "J3" V 2348 3930 50  0000 L CNN
