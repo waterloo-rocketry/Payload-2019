@@ -343,10 +343,6 @@ $EndComp
 Text Notes 1050 900  0    50   ~ 0
 Design heavily based on https://cdn.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Explorer-Dongle-v23.pdf
 Wire Wire Line
-	1650 2450 1150 2450
-Wire Wire Line
-	1550 2350 1150 2350
-Wire Wire Line
 	850  2900 850  2850
 Wire Wire Line
 	750  2750 750  2850
@@ -362,25 +358,14 @@ TO TABLET
 Text Notes 8550 5550 0    50   ~ 0
 USB TO UART
 $Comp
-L canhw:PIC18F26K83 U1
+L canhw:PICLF26K83 U1
 U 1 1 5C4F4F80
 P 5550 4300
 F 0 "U1" H 5525 5215 50  0000 C CNN
-F 1 "PIC18F26K83" H 5525 5124 50  0000 C CNN
+F 1 "PICLF26K83" H 5525 5124 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-28W_7.5x18.7mm_Pitch1.27mm" H 6000 4300 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001943A.pdf" H 6000 4300 50  0001 C CNN
+F 3 "" H 6000 4300 50  0001 C CNN
 	1    5550 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0103
-U 1 1 5C4F533C
-P 6450 3500
-F 0 "#PWR0103" H 6450 3350 50  0001 C CNN
-F 1 "+5V" H 6465 3673 50  0000 C CNN
-F 2 "" H 6450 3500 50  0001 C CNN
-F 3 "" H 6450 3500 50  0001 C CNN
-	1    6450 3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -427,17 +412,6 @@ Wire Wire Line
 	4600 3500 4600 3650
 Wire Wire Line
 	4600 3650 4800 3650
-$Comp
-L power:+5V #PWR0106
-U 1 1 5C4F8A5B
-P 4600 3200
-F 0 "#PWR0106" H 4600 3050 50  0001 C CNN
-F 1 "+5V" H 4615 3373 50  0000 C CNN
-F 2 "" H 4600 3200 50  0001 C CNN
-F 3 "" H 4600 3200 50  0001 C CNN
-	1    4600 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x05_Female J4
 U 1 1 5C4F8C66
@@ -792,9 +766,9 @@ Wire Wire Line
 	8900 2500 8800 2500
 Text Notes 1100 5900 0    50   ~ 0
 TO PIC PROGRAMMER
-Text Label 8100 4000 2    50   ~ 0
-USBD+
 Text Label 8100 4100 2    50   ~ 0
+USBD+
+Text Label 8100 4000 2    50   ~ 0
 USBD-
 Text Label 2900 3200 0    50   ~ 0
 USBD+
@@ -850,9 +824,9 @@ D1-
 Wire Wire Line
 	1150 2150 2400 2150
 Wire Wire Line
-	1650 2450 1650 3200
+	1650 2350 1650 3200
 Wire Wire Line
-	1550 2350 1550 3300
+	1550 2450 1550 3300
 $Comp
 L Device:D_TVS D1
 U 1 1 5C5A0958
@@ -879,4 +853,30 @@ Wire Wire Line
 	2850 2200 2850 2150
 Wire Wire Line
 	2400 2150 2850 2150
+Wire Wire Line
+	1650 2350 1150 2350
+Wire Wire Line
+	1150 2450 1550 2450
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C7F9CD3
+P 4600 3200
+F 0 "#PWR?" H 4600 3050 50  0001 C CNN
+F 1 "+3.3V" H 4615 3373 50  0000 C CNN
+F 2 "" H 4600 3200 50  0001 C CNN
+F 3 "" H 4600 3200 50  0001 C CNN
+	1    4600 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C7F9D60
+P 6450 3500
+F 0 "#PWR?" H 6450 3350 50  0001 C CNN
+F 1 "+3.3V" H 6465 3673 50  0000 C CNN
+F 2 "" H 6450 3500 50  0001 C CNN
+F 3 "" H 6450 3500 50  0001 C CNN
+	1    6450 3500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
