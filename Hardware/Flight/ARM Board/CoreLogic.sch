@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -66,8 +66,6 @@ F 3 "~" H 1250 2700 50  0001 C CNN
 	1    1250 2700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1100 2550 1250 2550
 Connection ~ 1250 2550
 Wire Wire Line
 	3800 1350 4650 1350
@@ -78,39 +76,39 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 5D19DB3C
-P 5100 2250
+P 5200 2250
 AR Path="/5D19DB3C" Ref="C?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB3C" Ref="C?"  Part="1" 
-F 0 "C?" H 5215 2296 50  0000 L CNN
-F 1 "1uF" H 5215 2205 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5138 2100 50  0001 C CNN
-F 3 "~" H 5100 2250 50  0001 C CNN
-	1    5100 2250
+F 0 "C?" H 5315 2296 50  0000 L CNN
+F 1 "1uF" H 5315 2205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5238 2100 50  0001 C CNN
+F 3 "~" H 5200 2250 50  0001 C CNN
+	1    5200 2250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5D19DB43
-P 5450 2250
+P 5550 2250
 AR Path="/5D19DB43" Ref="C?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB43" Ref="C?"  Part="1" 
-F 0 "C?" H 5565 2296 50  0000 L CNN
-F 1 "10uF" H 5565 2205 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5488 2100 50  0001 C CNN
-F 3 "~" H 5450 2250 50  0001 C CNN
-	1    5450 2250
+F 0 "C?" H 5665 2296 50  0000 L CNN
+F 1 "10uF" H 5665 2205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5588 2100 50  0001 C CNN
+F 3 "~" H 5550 2250 50  0001 C CNN
+	1    5550 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 2100 5100 2050
+	5200 2100 5200 2050
 Wire Wire Line
-	5100 2050 4650 2050
+	5200 2050 4850 2050
 Connection ~ 4650 2050
 Wire Wire Line
-	5450 2100 5450 2050
+	5550 2100 5550 2050
 Wire Wire Line
-	5450 2050 5100 2050
-Connection ~ 5100 2050
+	5550 2050 5200 2050
+Connection ~ 5200 2050
 $Comp
 L power:GND #PWR?
 U 1 1 5D19DB50
@@ -153,27 +151,27 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5D19DB62
-P 5100 2400
+P 5200 2400
 AR Path="/5D19DB62" Ref="#PWR?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB62" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5100 2150 50  0001 C CNN
-F 1 "GND" H 5105 2227 50  0000 C CNN
-F 2 "" H 5100 2400 50  0001 C CNN
-F 3 "" H 5100 2400 50  0001 C CNN
-	1    5100 2400
+F 0 "#PWR?" H 5200 2150 50  0001 C CNN
+F 1 "GND" H 5205 2227 50  0000 C CNN
+F 2 "" H 5200 2400 50  0001 C CNN
+F 3 "" H 5200 2400 50  0001 C CNN
+	1    5200 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5D19DB68
-P 5450 2400
+P 5550 2400
 AR Path="/5D19DB68" Ref="#PWR?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB68" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5450 2150 50  0001 C CNN
-F 1 "GND" H 5455 2227 50  0000 C CNN
-F 2 "" H 5450 2400 50  0001 C CNN
-F 3 "" H 5450 2400 50  0001 C CNN
-	1    5450 2400
+F 0 "#PWR?" H 5550 2150 50  0001 C CNN
+F 1 "GND" H 5555 2227 50  0000 C CNN
+F 2 "" H 5550 2400 50  0001 C CNN
+F 3 "" H 5550 2400 50  0001 C CNN
+	1    5550 2400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -195,32 +193,32 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 5D19DB79
-P 5850 2250
+P 5950 2250
 AR Path="/5D19DB79" Ref="C?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB79" Ref="C?"  Part="1" 
-F 0 "C?" H 5965 2296 50  0000 L CNN
-F 1 "100uF" H 5965 2205 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5888 2100 50  0001 C CNN
-F 3 "~" H 5850 2250 50  0001 C CNN
-	1    5850 2250
+F 0 "C?" H 6065 2296 50  0000 L CNN
+F 1 "100uF" H 6065 2205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5988 2100 50  0001 C CNN
+F 3 "~" H 5950 2250 50  0001 C CNN
+	1    5950 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5850 2100 5850 2050
+	5950 2100 5950 2050
 Wire Wire Line
-	5850 2050 5450 2050
-Connection ~ 5450 2050
+	5950 2050 5550 2050
+Connection ~ 5550 2050
 $Comp
 L power:GND #PWR?
 U 1 1 5D19DB83
-P 5850 2400
+P 5950 2400
 AR Path="/5D19DB83" Ref="#PWR?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB83" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5850 2150 50  0001 C CNN
-F 1 "GND" H 5855 2227 50  0000 C CNN
-F 2 "" H 5850 2400 50  0001 C CNN
-F 3 "" H 5850 2400 50  0001 C CNN
-	1    5850 2400
+F 0 "#PWR?" H 5950 2150 50  0001 C CNN
+F 1 "GND" H 5955 2227 50  0000 C CNN
+F 2 "" H 5950 2400 50  0001 C CNN
+F 3 "" H 5950 2400 50  0001 C CNN
+	1    5950 2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -265,25 +263,6 @@ Connection ~ 2500 2250
 Wire Wire Line
 	2500 2250 2500 2050
 Connection ~ 4650 2850
-$Comp
-L Device:R R?
-U 1 1 5D19DBCF
-P 7200 1400
-AR Path="/5D19DBCF" Ref="R?"  Part="1" 
-AR Path="/5D19D8A9/5D19DBCF" Ref="R?"  Part="1" 
-F 0 "R?" H 7270 1446 50  0000 L CNN
-F 1 "10K" H 7270 1355 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 7130 1400 50  0001 C CNN
-F 3 "~" H 7200 1400 50  0001 C CNN
-	1    7200 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7200 1050 7200 1250
-Wire Wire Line
-	7200 1550 7200 1650
-Wire Wire Line
-	7200 1650 7450 1650
 Wire Wire Line
 	7350 3150 7450 3150
 Wire Wire Line
@@ -291,17 +270,16 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5D19DBE5
-P 6500 1650
+P 6400 1650
 AR Path="/5D19DBE5" Ref="R?"  Part="1" 
 AR Path="/5D19D8A9/5D19DBE5" Ref="R?"  Part="1" 
-F 0 "R?" V 6300 1600 50  0000 L CNN
-F 1 "0" V 6400 1600 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 6430 1650 50  0001 C CNN
-F 3 "~" H 6500 1650 50  0001 C CNN
-	1    6500 1650
+F 0 "R?" V 6200 1600 50  0000 L CNN
+F 1 "0" V 6300 1600 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 6330 1650 50  0001 C CNN
+F 3 "~" H 6400 1650 50  0001 C CNN
+	1    6400 1650
 	0    1    1    0   
 $EndComp
-Connection ~ 7200 1650
 Wire Wire Line
 	2700 2650 2500 2650
 Wire Wire Line
@@ -376,12 +354,10 @@ F 3 "" H 4200 5400 50  0001 C CNN
 	1    4200 5400
 	1    0    0    -1  
 $EndComp
-Text HLabel 1100 2550 0    50   Input ~ 0
+Text HLabel 750  2550 0    50   Input ~ 0
 3v3
 Wire Wire Line
 	2150 2550 2500 2550
-Text HLabel 7200 1050 1    50   Input ~ 0
-3v3
 $Comp
 L power:GND #PWR?
 U 1 1 5D1BC4B3
@@ -418,7 +394,7 @@ Connection ~ 1750 5700
 Text Notes 850  6400 0    50   ~ 0
 STM PROGRAMMING HEADER
 Wire Wire Line
-	6650 1650 7200 1650
+	6550 1650 6600 1650
 Text Label 1350 5000 0    50   ~ 0
 JTRST|~RST
 Text Label 1200 5100 0    50   ~ 0
@@ -443,8 +419,6 @@ Text Label 7350 3050 2    50   ~ 0
 JTMS_SWDIO
 Text HLabel 1200 5900 2    50   Input ~ 0
 3v3
-Text HLabel 4750 5550 2    50   Input ~ 0
-3v3
 Wire Wire Line
 	1750 5700 1750 6000
 Text HLabel 1200 5300 2    50   Input ~ 0
@@ -457,8 +431,6 @@ Text Label 9400 2450 0    50   ~ 0
 ~CS3
 Text Label 7450 4650 2    50   ~ 0
 MISO3
-Text Label 4750 5650 0    50   ~ 0
-~HOLD3
 Text Label 4750 5750 0    50   ~ 0
 SCK3
 Text Label 4750 5850 0    50   ~ 0
@@ -473,143 +445,70 @@ Text Notes 3100 3200 0    50   ~ 0
 STM POWER MANAGEMENT
 Text Notes 8300 5450 0    50   ~ 0
 STM LOGIC
-$Comp
-L Device:Crystal_GND23 Y?
-U 1 1 5D1F0C3C
-P 10000 5300
-AR Path="/5D1F0C3C" Ref="Y?"  Part="1" 
-AR Path="/5D19D8A9/5D1F0C3C" Ref="Y?"  Part="1" 
-F 0 "Y?" H 10000 5650 50  0000 L CNN
-F 1 "Crystal_GND23" H 9700 4950 50  0000 L CNN
-F 2 "Payload_XTAL:MC-306" H 10000 5300 50  0001 C CNN
-F 3 "~" H 10000 5300 50  0001 C CNN
-	1    10000 5300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9400 4900 9650 4900
-Wire Wire Line
-	9650 4900 9650 5300
 Wire Wire Line
 	9650 5300 9850 5300
 Wire Wire Line
 	9400 4800 10350 4800
 Wire Wire Line
-	10350 4800 10350 5300
-Wire Wire Line
 	10350 5300 10150 5300
 $Comp
 L Device:C_Small C?
 U 1 1 5D1F4C89
-P 10350 5900
+P 10350 5600
 AR Path="/5D1F4C89" Ref="C?"  Part="1" 
 AR Path="/5D19D8A9/5D1F4C89" Ref="C?"  Part="1" 
-F 0 "C?" H 10442 5946 50  0000 L CNN
-F 1 "C_Small" H 10442 5855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 10350 5900 50  0001 C CNN
-F 3 "~" H 10350 5900 50  0001 C CNN
-	1    10350 5900
+F 0 "C?" H 10442 5646 50  0000 L CNN
+F 1 "C_Small" H 10442 5555 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10350 5600 50  0001 C CNN
+F 3 "~" H 10350 5600 50  0001 C CNN
+	1    10350 5600
 	1    0    0    -1  
 $EndComp
 Connection ~ 10350 5300
 $Comp
 L Device:C_Small C?
 U 1 1 5D1F6D2A
-P 9650 5850
+P 9650 5550
 AR Path="/5D1F6D2A" Ref="C?"  Part="1" 
 AR Path="/5D19D8A9/5D1F6D2A" Ref="C?"  Part="1" 
-F 0 "C?" H 9450 5900 50  0000 L CNN
-F 1 "C_Small" H 9250 5800 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 9650 5850 50  0001 C CNN
-F 3 "~" H 9650 5850 50  0001 C CNN
-	1    9650 5850
+F 0 "C?" H 9450 5600 50  0000 L CNN
+F 1 "C_Small" H 9250 5500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9650 5550 50  0001 C CNN
+F 3 "~" H 9650 5550 50  0001 C CNN
+	1    9650 5550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5D1F8EC7
-P 10000 6200
+P 10000 5900
 AR Path="/5D1F8EC7" Ref="#PWR?"  Part="1" 
 AR Path="/5D19D8A9/5D1F8EC7" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 10000 5950 50  0001 C CNN
-F 1 "GND" H 10005 6027 50  0000 C CNN
-F 2 "" H 10000 6200 50  0001 C CNN
-F 3 "" H 10000 6200 50  0001 C CNN
-	1    10000 6200
+F 0 "#PWR?" H 10000 5650 50  0001 C CNN
+F 1 "GND" H 10005 5727 50  0000 C CNN
+F 2 "" H 10000 5900 50  0001 C CNN
+F 3 "" H 10000 5900 50  0001 C CNN
+	1    10000 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 6050 10350 6050
+	10000 5750 10350 5750
 Wire Wire Line
-	10000 6050 10000 6200
-$Comp
-L Device:R R?
-U 1 1 5D1FFC34
-P 10600 5050
-AR Path="/5D1FFC34" Ref="R?"  Part="1" 
-AR Path="/5D19D8A9/5D1FFC34" Ref="R?"  Part="1" 
-F 0 "R?" V 10700 4950 50  0000 L CNN
-F 1 "DNP" V 10500 4950 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 10530 5050 50  0001 C CNN
-F 3 "~" H 10600 5050 50  0001 C CNN
-	1    10600 5050
-	0    1    1    0   
-$EndComp
+	10000 5750 10000 5900
 Wire Wire Line
-	10450 5050 10000 5050
+	10350 5750 10350 5700
 Wire Wire Line
-	10000 5050 10000 5100
-$Comp
-L Device:R R?
-U 1 1 5D2047FB
-P 10600 5550
-AR Path="/5D2047FB" Ref="R?"  Part="1" 
-AR Path="/5D19D8A9/5D2047FB" Ref="R?"  Part="1" 
-F 0 "R?" V 10700 5450 50  0000 L CNN
-F 1 "DNP" V 10500 5450 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 10530 5550 50  0001 C CNN
-F 3 "~" H 10600 5550 50  0001 C CNN
-	1    10600 5550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10350 6050 10350 6000
-Wire Wire Line
-	10350 5800 10350 5300
+	10350 5500 10350 5300
 Connection ~ 9650 5300
 Wire Wire Line
-	9650 5750 9650 5300
+	9650 5450 9650 5300
 Wire Wire Line
-	10000 6050 9650 6050
+	10000 5750 9650 5750
 Wire Wire Line
-	9650 6050 9650 5950
-Connection ~ 10000 6050
-Wire Wire Line
-	10000 5500 10000 5550
-Wire Wire Line
-	10000 5550 10450 5550
-$Comp
-L power:GND #PWR?
-U 1 1 5D219D5D
-P 10950 5750
-AR Path="/5D219D5D" Ref="#PWR?"  Part="1" 
-AR Path="/5D19D8A9/5D219D5D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 10950 5500 50  0001 C CNN
-F 1 "GND" H 10955 5577 50  0000 C CNN
-F 2 "" H 10950 5750 50  0001 C CNN
-F 3 "" H 10950 5750 50  0001 C CNN
-	1    10950 5750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10950 5550 10750 5550
-Wire Wire Line
-	10950 5550 10950 5750
-Wire Wire Line
-	10950 5550 10950 5050
-Wire Wire Line
-	10950 5050 10750 5050
-Connection ~ 10950 5550
+	9650 5750 9650 5650
+Connection ~ 10000 5750
 Text HLabel 7450 1950 0    50   Input ~ 0
 UART_TX
 Text HLabel 7450 2050 0    50   Input ~ 0
@@ -703,8 +602,131 @@ Text HLabel 6500 2800 1    50   Input ~ 0
 3v3
 Wire Wire Line
 	1200 5000 1350 5000
-Text Label 6350 1650 2    50   ~ 0
+Text Label 6250 1650 2    50   ~ 0
 JTRST|~RST
 Text Label 9400 2250 0    50   ~ 0
 JTRST|~RST
+$Comp
+L Device:Crystal Y?
+U 1 1 5D568D2B
+P 10000 5300
+F 0 "Y?" H 10000 5568 50  0000 C CNN
+F 1 "Crystal" H 10000 5477 50  0000 C CNN
+F 2 "" H 10000 5300 50  0001 C CNN
+F 3 "~" H 10000 5300 50  0001 C CNN
+	1    10000 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 4900 9650 5300
+Wire Wire Line
+	10350 4800 10350 5300
+$Comp
+L Device:C C?
+U 1 1 5D56B09D
+P 6600 1800
+AR Path="/5D56B09D" Ref="C?"  Part="1" 
+AR Path="/5D19D8A9/5D56B09D" Ref="C?"  Part="1" 
+F 0 "C?" H 6715 1846 50  0000 L CNN
+F 1 "0.1uF" H 6715 1755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6638 1650 50  0001 C CNN
+F 3 "~" H 6600 1800 50  0001 C CNN
+	1    6600 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 1650
+$Comp
+L power:GND #PWR?
+U 1 1 5D56B111
+P 6600 1950
+AR Path="/5D56B111" Ref="#PWR?"  Part="1" 
+AR Path="/5D19D8A9/5D56B111" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6600 1700 50  0001 C CNN
+F 1 "GND" H 6605 1777 50  0000 C CNN
+F 2 "" H 6600 1950 50  0001 C CNN
+F 3 "" H 6600 1950 50  0001 C CNN
+	1    6600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1650 7450 1650
+$Comp
+L Device:C C?
+U 1 1 5D56F313
+P 800 2700
+AR Path="/5D56F313" Ref="C?"  Part="1" 
+AR Path="/5D19D8A9/5D56F313" Ref="C?"  Part="1" 
+F 0 "C?" H 915 2746 50  0000 L CNN
+F 1 "4.7uF" H 915 2655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 838 2550 50  0001 C CNN
+F 3 "~" H 800 2700 50  0001 C CNN
+	1    800  2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  2550 800  2550
+$Comp
+L power:GND #PWR?
+U 1 1 5D57213C
+P 800 2850
+AR Path="/5D57213C" Ref="#PWR?"  Part="1" 
+AR Path="/5D19D8A9/5D57213C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 800 2600 50  0001 C CNN
+F 1 "GND" H 805 2677 50  0000 C CNN
+F 2 "" H 800 2850 50  0001 C CNN
+F 3 "" H 800 2850 50  0001 C CNN
+	1    800  2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 800  2550
+Wire Wire Line
+	800  2550 1250 2550
+$Comp
+L Device:C C?
+U 1 1 5D577CED
+P 4850 2250
+AR Path="/5D577CED" Ref="C?"  Part="1" 
+AR Path="/5D19D8A9/5D577CED" Ref="C?"  Part="1" 
+F 0 "C?" H 4965 2296 50  0000 L CNN
+F 1 "1uF" H 4965 2205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4888 2100 50  0001 C CNN
+F 3 "~" H 4850 2250 50  0001 C CNN
+	1    4850 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2100 4850 2050
+Connection ~ 4850 2050
+Wire Wire Line
+	4850 2050 4650 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5D5794A0
+P 4850 2400
+AR Path="/5D5794A0" Ref="#PWR?"  Part="1" 
+AR Path="/5D19D8A9/5D5794A0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4850 2150 50  0001 C CNN
+F 1 "GND" H 4855 2227 50  0000 C CNN
+F 2 "" H 4850 2400 50  0001 C CNN
+F 3 "" H 4850 2400 50  0001 C CNN
+	1    4850 2400
+	1    0    0    -1  
+$EndComp
+Text HLabel 9400 1850 2    50   Input ~ 0
+CARD_DETECT_1
+Text HLabel 9400 1950 2    50   Input ~ 0
+CARD_DETECT_2
+Text HLabel 5050 5400 1    50   Input ~ 0
+3v3
+Wire Wire Line
+	5050 5400 5050 5550
+Wire Wire Line
+	5050 5550 4750 5550
+Wire Wire Line
+	4750 5650 5050 5650
+Wire Wire Line
+	5050 5650 5050 5550
+Connection ~ 5050 5550
+Text HLabel 7450 3650 0    50   Input ~ 0
+CURR_AMP
 $EndSCHEMATC
