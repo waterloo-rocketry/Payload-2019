@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -327,7 +327,7 @@ Connection ~ 4450 3400
 Wire Wire Line
 	4700 2750 5200 2750
 Text GLabel 5200 2250 1    50   Input ~ 0
-VBUS
+VUSB
 Wire Wire Line
 	5200 2250 5200 2750
 Connection ~ 5200 2750
