@@ -126,28 +126,28 @@ Text Notes 9300 3400 0    50   ~ 0
 $Comp
 L pspice:DIODE D?
 U 1 1 5CBE1CEA
-P 2500 3300
+P 2850 3300
 AR Path="/5CBE1CEA" Ref="D?"  Part="1" 
 AR Path="/5CBBDC2B/5CBE1CEA" Ref="D?"  Part="1" 
-F 0 "D?" H 2500 3000 50  0000 C CNN
-F 1 "BAT60JFILM" H 2500 3100 50  0000 C CNN
-F 2 "Diodes_SMD:D_SOD-323_HandSoldering" H 2500 3300 50  0001 C CNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/3d/d2/27/1d/20/e3/4d/48/CD00001944.pdf/files/CD00001944.pdf/jcr:content/translations/en.CD00001944.pdf" H 2500 3300 50  0001 C CNN
-	1    2500 3300
+F 0 "D?" H 2850 3000 50  0000 C CNN
+F 1 "BAT60JFILM" H 2850 3100 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" H 2850 3300 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/3d/d2/27/1d/20/e3/4d/48/CD00001944.pdf/files/CD00001944.pdf/jcr:content/translations/en.CD00001944.pdf" H 2850 3300 50  0001 C CNN
+	1    2850 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 2400 2700 2400
-Connection ~ 3000 2400
-Text Notes 2350 3900 0    50   ~ 0
+	3350 2400 3050 2400
+Connection ~ 3350 2400
+Text Notes 2700 3900 0    50   ~ 0
 5v source selection (canhw, bus or usb)
-Text HLabel 2450 2050 0    50   Input ~ 0
+Text HLabel 2800 2050 0    50   Input ~ 0
 5_USB
-Text HLabel 1900 3300 0    50   Input ~ 0
+Text HLabel 2250 3300 0    50   Input ~ 0
 5_CANHW
-Text HLabel 2450 2750 0    50   Input ~ 0
+Text HLabel 2800 2750 0    50   Input ~ 0
 5_BUS
-Text HLabel 3000 2250 1    50   Input ~ 0
+Text HLabel 3350 2250 1    50   Input ~ 0
 +5V
 Text HLabel 8950 3150 0    50   Input ~ 0
 3V3_BUS
@@ -156,82 +156,80 @@ Text HLabel 9500 2800 2    50   Input ~ 0
 Text Notes 5100 3450 0    50   ~ 0
 selected 5v source to 3.3v
 Wire Wire Line
-	3000 2250 3000 2400
+	3350 2250 3350 2400
 $Comp
 L Device:Q_PMOS_DGS Q?
 U 1 1 5D7103F5
-P 2100 3400
-F 0 "Q?" V 2500 3250 50  0000 C CNN
-F 1 "Q_PMOS_DGS" V 2350 3250 50  0000 C CNN
-F 2 "" H 2300 3500 50  0001 C CNN
-F 3 "~" H 2100 3400 50  0001 C CNN
-	1    2100 3400
+P 2450 3400
+F 0 "Q?" V 2850 3250 50  0000 C CNN
+F 1 "Q_PMOS_DGS" V 2700 3250 50  0000 C CNN
+F 2 "" H 2650 3500 50  0001 C CNN
+F 3 "~" H 2450 3400 50  0001 C CNN
+	1    2450 3400
 	0    1    -1   0   
 $EndComp
 Connection ~ 4500 2400
 Wire Wire Line
-	3000 2400 4500 2400
+	3350 2400 4500 2400
 $Comp
 L Device:D_Schottky_x2_KCom_AAK D?
 U 1 1 5D711358
-P 1750 4050
-F 0 "D?" V 1796 4128 50  0000 L CNN
-F 1 "D_Schottky_x2_KCom_AAK" V 1705 4128 50  0000 L CNN
-F 2 "" H 1750 4050 50  0001 C CNN
-F 3 "~" H 1750 4050 50  0001 C CNN
-	1    1750 4050
+P 1650 4050
+F 0 "D?" V 1696 4128 50  0000 L CNN
+F 1 "D_Schottky_x2_KCom_AAK" V 1605 4128 50  0000 L CNN
+F 2 "" H 1650 4050 50  0001 C CNN
+F 3 "~" H 1650 4050 50  0001 C CNN
+	1    1650 4050
 	0    -1   -1   0   
 $EndComp
-Text HLabel 1700 3700 0    50   Input ~ 0
+Text HLabel 1600 3700 0    50   Input ~ 0
 5_BUS
-Text HLabel 1700 4400 0    50   Input ~ 0
+Text HLabel 1600 4400 0    50   Input ~ 0
 5_USB
 Wire Wire Line
-	1950 4050 2100 4050
-Wire Wire Line
-	2100 4050 2100 3600
+	2450 4050 2450 3600
 $Comp
 L Device:R R?
 U 1 1 5D713A24
-P 2100 4300
-F 0 "R?" H 2170 4346 50  0000 L CNN
-F 1 "10k" H 2170 4255 50  0000 L CNN
-F 2 "" V 2030 4300 50  0001 C CNN
-F 3 "~" H 2100 4300 50  0001 C CNN
-	1    2100 4300
+P 2450 4300
+F 0 "R?" H 2520 4346 50  0000 L CNN
+F 1 "10k" H 2520 4255 50  0000 L CNN
+F 2 "" V 2380 4300 50  0001 C CNN
+F 3 "~" H 2450 4300 50  0001 C CNN
+	1    2450 4300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 4150 2100 4050
-Connection ~ 2100 4050
+	2450 4150 2450 4050
+Connection ~ 2450 4050
 $Comp
 L power:GND #PWR?
 U 1 1 5D713D84
-P 2100 4450
+P 2450 4450
 AR Path="/5D713D84" Ref="#PWR?"  Part="1" 
 AR Path="/5CBBDC2B/5D713D84" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2100 4200 50  0001 C CNN
-F 1 "GND" H 2105 4277 50  0000 C CNN
-F 2 "" H 2100 4450 50  0001 C CNN
-F 3 "" H 2100 4450 50  0001 C CNN
-	1    2100 4450
+F 0 "#PWR?" H 2450 4200 50  0001 C CNN
+F 1 "GND" H 2455 4277 50  0000 C CNN
+F 2 "" H 2450 4450 50  0001 C CNN
+F 3 "" H 2450 4450 50  0001 C CNN
+	1    2450 4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2700 3300 3000 3300
+	3050 3300 3350 3300
 $Comp
 L Device:D_Schottky_x2_KCom_AAK D?
 U 1 1 5D714452
-P 2500 2400
-F 0 "D?" V 2546 2478 50  0000 L CNN
-F 1 "D_Schottky_x2_KCom_AAK" V 2455 2478 50  0000 L CNN
-F 2 "" H 2500 2400 50  0001 C CNN
-F 3 "~" H 2500 2400 50  0001 C CNN
-	1    2500 2400
+P 2850 2400
+F 0 "D?" V 2896 2478 50  0000 L CNN
+F 1 "D_Schottky_x2_KCom_AAK" V 2805 2478 50  0000 L CNN
+F 2 "" H 2850 2400 50  0001 C CNN
+F 3 "~" H 2850 2400 50  0001 C CNN
+	1    2850 2400
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3000 2400 3000 3300
+	3350 2400 3350 2500
 $Comp
 L Device:D_Schottky_x2_KCom_AAK D?
 U 1 1 5D714C8D
@@ -248,25 +246,49 @@ Wire Wire Line
 Wire Wire Line
 	6400 2400 9000 2400
 Wire Wire Line
-	4750 2400 4950 2400
+	2850 2750 2800 2750
 Wire Wire Line
-	2500 2750 2450 2750
+	2850 2700 2850 2750
 Wire Wire Line
-	2500 2700 2500 2750
+	2800 2050 2850 2050
 Wire Wire Line
-	2450 2050 2500 2050
+	2850 2050 2850 2100
 Wire Wire Line
-	2500 2050 2500 2100
+	1600 3700 1650 3700
 Wire Wire Line
-	1700 3700 1750 3700
+	1650 3700 1650 3750
 Wire Wire Line
-	1750 3700 1750 3750
+	1600 4400 1650 4400
 Wire Wire Line
-	1700 4400 1750 4400
-Wire Wire Line
-	1750 4400 1750 4350
+	1650 4400 1650 4350
 Wire Wire Line
 	8950 3150 9000 3150
 Wire Wire Line
 	9000 3150 9000 3100
+$Comp
+L Device:Jumper JP?
+U 1 1 5D80E2ED
+P 2150 4050
+F 0 "JP?" H 2150 4314 50  0000 C CNN
+F 1 "Jumper" H 2150 4223 50  0000 C CNN
+F 2 "" H 2150 4050 50  0001 C CNN
+F 3 "~" H 2150 4050 50  0001 C CNN
+	1    2150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP?
+U 1 1 5D80EE39
+P 3350 2800
+F 0 "JP?" V 3304 2927 50  0000 L CNN
+F 1 "Jumper" V 3395 2927 50  0000 L CNN
+F 2 "" H 3350 2800 50  0001 C CNN
+F 3 "~" H 3350 2800 50  0001 C CNN
+	1    3350 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 3100 3350 3300
+Wire Wire Line
+	4750 2400 4950 2400
 $EndSCHEMATC

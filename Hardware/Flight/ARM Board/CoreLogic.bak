@@ -395,8 +395,8 @@ Text Notes 850  6400 0    50   ~ 0
 STM PROGRAMMING HEADER
 Wire Wire Line
 	6550 1650 6600 1650
-Text Label 1350 5000 0    50   ~ 0
-JTRST|~RST
+Text Label 1200 5000 0    50   ~ 0
+~(JTRST|RST)
 Text Label 1200 5100 0    50   ~ 0
 PH3-BOOT0
 Text Label 9400 3650 0    50   ~ 0
@@ -600,10 +600,8 @@ Wire Wire Line
 Connection ~ 6650 3550
 Text HLabel 6500 2800 1    50   Input ~ 0
 3v3
-Wire Wire Line
-	1200 5000 1350 5000
 Text Label 6250 1650 2    50   ~ 0
-JTRST|~RST
+~(JTRST|RST)
 Text Label 9400 2250 0    50   ~ 0
 JTRST|~RST
 $Comp
