@@ -1,6 +1,2 @@
 (fp_lib_table
-  (lib (name Payload_Connectors)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/footprints/Payload_Connectors.pretty")(options "")(descr ""))
-  (lib (name Payload_Oscillators)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/footprints/Payload_Oscillators.pretty")(options "")(descr ""))
-  (lib (name Payload_StandardPackages)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/footprints/Payload_StandardPackages.pretty")(options "")(descr ""))
-  (lib (name Payload_Switches)(type KiCad)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/footprints/Payload_Switches.pretty")(options "")(descr ""))
 )
