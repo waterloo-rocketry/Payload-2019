@@ -61,11 +61,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Payload_Connections:Conn_01x20_Female
+# Payload_Connectors:Conn_01x20_Female
 #
-DEF Payload_Connections:Conn_01x20_Female J 0 40 Y N 1 F N
+DEF Payload_Connectors:Conn_01x20_Female J 0 40 Y N 1 F N
 F0 "J" 50 950 50 H V C CNN
-F1 "Payload_Connections:Conn_01x20_Female" 50 -1150 50 H V C CNN
+F1 "Payload_Connectors:Conn_01x20_Female" 50 -1150 50 H V C CNN
 F2 "" 50 -50 50 H I C CNN
 F3 "" 50 -50 50 H I C CNN
 $FPLIST
@@ -113,7 +113,7 @@ P 2 1 1 6 0 550 30 550 N
 P 2 1 1 6 0 650 30 650 N
 P 2 1 1 6 0 750 30 750 N
 P 2 1 1 6 0 850 30 850 N
-X Pin_1 1 -150 850 150 R 50 50 1 1 P
+X GND 1 -150 850 150 R 50 50 1 1 P
 X Pin_10 10 -150 -50 150 R 50 50 1 1 P
 X Pin_11 11 -150 -150 150 R 50 50 1 1 P
 X Pin_12 12 -150 -250 150 R 50 50 1 1 P
@@ -124,7 +124,7 @@ X Pin_16 16 -150 -650 150 R 50 50 1 1 P
 X Pin_17 17 -150 -750 150 R 50 50 1 1 P
 X Pin_18 18 -150 -850 150 R 50 50 1 1 P
 X Pin_19 19 -150 -950 150 R 50 50 1 1 P
-X Pin_2 2 -150 750 150 R 50 50 1 1 P
+X SDA 2 -150 750 150 R 50 50 1 1 P
 X Pin_20 20 -150 -1050 150 R 50 50 1 1 P
 X Pin_3 3 -150 650 150 R 50 50 1 1 P
 X Pin_4 4 -150 550 150 R 50 50 1 1 P

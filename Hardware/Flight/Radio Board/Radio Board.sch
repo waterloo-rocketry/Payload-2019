@@ -37,7 +37,7 @@ F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 2800 5000 50  0001 C
 	1    0    0    -1  
 $EndComp
 $Comp
-L Payload_Connections:Conn_01x20_Female J1
+L Payload_Connectors:Conn_01x20_Female J1
 U 1 1 5C146FED
 P 2950 4300
 F 0 "J1" H 3127 4241 50  0000 L CNN
@@ -87,9 +87,9 @@ Text GLabel 3100 4350 2    50   Input ~ 0
 CS1
 Text GLabel 3100 4250 2    50   Input ~ 0
 CS2
-Text GLabel 3100 4150 2    50   Input ~ 0
+Text GLabel 3100 4750 2    50   Input ~ 0
 INT1
-Text GLabel 3100 4050 2    50   Input ~ 0
+Text GLabel 3100 4850 2    50   Input ~ 0
 INT2
 $Comp
 L power:GND #PWR0103
@@ -191,17 +191,13 @@ F 3 "" H 6100 4400 50  0001 C CNN
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 3100 3950 2    50   Input ~ 0
-RST1
-Text GLabel 3100 3850 2    50   Input ~ 0
-RST2
 $Comp
 L Device:R R2
 U 1 1 5C1530ED
 P 4750 4650
 F 0 "R2" H 4820 4696 50  0000 L CNN
 F 1 "10k" H 4820 4605 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4680 4650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4680 4650 50  0001 C CNN
 F 3 "~" H 4750 4650 50  0001 C CNN
 	1    4750 4650
 	1    0    0    -1  
@@ -217,11 +213,6 @@ F 3 "" H 4750 4500 50  0001 C CNN
 	1    4750 4500
 	1    0    0    -1  
 $EndComp
-Text GLabel 4650 5350 0    50   Input ~ 0
-RST2
-Wire Wire Line
-	4650 5350 4750 5350
-Connection ~ 4750 5350
 Wire Wire Line
 	4750 5350 5600 5350
 $Comp
@@ -230,7 +221,7 @@ U 1 1 5C1536B6
 P 5200 4650
 F 0 "R4" H 5270 4696 50  0000 L CNN
 F 1 "10k" H 5270 4605 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5130 4650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5130 4650 50  0001 C CNN
 F 3 "~" H 5200 4650 50  0001 C CNN
 	1    5200 4650
 	1    0    0    -1  
@@ -267,7 +258,7 @@ U 1 1 5C153CAF
 P 4750 2850
 F 0 "R1" H 4820 2896 50  0000 L CNN
 F 1 "10k" H 4820 2805 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4680 2850 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4680 2850 50  0001 C CNN
 F 3 "~" H 4750 2850 50  0001 C CNN
 	1    4750 2850
 	1    0    0    -1  
@@ -283,11 +274,6 @@ F 3 "" H 4750 2700 50  0001 C CNN
 	1    4750 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 4650 3550 0    50   Input ~ 0
-RST1
-Wire Wire Line
-	4650 3550 4750 3550
-Connection ~ 4750 3550
 Wire Wire Line
 	4750 3550 5600 3550
 $Comp
@@ -296,7 +282,7 @@ U 1 1 5C153CBF
 P 5200 2850
 F 0 "R3" H 5270 2896 50  0000 L CNN
 F 1 "10k" H 5270 2805 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5130 2850 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5130 2850 50  0001 C CNN
 F 3 "~" H 5200 2850 50  0001 C CNN
 	1    5200 2850
 	1    0    0    -1  
@@ -377,7 +363,7 @@ U 1 1 5C1B1B15
 P 6550 2450
 F 0 "C1" H 6665 2496 50  0000 L CNN
 F 1 "10uF" H 6665 2405 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6588 2300 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6588 2300 50  0001 C CNN
 F 3 "~" H 6550 2450 50  0001 C CNN
 	1    6550 2450
 	1    0    0    -1  
@@ -410,7 +396,7 @@ U 1 1 5C1B236E
 P 7900 4700
 F 0 "C2" H 8015 4746 50  0000 L CNN
 F 1 "10uF" H 8015 4655 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7938 4550 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7938 4550 50  0001 C CNN
 F 3 "~" H 7900 4700 50  0001 C CNN
 	1    7900 4700
 	1    0    0    -1  
