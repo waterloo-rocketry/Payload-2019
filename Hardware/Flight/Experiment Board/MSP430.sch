@@ -1,0 +1,178 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Payload_Microcontrollers:MSP430FR2355-MSP430FR2355 U?
+U 1 1 5C9525BA
+P 5750 3700
+F 0 "U?" H 5800 5187 60  0000 C CNN
+F 1 "MSP430FR2355-MSP430FR2355" H 5800 5081 60  0000 C CNN
+F 2 "ModelRocketNFCAvionicsLibrary:48-LQFP" H 5750 2250 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/msp430fr2355.pdf" H 5750 2150 60  0001 C CNN
+F 4 "296-50261-1-ND" H 5750 2050 60  0001 C CNN "Digi-Key Part Number"
+	1    5750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C95267A
+P 3150 3350
+F 0 "#PWR?" H 3150 3100 50  0001 C CNN
+F 1 "GND" H 3155 3177 50  0000 C CNN
+F 2 "" H 3150 3350 50  0001 C CNN
+F 3 "" H 3150 3350 50  0001 C CNN
+	1    3150 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 3350 3150 3100
+Wire Wire Line
+	3150 3100 3700 3100
+$Comp
+L Device:C C?
+U 1 1 5C9526B2
+P 2750 3200
+F 0 "C?" H 2865 3246 50  0000 L CNN
+F 1 "100nF" H 2865 3155 50  0000 L CNN
+F 2 "" H 2788 3050 50  0001 C CNN
+F 3 "~" H 2750 3200 50  0001 C CNN
+	1    2750 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9526E8
+P 2300 3200
+F 0 "C?" H 2415 3246 50  0000 L CNN
+F 1 "10uF" H 2415 3155 50  0000 L CNN
+F 2 "" H 2338 3050 50  0001 C CNN
+F 3 "~" H 2300 3200 50  0001 C CNN
+	1    2300 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3050 2300 3000
+Wire Wire Line
+	2300 3000 2750 3000
+Wire Wire Line
+	2750 3050 2750 3000
+Connection ~ 2750 3000
+Wire Wire Line
+	2750 3000 3700 3000
+$Comp
+L power:GND #PWR?
+U 1 1 5C952734
+P 2750 3350
+F 0 "#PWR?" H 2750 3100 50  0001 C CNN
+F 1 "GND" H 2755 3177 50  0000 C CNN
+F 2 "" H 2750 3350 50  0001 C CNN
+F 3 "" H 2750 3350 50  0001 C CNN
+	1    2750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C952745
+P 2300 3350
+F 0 "#PWR?" H 2300 3100 50  0001 C CNN
+F 1 "GND" H 2305 3177 50  0000 C CNN
+F 2 "" H 2300 3350 50  0001 C CNN
+F 3 "" H 2300 3350 50  0001 C CNN
+	1    2300 3350
+	1    0    0    -1  
+$EndComp
+Text Label 3700 3200 2    50   ~ 0
+CLKIN
+Text Label 3700 3300 2    50   ~ 0
+CLKOUT
+$Comp
+L Device:Crystal Y?
+U 1 1 5C952D05
+P 2200 6300
+F 0 "Y?" H 2200 6568 50  0000 C CNN
+F 1 "Crystal" H 2200 6477 50  0000 C CNN
+F 2 "" H 2200 6300 50  0001 C CNN
+F 3 "~" H 2200 6300 50  0001 C CNN
+	1    2200 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C952DD0
+P 2450 6550
+F 0 "C?" H 2542 6596 50  0000 L CNN
+F 1 "C_Small" H 2542 6505 50  0000 L CNN
+F 2 "" H 2450 6550 50  0001 C CNN
+F 3 "~" H 2450 6550 50  0001 C CNN
+	1    2450 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C952E08
+P 1950 6550
+F 0 "C?" H 2042 6596 50  0000 L CNN
+F 1 "C_Small" H 2042 6505 50  0000 L CNN
+F 2 "" H 1950 6550 50  0001 C CNN
+F 3 "~" H 1950 6550 50  0001 C CNN
+	1    1950 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 6450 1950 6300
+Wire Wire Line
+	1950 6300 2050 6300
+Wire Wire Line
+	2350 6300 2450 6300
+Wire Wire Line
+	2450 6300 2450 6450
+$Comp
+L power:GND #PWR?
+U 1 1 5C952F09
+P 2450 6650
+F 0 "#PWR?" H 2450 6400 50  0001 C CNN
+F 1 "GND" H 2455 6477 50  0000 C CNN
+F 2 "" H 2450 6650 50  0001 C CNN
+F 3 "" H 2450 6650 50  0001 C CNN
+	1    2450 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C952F27
+P 1950 6650
+F 0 "#PWR?" H 1950 6400 50  0001 C CNN
+F 1 "GND" H 1955 6477 50  0000 C CNN
+F 2 "" H 1950 6650 50  0001 C CNN
+F 3 "" H 1950 6650 50  0001 C CNN
+	1    1950 6650
+	1    0    0    -1  
+$EndComp
+Text Label 1950 6150 1    50   ~ 0
+CLKIN
+Text Label 2450 6150 1    50   ~ 0
+CLKOUT
+Wire Wire Line
+	2450 6150 2450 6300
+Connection ~ 2450 6300
+Wire Wire Line
+	1950 6150 1950 6300
+Connection ~ 1950 6300
+Text HLabel 2300 2850 1    50   Input ~ 0
+3v3
+Wire Wire Line
+	2300 2850 2300 3000
+Connection ~ 2300 3000
+$EndSCHEMATC

@@ -1,0 +1,237 @@
+EESchema Schematic File Version 4
+LIBS:Experiment Board-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Payload_Transistors:SIRA22DP-T1-RE3 U?
+U 1 1 5CA18CE8
+P 5800 3300
+AR Path="/5CA18CE8" Ref="U?"  Part="1" 
+AR Path="/5CA15234/5CA18CE8" Ref="U2"  Part="1" 
+AR Path="/5CA1DEB9/5CA18CE8" Ref="U4"  Part="1" 
+AR Path="/5CA51936/5CA18CE8" Ref="U7"  Part="1" 
+AR Path="/5CA5193B/5CA18CE8" Ref="U9"  Part="1" 
+F 0 "U9" H 5800 3625 50  0000 C CNN
+F 1 "SIRA22DP-T1-RE3" H 5800 3534 50  0000 C CNN
+F 2 "" H 5800 3300 50  0001 C CNN
+F 3 "" H 5800 3300 50  0001 C CNN
+	1    5800 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Transistors:SIRA22DP-T1-RE3 U?
+U 1 1 5CA18CEF
+P 5800 4850
+AR Path="/5CA18CEF" Ref="U?"  Part="1" 
+AR Path="/5CA15234/5CA18CEF" Ref="U3"  Part="1" 
+AR Path="/5CA1DEB9/5CA18CEF" Ref="U5"  Part="1" 
+AR Path="/5CA51936/5CA18CEF" Ref="U8"  Part="1" 
+AR Path="/5CA5193B/5CA18CEF" Ref="U10"  Part="1" 
+F 0 "U10" H 5800 5175 50  0000 C CNN
+F 1 "SIRA22DP-T1-RE3" H 5800 5084 50  0000 C CNN
+F 2 "" H 5800 4850 50  0001 C CNN
+F 3 "" H 5800 4850 50  0001 C CNN
+	1    5800 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3200 5450 3200
+Wire Wire Line
+	5450 4950 5300 4950
+Wire Wire Line
+	5300 4950 5300 4850
+Wire Wire Line
+	5300 4750 5450 4750
+Wire Wire Line
+	5450 4850 5300 4850
+Connection ~ 5300 4850
+Wire Wire Line
+	5300 4850 5300 4750
+Wire Wire Line
+	5300 4950 5300 5050
+Wire Wire Line
+	5300 5050 5450 5050
+Connection ~ 5300 4950
+$Comp
+L power:+24V #PWR?
+U 1 1 5CA18D02
+P 6350 3050
+AR Path="/5CA18D02" Ref="#PWR?"  Part="1" 
+AR Path="/5CA15234/5CA18D02" Ref="#PWR011"  Part="1" 
+AR Path="/5CA1DEB9/5CA18D02" Ref="#PWR015"  Part="1" 
+AR Path="/5CA51936/5CA18D02" Ref="#PWR026"  Part="1" 
+AR Path="/5CA5193B/5CA18D02" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 6350 2900 50  0001 C CNN
+F 1 "+24V" H 6365 3223 50  0000 C CNN
+F 2 "" H 6350 3050 50  0001 C CNN
+F 3 "" H 6350 3050 50  0001 C CNN
+	1    6350 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3050 6350 3200
+Wire Wire Line
+	6350 3500 6150 3500
+Wire Wire Line
+	6150 3400 6350 3400
+Connection ~ 6350 3400
+Wire Wire Line
+	6350 3400 6350 3500
+Wire Wire Line
+	6150 3300 6350 3300
+Connection ~ 6350 3300
+Wire Wire Line
+	6350 3300 6350 3400
+Wire Wire Line
+	6150 3200 6350 3200
+Connection ~ 6350 3200
+Wire Wire Line
+	6350 3200 6350 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5CA18D13
+P 6350 5100
+AR Path="/5CA18D13" Ref="#PWR?"  Part="1" 
+AR Path="/5CA15234/5CA18D13" Ref="#PWR012"  Part="1" 
+AR Path="/5CA1DEB9/5CA18D13" Ref="#PWR016"  Part="1" 
+AR Path="/5CA51936/5CA18D13" Ref="#PWR027"  Part="1" 
+AR Path="/5CA5193B/5CA18D13" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 6350 4850 50  0001 C CNN
+F 1 "GND" H 6355 4927 50  0000 C CNN
+F 2 "" H 6350 5100 50  0001 C CNN
+F 3 "" H 6350 5100 50  0001 C CNN
+	1    6350 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4950 6350 4950
+Wire Wire Line
+	6350 4950 6350 5100
+Wire Wire Line
+	6150 4850 6350 4850
+Wire Wire Line
+	6350 4850 6350 4950
+Connection ~ 6350 4950
+Wire Wire Line
+	6150 4750 6350 4750
+Wire Wire Line
+	6350 4750 6350 4850
+Connection ~ 6350 4850
+Wire Wire Line
+	5300 4750 5200 4750
+Connection ~ 5300 4750
+Wire Wire Line
+	5200 3400 5200 4100
+Wire Wire Line
+	5300 3300 5300 3200
+Wire Wire Line
+	5300 3300 5450 3300
+Connection ~ 5300 3300
+Wire Wire Line
+	5300 3400 5200 3400
+Wire Wire Line
+	5450 3400 5300 3400
+Connection ~ 5300 3400
+Wire Wire Line
+	5300 3400 5300 3300
+$Comp
+L Device:C C?
+U 1 1 5CA18D2B
+P 6550 3400
+AR Path="/5CA18D2B" Ref="C?"  Part="1" 
+AR Path="/5CA15234/5CA18D2B" Ref="C6"  Part="1" 
+AR Path="/5CA1DEB9/5CA18D2B" Ref="C8"  Part="1" 
+AR Path="/5CA51936/5CA18D2B" Ref="C15"  Part="1" 
+AR Path="/5CA5193B/5CA18D2B" Ref="C17"  Part="1" 
+F 0 "C17" H 6665 3446 50  0000 L CNN
+F 1 "100nF" H 6665 3355 50  0000 L CNN
+F 2 "" H 6588 3250 50  0001 C CNN
+F 3 "~" H 6550 3400 50  0001 C CNN
+	1    6550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5CA18D32
+P 7000 3400
+AR Path="/5CA18D32" Ref="C?"  Part="1" 
+AR Path="/5CA15234/5CA18D32" Ref="C7"  Part="1" 
+AR Path="/5CA1DEB9/5CA18D32" Ref="C9"  Part="1" 
+AR Path="/5CA51936/5CA18D32" Ref="C16"  Part="1" 
+AR Path="/5CA5193B/5CA18D32" Ref="C18"  Part="1" 
+F 0 "C18" H 7115 3446 50  0000 L CNN
+F 1 "100nF" H 7115 3355 50  0000 L CNN
+F 2 "" H 7038 3250 50  0001 C CNN
+F 3 "~" H 7000 3400 50  0001 C CNN
+	1    7000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CA18D39
+P 6550 3550
+AR Path="/5CA18D39" Ref="#PWR?"  Part="1" 
+AR Path="/5CA15234/5CA18D39" Ref="#PWR013"  Part="1" 
+AR Path="/5CA1DEB9/5CA18D39" Ref="#PWR017"  Part="1" 
+AR Path="/5CA51936/5CA18D39" Ref="#PWR028"  Part="1" 
+AR Path="/5CA5193B/5CA18D39" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 6550 3300 50  0001 C CNN
+F 1 "GND" H 6555 3377 50  0000 C CNN
+F 2 "" H 6550 3550 50  0001 C CNN
+F 3 "" H 6550 3550 50  0001 C CNN
+	1    6550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CA18D3F
+P 7000 3550
+AR Path="/5CA18D3F" Ref="#PWR?"  Part="1" 
+AR Path="/5CA15234/5CA18D3F" Ref="#PWR014"  Part="1" 
+AR Path="/5CA1DEB9/5CA18D3F" Ref="#PWR018"  Part="1" 
+AR Path="/5CA51936/5CA18D3F" Ref="#PWR029"  Part="1" 
+AR Path="/5CA5193B/5CA18D3F" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 7000 3300 50  0001 C CNN
+F 1 "GND" H 7005 3377 50  0000 C CNN
+F 2 "" H 7000 3550 50  0001 C CNN
+F 3 "" H 7000 3550 50  0001 C CNN
+	1    7000 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3200 6550 3200
+Wire Wire Line
+	6550 3200 6550 3250
+Wire Wire Line
+	6550 3200 7000 3200
+Connection ~ 6550 3200
+Wire Wire Line
+	7000 3250 7000 3200
+Text Notes 7450 3350 0    50   ~ 0
+HIGH SIDE NMOS
+Text Notes 7500 4900 0    50   ~ 0
+LOW SIDE NMOS
+Text HLabel 5450 3500 0    50   Input ~ 0
+GH
+Text HLabel 6150 5050 2    50   Input ~ 0
+GL
+Text HLabel 5100 4100 0    50   Input ~ 0
+OUT
+Wire Wire Line
+	5100 4100 5200 4100
+Wire Wire Line
+	5200 4100 5200 4750
+Connection ~ 5200 4100
+$EndSCHEMATC

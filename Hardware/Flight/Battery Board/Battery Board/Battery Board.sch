@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5C944294
+P 2050 1550
+F 0 "J?" H 1970 1225 50  0000 C CNN
+F 1 "Conn_01x02" H 1970 1316 50  0000 C CNN
+F 2 "" H 2050 1550 50  0001 C CNN
+F 3 "~" H 2050 1550 50  0001 C CNN
+	1    2050 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5C94431A
+P 2050 2050
+F 0 "J?" H 1970 1725 50  0000 C CNN
+F 1 "Conn_01x02" H 1970 1816 50  0000 C CNN
+F 2 "" H 2050 2050 50  0001 C CNN
+F 3 "~" H 2050 2050 50  0001 C CNN
+	1    2050 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5C944340
+P 2150 3350
+F 0 "J?" H 2070 3567 50  0000 C CNN
+F 1 "Conn_01x02" H 2070 3476 50  0000 C CNN
+F 2 "" H 2150 3350 50  0001 C CNN
+F 3 "~" H 2150 3350 50  0001 C CNN
+	1    2150 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5C944374
+P 2150 3800
+F 0 "J?" H 2070 4017 50  0000 C CNN
+F 1 "Conn_01x02" H 2070 3926 50  0000 C CNN
+F 2 "" H 2150 3800 50  0001 C CNN
+F 3 "~" H 2150 3800 50  0001 C CNN
+	1    2150 3800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1550 2400 1550
+Wire Wire Line
+	2400 1550 2400 1950
+Wire Wire Line
+	2400 1950 2250 1950
+$Comp
+L power:GND #PWR?
+U 1 1 5C944BE7
+P 2400 2150
+F 0 "#PWR?" H 2400 1900 50  0001 C CNN
+F 1 "GND" H 2405 1977 50  0000 C CNN
+F 2 "" H 2400 2150 50  0001 C CNN
+F 3 "" H 2400 2150 50  0001 C CNN
+	1    2400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2150 2400 2050
+Wire Wire Line
+	2400 2050 2250 2050
+Wire Wire Line
+	2350 3450 2500 3450
+Wire Wire Line
+	2500 3450 2500 3800
+Wire Wire Line
+	2500 3800 2350 3800
+$Comp
+L power:GND #PWR?
+U 1 1 5C944F39
+P 2500 4050
+F 0 "#PWR?" H 2500 3800 50  0001 C CNN
+F 1 "GND" H 2505 3877 50  0000 C CNN
+F 2 "" H 2500 4050 50  0001 C CNN
+F 3 "" H 2500 4050 50  0001 C CNN
+	1    2500 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3900 2350 3900
+Wire Wire Line
+	2500 3900 2500 4050
+Text Notes 1950 1150 0    50   ~ 0
++24V source
+Text Notes 2050 3100 0    50   ~ 0
+-24V source
+$Sheet
+S 2700 1150 900  400 
+U 5C9451D7
+F0 "Current Monitoring" 50
+F1 "CurrentMonitoring.sch" 50
+F2 "3v3" I L 2700 1250 50 
+F3 "VOUT" I R 3600 1450 50 
+F4 "VIN" I L 2700 1450 50 
+F5 "CURR_MEAS" I R 3600 1250 50 
+$EndSheet
+Wire Wire Line
+	2250 1450 2700 1450
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C945C58
+P 2600 1000
+F 0 "#PWR?" H 2600 850 50  0001 C CNN
+F 1 "+3V3" H 2615 1173 50  0000 C CNN
+F 2 "" H 2600 1000 50  0001 C CNN
+F 3 "" H 2600 1000 50  0001 C CNN
+	1    2600 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1000 2600 1250
+Wire Wire Line
+	2600 1250 2700 1250
+$Sheet
+S 2800 3050 900  400 
+U 5C945D17
+F0 "sheet5C945D17" 50
+F1 "CurrentMonitoring.sch" 50
+F2 "3v3" I L 2800 3150 50 
+F3 "VOUT" I R 3700 3350 50 
+F4 "VIN" I L 2800 3350 50 
+F5 "CURR_MEAS" I R 3700 3150 50 
+$EndSheet
+Wire Wire Line
+	2350 3350 2800 3350
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C945D1E
+P 2700 2900
+F 0 "#PWR?" H 2700 2750 50  0001 C CNN
+F 1 "+3V3" H 2715 3073 50  0000 C CNN
+F 2 "" H 2700 2900 50  0001 C CNN
+F 3 "" H 2700 2900 50  0001 C CNN
+	1    2700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2900 2700 3150
+Wire Wire Line
+	2700 3150 2800 3150
+$Comp
+L Regulator_Switching:TSR_1-2433 U?
+U 1 1 5C945EDD
+P 4650 1550
+F 0 "U?" H 4650 1917 50  0000 C CNN
+F 1 "TSR_1-2433" H 4650 1826 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 4650 1400 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 4650 1550 50  0001 C CNN
+	1    4650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9460EA
+P 4650 1750
+F 0 "#PWR?" H 4650 1500 50  0001 C CNN
+F 1 "GND" H 4655 1577 50  0000 C CNN
+F 2 "" H 4650 1750 50  0001 C CNN
+F 3 "" H 4650 1750 50  0001 C CNN
+	1    4650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Connectors:Conn_01x20_Female J?
+U 1 1 5C946211
+P 8550 1850
+F 0 "J?" H 8727 1791 50  0000 L CNN
+F 1 "Conn_01x20_Female" H 8727 1700 50  0000 L CNN
+F 2 "" H 8600 1800 50  0001 C CNN
+F 3 "" H 8600 1800 50  0001 C CNN
+	1    8550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Payload_Power:P7805-Q24-S5-S U?
+U 1 1 5C9465EC
+P 4650 2350
+F 0 "U?" H 4675 2665 50  0000 C CNN
+F 1 "P7805-Q24-S5-S" H 4675 2574 50  0000 C CNN
+F 2 "" H 4650 2350 50  0001 C CNN
+F 3 "" H 4650 2350 50  0001 C CNN
+	1    4650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C94697B
+P 4650 2700
+F 0 "#PWR?" H 4650 2450 50  0001 C CNN
+F 1 "GND" H 4655 2527 50  0000 C CNN
+F 2 "" H 4650 2700 50  0001 C CNN
+F 3 "" H 4650 2700 50  0001 C CNN
+	1    4650 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1450 3950 1450
+Wire Wire Line
+	4150 2350 3950 2350
+Wire Wire Line
+	3950 2350 3950 1450
+Connection ~ 3950 1450
+Wire Wire Line
+	3950 1450 4250 1450
+$Comp
+L power:+5V #PWR?
+U 1 1 5C946F4A
+P 5300 2250
+F 0 "#PWR?" H 5300 2100 50  0001 C CNN
+F 1 "+5V" H 5315 2423 50  0000 C CNN
+F 2 "" H 5300 2250 50  0001 C CNN
+F 3 "" H 5300 2250 50  0001 C CNN
+	1    5300 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C946F9D
+P 5150 1350
+F 0 "#PWR?" H 5150 1200 50  0001 C CNN
+F 1 "+3V3" H 5165 1523 50  0000 C CNN
+F 2 "" H 5150 1350 50  0001 C CNN
+F 3 "" H 5150 1350 50  0001 C CNN
+	1    5150 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1350 5150 1450
+Wire Wire Line
+	5150 1450 5050 1450
+Wire Wire Line
+	5200 2350 5300 2350
+Wire Wire Line
+	5300 2350 5300 2250
+$Comp
+L power:+5V #PWR?
+U 1 1 5C94771A
+P 8250 950
+F 0 "#PWR?" H 8250 800 50  0001 C CNN
+F 1 "+5V" H 8265 1123 50  0000 C CNN
+F 2 "" H 8250 950 50  0001 C CNN
+F 3 "" H 8250 950 50  0001 C CNN
+	1    8250 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 950  8250 1000
+Wire Wire Line
+	8250 1000 8400 1000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C947A36
+P 8050 950
+F 0 "#PWR?" H 8050 800 50  0001 C CNN
+F 1 "+3V3" H 8065 1123 50  0000 C CNN
+F 2 "" H 8050 950 50  0001 C CNN
+F 3 "" H 8050 950 50  0001 C CNN
+	1    8050 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 950  8050 1100
+Wire Wire Line
+	8050 1100 8400 1100
+$Comp
+L power:GND #PWR?
+U 1 1 5C947D70
+P 8300 3000
+F 0 "#PWR?" H 8300 2750 50  0001 C CNN
+F 1 "GND" H 8305 2827 50  0000 C CNN
+F 2 "" H 8300 3000 50  0001 C CNN
+F 3 "" H 8300 3000 50  0001 C CNN
+	1    8300 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3000 8300 2900
+Wire Wire Line
+	8300 2900 8400 2900
+$EndSCHEMATC
