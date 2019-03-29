@@ -895,4 +895,6 @@ F 3 "" H 5050 5400 50  0001 C CNN
 	1    5050 5400
 	1    0    0    -1  
 $EndComp
+Text Notes 10100 1550 0    50   ~ 0
+2v drop, 20mA max per pin
 $EndSCHEMATC
