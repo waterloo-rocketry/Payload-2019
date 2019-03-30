@@ -568,14 +568,6 @@ Text Label 1350 3700 0    50   ~ 0
 CURR_3
 Text Label 1350 3800 0    50   ~ 0
 CURR_4
-Text Label 7450 2900 0    50   ~ 0
-CURR_1
-Text Label 7450 3300 0    50   ~ 0
-CURR_2
-Text Label 7400 4400 0    50   ~ 0
-CURR_3
-Text Label 7400 4800 0    50   ~ 0
-CURR_4
 Text Label 1350 4800 0    50   ~ 0
 SCL
 Text Label 1350 4900 0    50   ~ 0
@@ -726,4 +718,113 @@ Text Label 7400 4300 0    50   ~ 0
 FAULT5
 Text Label 7400 4900 0    50   ~ 0
 FAULT6
+$Comp
+L Analog_ADC:ADS1015IDGS U?
+U 1 1 5C9FA6D0
+P 9350 3800
+F 0 "U?" H 9050 4500 50  0000 C CNN
+F 1 "ADS1015IDGS" H 9050 4350 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 9350 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads1015.pdf" H 9300 2900 50  0001 C CNN
+	1    9350 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C9FA956
+P 9350 3100
+F 0 "#PWR?" H 9350 2950 50  0001 C CNN
+F 1 "+3V3" H 9365 3273 50  0000 C CNN
+F 2 "" H 9350 3100 50  0001 C CNN
+F 3 "" H 9350 3100 50  0001 C CNN
+	1    9350 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 3100 9350 3200
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C9FC444
+P 10150 3750
+F 0 "#PWR?" H 10150 3600 50  0001 C CNN
+F 1 "+3V3" H 10165 3923 50  0000 C CNN
+F 2 "" H 10150 3750 50  0001 C CNN
+F 3 "" H 10150 3750 50  0001 C CNN
+	1    10150 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3750 10150 4000
+Wire Wire Line
+	10150 4000 9750 4000
+Text Label 9750 3800 0    50   ~ 0
+SCL
+Text Label 9750 3900 0    50   ~ 0
+SDA
+$Comp
+L Device:C C?
+U 1 1 5C9FE1D0
+P 9600 3200
+F 0 "C?" V 9348 3200 50  0000 C CNN
+F 1 "0.1uF" V 9439 3200 50  0000 C CNN
+F 2 "" H 9638 3050 50  0001 C CNN
+F 3 "~" H 9600 3200 50  0001 C CNN
+	1    9600 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9450 3200 9350 3200
+Connection ~ 9350 3200
+Wire Wire Line
+	9350 3200 9350 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5C9FFAB0
+P 9800 3250
+F 0 "#PWR?" H 9800 3000 50  0001 C CNN
+F 1 "GND" H 9805 3077 50  0000 C CNN
+F 2 "" H 9800 3250 50  0001 C CNN
+F 3 "" H 9800 3250 50  0001 C CNN
+	1    9800 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3200 9800 3200
+Wire Wire Line
+	9800 3200 9800 3250
+Wire Wire Line
+	7400 4400 8650 4400
+Wire Wire Line
+	8650 4400 8650 3900
+Wire Wire Line
+	8650 3900 8950 3900
+Wire Wire Line
+	7400 4800 8750 4800
+Wire Wire Line
+	8750 4800 8750 4000
+Wire Wire Line
+	8750 4000 8950 4000
+Wire Wire Line
+	7450 2900 8750 2900
+Wire Wire Line
+	8950 3700 8750 3700
+Wire Wire Line
+	8750 3700 8750 2900
+Wire Wire Line
+	8950 3800 8650 3800
+Wire Wire Line
+	8650 3800 8650 3300
+Wire Wire Line
+	8650 3300 7450 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5CA0F165
+P 9350 4200
+F 0 "#PWR?" H 9350 3950 50  0001 C CNN
+F 1 "GND" H 9355 4027 50  0000 C CNN
+F 2 "" H 9350 4200 50  0001 C CNN
+F 3 "" H 9350 4200 50  0001 C CNN
+	1    9350 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
