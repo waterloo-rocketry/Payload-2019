@@ -1,0 +1,44 @@
+OSMDROID OFFLINE STUFF
+
+getting set up:
+
+clone osmdroid repo
+
+in parent build.gradle, set
+classpath "com.android.tools.build:gradle:3.3.0"
+
+in gradle-wrapper.properties, set
+distributionUrl=https\://services.gradle.org/distributions/gradle-4.10.2-all.zip
+
+in command line, from OSMMapTilePackager, do
+gradlew build
+cd build\distributions
+unzip OSMMapTilePackager-6.1.0-SNAPSHOT.zip
+cd OSMMapTilePackager-6.1.0-SNAPSHOT/bin
+./OSMMapTilePackager
+
+run the thing with
+OSMMapTilePackager -gui
+
+it'll generate a zip, go inside the zip and rename the top level folder to Mapnik
+
+use adb to put zip file in phone/tablet
+adb shell rm -r /sdcard/osmdroid/
+adb shell mkdir /sdcard/osmdroid/
+adb push ~/path/to/your/Mapnik.zip /sdcard/osmdroid
+
+note these permissions are needed in AndroidManifest.xml under <application> section
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+===
+(SF PARAMETERS)
+-u http://b.tile.openstreetmap.org/%d/%d/%d.png -t Mapnik -d us_sanfrancisco_mapnik_17.zip -zmax 17 -n 37.811976 -s 37.699600 -e -122.345098 -w -122.521050
+
+(SWEDEN PARAMETERS)
+
+java -jar OSMMapTilePackager-6.1.0-SNAPSHOT.jar -u http://b.tile.openstreetmap.org/%d/%d/%d.png -t Mapnik -d se_mapnik_12.zip -zmax 12 -n 69.05567 -s 55.18336 -e 24.31045 -w 11.17080
