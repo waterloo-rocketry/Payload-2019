@@ -589,7 +589,7 @@ Wire Wire Line
 	7800 3250 7950 3250
 Connection ~ 7950 3250
 Text HLabel 7800 3250 0    50   Input ~ 0
-FAULT2
+~FAULT2
 $Comp
 L Device:R R5
 U 1 1 5C9DCACD
@@ -622,7 +622,7 @@ Wire Wire Line
 	7750 5250 7900 5250
 Connection ~ 7900 5250
 Text HLabel 7750 5250 0    50   Input ~ 0
-FAULT3
+~FAULT3
 Wire Wire Line
 	8650 5250 8650 5150
 $Comp

@@ -20,7 +20,7 @@ U 1 1 5C146D43
 P 5700 4600
 F 0 "U2" H 5950 5150 50  0000 C CNN
 F 1 "RFM95W-915S2" H 6200 5050 50  0000 C CNN
-F 2 "RF_Modules:Hopref_RFM9XW_THT" H 2400 6250 50  0001 C CNN
+F 2 "RF_Modules:Hopref_RFM9XW_SMD" H 2400 6250 50  0001 C CNN
 F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 2400 6250 50  0001 C CNN
 	1    5700 4600
 	1    0    0    -1  
@@ -31,21 +31,10 @@ U 1 1 5C146ECD
 P 5700 2200
 F 0 "U1" H 5950 2750 50  0000 C CNN
 F 1 "RFM95W-915S2" H 6200 2650 50  0000 C CNN
-F 2 "RF_Modules:Hopref_RFM9XW_THT" H 2400 3850 50  0001 C CNN
+F 2 "RF_Modules:Hopref_RFM9XW_SMD" H 2400 3850 50  0001 C CNN
 F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 2400 3850 50  0001 C CNN
 	1    5700 2200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Payload_Connectors:Conn_01x20_Female J1
-U 1 1 5C146FED
-P 1700 4000
-F 0 "J1" H 1877 3941 50  0000 L CNN
-F 1 "Conn_01x20_Female" H 1877 3850 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x10_Pitch2.54mm" H 1750 3950 50  0001 C CNN
-F 3 "" H 1750 3950 50  0001 C CNN
-	1    1700 4000
-	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0101
@@ -629,4 +618,15 @@ F 3 "" H 7850 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6200 4700 6900 4700
+$Comp
+L Payload_Connectors:Bus_Connector J?
+U 1 1 5CC7A6A1
+P 1650 3950
+F 0 "J?" H 1461 5175 50  0000 C CNN
+F 1 "Bus_Connector" H 1461 5084 50  0000 C CNN
+F 2 "" H 1750 4700 50  0001 C CNN
+F 3 "" H 1750 4700 50  0001 C CNN
+	1    1650 3950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

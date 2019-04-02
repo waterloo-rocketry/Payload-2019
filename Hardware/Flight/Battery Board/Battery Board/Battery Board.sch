@@ -242,12 +242,12 @@ $EndComp
 $Comp
 L Device:D_Schottky_x2_KCom_KAA D1
 U 1 1 5C9F2FC4
-P 3900 2850
-F 0 "D1" V 3946 2928 50  0000 L CNN
-F 1 "D_Schottky_x2_KCom_KAA" V 3750 1800 50  0000 L CNN
-F 2 "" H 3900 2850 50  0001 C CNN
-F 3 "~" H 3900 2850 50  0001 C CNN
-	1    3900 2850
+P 4050 2850
+F 0 "D1" V 4096 2928 50  0000 L CNN
+F 1 "D_Schottky_x2_KCom_KAA" V 3900 1800 50  0000 L CNN
+F 2 "" H 4050 2850 50  0001 C CNN
+F 3 "~" H 4050 2850 50  0001 C CNN
+	1    4050 2850
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -465,15 +465,15 @@ Connection ~ 2250 3350
 Wire Wire Line
 	2250 3350 2400 3350
 Wire Wire Line
-	2250 2450 3900 2450
+	2250 2450 4050 2450
 Wire Wire Line
-	3900 2450 3900 2550
+	4050 2450 4050 2550
 Wire Wire Line
 	2250 1750 2250 2450
 Wire Wire Line
-	3900 3150 3900 4650
+	4050 3150 4050 4650
 Wire Wire Line
-	3900 4650 2250 4650
+	4050 4650 2250 4650
 Wire Wire Line
 	2250 4650 2250 3650
 Wire Wire Line
@@ -497,7 +497,7 @@ $EndComp
 Wire Wire Line
 	4300 2650 4300 2850
 Wire Wire Line
-	4300 2850 4100 2850
+	4300 2850 4250 2850
 $Comp
 L power:+24V #PWR012
 U 1 1 5CA18D63
@@ -520,17 +520,6 @@ F 1 "+24V" H 8365 3823 50  0000 C CNN
 F 2 "" H 8350 3650 50  0001 C CNN
 F 3 "" H 8350 3650 50  0001 C CNN
 	1    8350 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x20 J5
-U 1 1 5CA1B4EE
-P 8600 1900
-F 0 "J5" H 8680 1892 50  0000 L CNN
-F 1 "Conn_01x20" H 8680 1801 50  0000 L CNN
-F 2 "" H 8600 1900 50  0001 C CNN
-F 3 "~" H 8600 1900 50  0001 C CNN
-	1    8600 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -736,4 +725,85 @@ Text Label 8400 2800 2    50   ~ 0
 SDA
 Text Label 8400 2700 2    50   ~ 0
 SCL
+$Comp
+L Payload_Connectors:Bus_Connector J?
+U 1 1 5CA3FA86
+P 8600 2000
+F 0 "J?" H 7981 2101 50  0000 R CNN
+F 1 "Bus_Connector" H 7981 2010 50  0000 R CNN
+F 2 "" H 8700 2750 50  0001 C CNN
+F 3 "" H 8700 2750 50  0001 C CNN
+	1    8600 2000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2300 2950 2200
+Text Label 3700 4200 0    50   ~ 0
+~Fault2
+Wire Wire Line
+	2950 4200 2950 4100
+Text Label 8400 1800 2    50   ~ 0
+~Fault1
+Text Label 8400 1900 2    50   ~ 0
+~Fault2
+$Comp
+L Device:R R?
+U 1 1 5CA46901
+P 3650 3900
+F 0 "R?" H 3720 3946 50  0000 L CNN
+F 1 "10k" H 3720 3855 50  0000 L CNN
+F 2 "" V 3580 3900 50  0001 C CNN
+F 3 "~" H 3650 3900 50  0001 C CNN
+	1    3650 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4050 3650 4200
+Wire Wire Line
+	3650 4200 3700 4200
+Wire Wire Line
+	2950 4200 3650 4200
+Connection ~ 3650 4200
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5CA4A84A
+P 3650 3750
+F 0 "#PWR?" H 3650 3600 50  0001 C CNN
+F 1 "+3V3" H 3665 3923 50  0000 C CNN
+F 2 "" H 3650 3750 50  0001 C CNN
+F 3 "" H 3650 3750 50  0001 C CNN
+	1    3650 3750
+	-1   0    0    -1  
+$EndComp
+Text Label 3700 2300 0    50   ~ 0
+~Fault1
+$Comp
+L Device:R R?
+U 1 1 5CA4A8F0
+P 3650 2000
+F 0 "R?" H 3720 2046 50  0000 L CNN
+F 1 "10k" H 3720 1955 50  0000 L CNN
+F 2 "" V 3580 2000 50  0001 C CNN
+F 3 "~" H 3650 2000 50  0001 C CNN
+	1    3650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2150 3650 2300
+Wire Wire Line
+	3650 2300 3700 2300
+Connection ~ 3650 2300
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5CA4A8FA
+P 3650 1850
+F 0 "#PWR?" H 3650 1700 50  0001 C CNN
+F 1 "+3V3" H 3665 2023 50  0000 C CNN
+F 2 "" H 3650 1850 50  0001 C CNN
+F 3 "" H 3650 1850 50  0001 C CNN
+	1    3650 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2300 3650 2300
 $EndSCHEMATC

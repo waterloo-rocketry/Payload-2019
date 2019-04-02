@@ -214,45 +214,6 @@ Wire Wire Line
 	3800 3650 3800 3850
 Connection ~ 3800 3850
 $Comp
-L Device:R R?
-U 1 1 5CA3645A
-P 3500 3700
-AR Path="/5CA3645A" Ref="R?"  Part="1" 
-AR Path="/5CA34EBF/5CA3645A" Ref="R2"  Part="1" 
-AR Path="/5CA51947/5CA3645A" Ref="R3"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D1C/5CA3645A" Ref="R2"  Part="1" 
-AR Path="/5CCC856A/5CCA5D1C/5CA3645A" Ref="R2"  Part="1" 
-F 0 "R2" H 3570 3746 50  0000 L CNN
-F 1 "10k" H 3570 3655 50  0000 L CNN
-F 2 "" V 3430 3700 50  0001 C CNN
-F 3 "~" H 3500 3700 50  0001 C CNN
-	1    3500 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 3850 3500 3950
-Wire Wire Line
-	3500 3950 4300 3950
-$Comp
-L power:+5V #PWR?
-U 1 1 5CA36463
-P 3500 3550
-AR Path="/5CA36463" Ref="#PWR?"  Part="1" 
-AR Path="/5CA34EBF/5CA36463" Ref="#PWR019"  Part="1" 
-AR Path="/5CA51947/5CA36463" Ref="#PWR034"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D1C/5CA36463" Ref="#PWR019"  Part="1" 
-AR Path="/5CCC856A/5CCA5D1C/5CA36463" Ref="#PWR019"  Part="1" 
-F 0 "#PWR019" H 3500 3400 50  0001 C CNN
-F 1 "+5V" H 3515 3723 50  0000 C CNN
-F 2 "" H 3500 3550 50  0001 C CNN
-F 3 "" H 3500 3550 50  0001 C CNN
-	1    3500 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 3950 3450 3950
-Connection ~ 3500 3950
-$Comp
 L Device:C C?
 U 1 1 5CA3646C
 P 5150 2750
@@ -386,4 +347,6 @@ Text Notes 7350 2400 0    50   ~ 0
 deltaV = 16V (page 17 of driver datasheet)\ndeltaV = 5% of Vboot\nVboot = 320v\nCboot = (Qgate *20)/Vboot = 9.6875nF
 Text HLabel 3450 3950 0    50   Input ~ 0
 FAULT
+Wire Wire Line
+	3450 3950 4300 3950
 $EndSCHEMATC

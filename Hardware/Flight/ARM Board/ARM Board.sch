@@ -1239,17 +1239,6 @@ Wire Wire Line
 	1450 4550 2600 4550
 Wire Wire Line
 	1450 4650 2600 4650
-$Comp
-L Payload_Connectors:Bus_Connector U6
-U 1 1 5CC33259
-P 1250 4750
-F 0 "U6" H 1061 5975 50  0000 C CNN
-F 1 "Bus_Connector" H 1061 5884 50  0000 C CNN
-F 2 "Payload_Connectors:Pin_Header_Straight_2x10_Pitch2.54mm" H 1350 5500 50  0001 C CNN
-F 3 "" H 1350 5500 50  0001 C CNN
-	1    1250 4750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 4750 2600 4750
 Wire Wire Line
@@ -1303,5 +1292,85 @@ F28 "RES2" I L 6000 4350 50
 F29 "RES3" I L 6000 4450 50 
 F30 "RES4" I L 6000 4550 50 
 F31 "RES5" I L 6000 4650 50 
+F32 "TEMP" I R 6750 3550 50 
 $EndSheet
+$Comp
+L Payload_Connectors:Bus_Connector J1
+U 1 1 5CC85191
+P 1250 4750
+F 0 "J1" H 1061 5975 50  0000 C CNN
+F 1 "Bus_Connector" H 1061 5884 50  0000 C CNN
+F 2 "Payload_Connectors:Pin_Header_Straight_2x10_Pitch2.54mm" H 1350 5500 50  0001 C CNN
+F 3 "" H 1350 5500 50  0001 C CNN
+	1    1250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:MCP9700AT-ETT U6
+U 1 1 5CCB0282
+P 6650 2450
+F 0 "U6" H 6900 2850 50  0000 R CNN
+F 1 "MCP9700AT-ETT" H 7400 2750 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 6650 2050 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21942e.pdf" H 6500 2700 50  0001 C CNN
+	1    6650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C22
+U 1 1 5CCB032D
+P 6050 2450
+F 0 "C22" H 6100 2550 50  0000 L CNN
+F 1 "0.1uF" H 6100 2300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6088 2300 50  0001 C CNN
+F 3 "~" H 6050 2450 50  0001 C CNN
+	1    6050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2150 6650 2050
+Wire Wire Line
+	6650 2050 6050 2050
+Wire Wire Line
+	6050 2050 6050 2300
+Wire Wire Line
+	6050 2600 6050 2850
+Wire Wire Line
+	6050 2850 6650 2850
+Wire Wire Line
+	6650 2850 6650 2750
+$Comp
+L power:GND #PWR0109
+U 1 1 5CCC5CBF
+P 6650 2900
+F 0 "#PWR0109" H 6650 2650 50  0001 C CNN
+F 1 "GND" H 6655 2727 50  0000 C CNN
+F 2 "" H 6650 2900 50  0001 C CNN
+F 3 "" H 6650 2900 50  0001 C CNN
+	1    6650 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2900 6650 2850
+Connection ~ 6650 2850
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 5CCD0C23
+P 6650 2000
+F 0 "#PWR0110" H 6650 1850 50  0001 C CNN
+F 1 "+3V3" H 6665 2173 50  0000 C CNN
+F 2 "" H 6650 2000 50  0001 C CNN
+F 3 "" H 6650 2000 50  0001 C CNN
+	1    6650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2000 6650 2050
+Connection ~ 6650 2050
+Wire Wire Line
+	6750 3550 7150 3550
+Wire Wire Line
+	7150 3550 7150 2450
+Wire Wire Line
+	7150 2450 7050 2450
 $EndSCHEMATC
