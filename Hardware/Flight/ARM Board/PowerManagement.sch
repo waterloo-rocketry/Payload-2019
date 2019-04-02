@@ -107,7 +107,7 @@ Connection ~ 4750 2400
 Wire Wire Line
 	4750 2550 4750 2400
 $Comp
-L ARM-Board-rescue:LD39200PU33R-Payload_Regulators VR?
+L Payload_Regulators:LD39200PU33R VR?
 U 1 1 5CBE1CC1
 P 5350 2300
 AR Path="/5CBE1CC1" Ref="VR?"  Part="1" 

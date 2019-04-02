@@ -291,7 +291,7 @@ Wire Wire Line
 	2500 2750 2500 2650
 Connection ~ 2500 2650
 $Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols-Payload_Microcontrollers U?
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U?
 U 1 1 5D19DC14
 P 7450 1650
 AR Path="/5D19DC14" Ref="U?"  Part="1" 
@@ -301,19 +301,6 @@ F 1 "STM32L4x6RxT6-symbols" H 8425 2031 60  0000 C CNN
 F 2 "Payload_StandardPackages:STM32L4x6RxT6" H 8300 2000 60  0001 C CNN
 F 3 "" H 7450 1750 60  0000 C CNN
 	1    7450 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L ARM-Board-rescue:STM32L4x6RxT6-symbols-Payload_Microcontrollers U?
-U 2 1 5D19DC1B
-P 2700 2150
-AR Path="/5D19DC1B" Ref="U?"  Part="2" 
-AR Path="/5D19D8A9/5D19DC1B" Ref="U3"  Part="2" 
-F 0 "U3" H 3600 2537 60  0000 C CNN
-F 1 "STM32L4x6RxT6-symbols" H 3600 2431 60  0000 C CNN
-F 2 "Payload_StandardPackages:STM32L4x6RxT6" H 3550 2500 60  0001 C CNN
-F 3 "" H 2700 2250 60  0000 C CNN
-	2    2700 2150
 	1    0    0    -1  
 $EndComp
 Connection ~ 1700 2550
@@ -342,7 +329,7 @@ Wire Wire Line
 Text Notes 4200 5150 0    50   ~ 0
 RAM
 $Comp
-L ARM-Board-rescue:SRAM_23LC1024T-I_ST-ARMlib-Payload_Microcontrollers U?
+L Payload_Microcontrollers:SRAM_23LC1024T-I_ST-ARMlib U?
 U 1 1 5D1A8E77
 P 4200 5400
 AR Path="/5D1A8E77" Ref="U?"  Part="1" 
@@ -897,4 +884,29 @@ F 3 "" H 5050 5400 50  0001 C CNN
 $EndComp
 Text Notes 10100 1550 0    50   ~ 0
 2v drop, 20mA max per pin
+Text HLabel 7450 4050 0    50   Input ~ 0
+RES0
+Text HLabel 7450 4150 0    50   Input ~ 0
+RES1
+Text HLabel 7450 4250 0    50   Input ~ 0
+RES2
+Text HLabel 7450 4350 0    50   Input ~ 0
+RES3
+Text HLabel 7450 4850 0    50   Input ~ 0
+RES4
+Text HLabel 7450 5050 0    50   Input ~ 0
+RES5
+$Comp
+L Payload_Microcontrollers:STM32L4x6RxT6-symbols U?
+U 2 1 5D19DC1B
+P 2700 2150
+AR Path="/5D19DC1B" Ref="U?"  Part="2" 
+AR Path="/5D19D8A9/5D19DC1B" Ref="U3"  Part="2" 
+F 0 "U3" H 3600 2537 60  0000 C CNN
+F 1 "STM32L4x6RxT6-symbols" H 3600 2431 60  0000 C CNN
+F 2 "Payload_StandardPackages:STM32L4x6RxT6" H 3550 2500 60  0001 C CNN
+F 3 "" H 2700 2250 60  0000 C CNN
+	2    2700 2150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

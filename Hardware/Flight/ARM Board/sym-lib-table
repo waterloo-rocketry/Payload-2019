@@ -1,9 +1,2 @@
 (sym_lib_table
-  (lib (name Molex_Nano)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/symbols/Molex Nano.lib")(options "")(descr ""))
-  (lib (name Payload_Canhw)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/symbols/Payload_Canhw.lib")(options "")(descr ""))
-  (lib (name Payload_Connectors)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/symbols/Payload_Connectors.lib")(options "")(descr ""))
-  (lib (name Payload_Microcontrollers)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/symbols/Payload_Microcontrollers.lib")(options "")(descr ""))
-  (lib (name Payload_Radio)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/symbols/Payload_Radio.lib")(options "")(descr ""))
-  (lib (name Payload_Regulators)(type Legacy)(uri "C:/Users/alext/OneDrive - University of Waterloo/Side Projects/Rocketry/Payload-2019/Hardware/libs/symbols/Payload_Regulators.lib")(options "")(descr ""))
-  (lib (name ARM-Board-rescue)(type Legacy)(uri "${KIPRJMOD}/ARM Board-rescue.lib")(options "")(descr ""))
 )
