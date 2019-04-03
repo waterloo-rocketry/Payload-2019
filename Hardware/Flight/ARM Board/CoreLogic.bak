@@ -197,7 +197,7 @@ P 5950 2250
 AR Path="/5D19DB79" Ref="C?"  Part="1" 
 AR Path="/5D19D8A9/5D19DB79" Ref="C17"  Part="1" 
 F 0 "C17" H 6065 2296 50  0000 L CNN
-F 1 "100uF" H 6065 2205 50  0000 L CNN
+F 1 "100nF" H 6065 2205 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5988 2100 50  0001 C CNN
 F 3 "~" H 5950 2250 50  0001 C CNN
 	1    5950 2250
@@ -267,19 +267,6 @@ Wire Wire Line
 	7350 3150 7450 3150
 Wire Wire Line
 	7350 3050 7450 3050
-$Comp
-L Device:R R?
-U 1 1 5D19DBE5
-P 6400 1650
-AR Path="/5D19DBE5" Ref="R?"  Part="1" 
-AR Path="/5D19D8A9/5D19DBE5" Ref="R7"  Part="1" 
-F 0 "R7" V 6200 1600 50  0000 L CNN
-F 1 "0" V 6300 1600 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 6330 1650 50  0001 C CNN
-F 3 "~" H 6400 1650 50  0001 C CNN
-	1    6400 1650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2700 2650 2500 2650
 Wire Wire Line
@@ -579,7 +566,7 @@ Wire Wire Line
 Wire Wire Line
 	6650 3550 6200 3550
 Connection ~ 6650 3550
-Text Label 6250 1650 2    50   ~ 0
+Text Label 5950 1650 2    50   ~ 0
 ~(JTRST|RST)
 Text Label 9400 2250 0    50   ~ 0
 ~(JTRST|RST)
@@ -893,9 +880,9 @@ RES2
 Text HLabel 7450 4350 0    50   Input ~ 0
 RES3
 Text HLabel 7450 4850 0    50   Input ~ 0
-RES4
+~FAULT1
 Text HLabel 7450 5050 0    50   Input ~ 0
-RES5
+~FAULT2
 $Comp
 L Payload_Microcontrollers:STM32L4x6RxT6-symbols U?
 U 2 1 5D19DC1B
@@ -911,4 +898,15 @@ F 3 "" H 2700 2250 60  0000 C CNN
 $EndComp
 Text HLabel 9400 2050 2    50   Input ~ 0
 TEMP
+$Comp
+L Device:Jumper JP31
+U 1 1 5CD1B376
+P 6250 1650
+F 0 "JP31" H 6250 1914 50  0000 C CNN
+F 1 "Jumper" H 6250 1823 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6250 1650 50  0001 C CNN
+F 3 "~" H 6250 1650 50  0001 C CNN
+	1    6250 1650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

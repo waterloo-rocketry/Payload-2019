@@ -113,7 +113,7 @@
   )
 
   (module Payload_StandardPackages:DIP-6_W11.25mm (layer F.Cu) (tedit 5CA42CD3) (tstamp 5CA5D26E)
-    (at 150 100.076)
+    (at 150 100)
     (descr "6-lead though-hole mounted DIP package, row spacing 10.16 mm (400 mils)")
     (tags "THT DIP DIL PDIP 2.54mm 10.16mm 400mil")
     (path /5C9BD3E8)
