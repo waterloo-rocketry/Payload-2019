@@ -815,17 +815,6 @@ F 3 "" H 6500 2800 50  0001 C CNN
 	1    6500 2800
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3V3 #PWR0105
-U 1 1 5C9E4A53
-P 800 2350
-F 0 "#PWR0105" H 800 2200 50  0001 C CNN
-F 1 "+3V3" H 815 2523 50  0000 C CNN
-F 2 "" H 800 2350 50  0001 C CNN
-F 3 "" H 800 2350 50  0001 C CNN
-	1    800  2350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	800  2350 800  2550
 $Comp
@@ -877,8 +866,6 @@ Text HLabel 7450 4150 0    50   Input ~ 0
 RES1
 Text HLabel 7450 4250 0    50   Input ~ 0
 RES2
-Text HLabel 7450 4350 0    50   Input ~ 0
-RES3
 Text HLabel 7450 4850 0    50   Input ~ 0
 ~FAULT1
 Text HLabel 7450 5050 0    50   Input ~ 0
@@ -909,4 +896,8 @@ F 3 "~" H 6250 1650 50  0001 C CNN
 	1    6250 1650
 	1    0    0    -1  
 $EndComp
+Text Label 800  2350 1    50   ~ 0
+3v3_BACKUP
+Text HLabel 7450 4350 0    50   Input ~ 0
+RES3
 $EndSCHEMATC
