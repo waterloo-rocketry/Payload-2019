@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 11
+Sheet 6 11
 Title ""
 Date ""
 Rev ""
@@ -87,234 +87,12 @@ Wire Wire Line
 	4700 3700 4450 3700
 Text Notes 4000 2600 0    50   ~ 0
 H BRIDGE
-$Comp
-L pspice:INDUCTOR L?
-U 1 1 5CCA5D35
-P 5700 3850
-AR Path="/5CCA5D35" Ref="L?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D35" Ref="L2"  Part="1" 
-AR Path="/5CCC856A/5CCA5D35" Ref="L4"  Part="1" 
-F 0 "L4" H 5700 4065 50  0000 C CNN
-F 1 "10uH" H 5700 3974 50  0000 C CNN
-F 2 "" H 5700 3850 50  0001 C CNN
-F 3 "" H 5700 3850 50  0001 C CNN
-	1    5700 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L pspice:INDUCTOR L?
-U 1 1 5CCA5D3C
-P 5700 3000
-AR Path="/5CCA5D3C" Ref="L?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D3C" Ref="L1"  Part="1" 
-AR Path="/5CCC856A/5CCA5D3C" Ref="L3"  Part="1" 
-F 0 "L3" H 5700 3215 50  0000 C CNN
-F 1 "10uH" H 5700 3124 50  0000 C CNN
-F 2 "" H 5700 3000 50  0001 C CNN
-F 3 "" H 5700 3000 50  0001 C CNN
-	1    5700 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5CCA5D43
-P 6200 2850
-AR Path="/5CCA5D43" Ref="C?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D43" Ref="C5"  Part="1" 
-AR Path="/5CCC856A/5CCA5D43" Ref="C18"  Part="1" 
-F 0 "C18" V 6050 3000 50  0000 L CNN
-F 1 "1000uF" V 6150 3000 50  0000 L CNN
-F 2 "" H 6238 2700 50  0001 C CNN
-F 3 "~" H 6200 2850 50  0001 C CNN
-	1    6200 2850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5950 3000 6050 3000
-Wire Wire Line
-	6050 3000 6050 2850
 Wire Wire Line
 	6500 3400 6500 3000
-Connection ~ 6050 3000
 Wire Wire Line
 	6500 3850 6500 3500
 Text Notes 10350 3400 0    50   ~ 0
 SOLENOID OUTPUT
-Wire Wire Line
-	5950 3850 6050 3850
-$Comp
-L Device:C C?
-U 1 1 5CCA5D58
-P 6200 4000
-AR Path="/5CCA5D58" Ref="C?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D58" Ref="C8"  Part="1" 
-AR Path="/5CCC856A/5CCA5D58" Ref="C19"  Part="1" 
-F 0 "C19" V 6150 4050 50  0000 L CNN
-F 1 "1000uF" V 6350 3950 50  0000 L CNN
-F 2 "" H 6238 3850 50  0001 C CNN
-F 3 "~" H 6200 4000 50  0001 C CNN
-	1    6200 4000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6050 4000 6050 3850
-Connection ~ 6050 3850
-Wire Wire Line
-	6050 3850 6500 3850
-$Comp
-L power:GND #PWR?
-U 1 1 5CCA5D62
-P 6600 2900
-AR Path="/5CCA5D62" Ref="#PWR?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D62" Ref="#PWR034"  Part="1" 
-AR Path="/5CCC856A/5CCA5D62" Ref="#PWR046"  Part="1" 
-F 0 "#PWR046" H 6600 2650 50  0001 C CNN
-F 1 "GND" H 6605 2727 50  0000 C CNN
-F 2 "" H 6600 2900 50  0001 C CNN
-F 3 "" H 6600 2900 50  0001 C CNN
-	1    6600 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CCA5D68
-P 6550 4050
-AR Path="/5CCA5D68" Ref="#PWR?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D68" Ref="#PWR033"  Part="1" 
-AR Path="/5CCC856A/5CCA5D68" Ref="#PWR045"  Part="1" 
-F 0 "#PWR045" H 6550 3800 50  0001 C CNN
-F 1 "GND" H 6555 3877 50  0000 C CNN
-F 2 "" H 6550 4050 50  0001 C CNN
-F 3 "" H 6550 4050 50  0001 C CNN
-	1    6550 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6500 3000 6050 3000
-Wire Wire Line
-	4700 3700 4700 3850
-$Comp
-L Device:Jumper JP?
-U 1 1 5CCA5D70
-P 5000 3000
-AR Path="/5CCA5D70" Ref="JP?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D70" Ref="JP1"  Part="1" 
-AR Path="/5CCC856A/5CCA5D70" Ref="JP7"  Part="1" 
-F 0 "JP7" H 5000 3264 50  0000 C CNN
-F 1 "Jumper" H 5000 3173 50  0000 C CNN
-F 2 "" H 5000 3000 50  0001 C CNN
-F 3 "~" H 5000 3000 50  0001 C CNN
-	1    5000 3000
-	1    0    0    -1  
-$EndComp
-Connection ~ 4700 3000
-Wire Wire Line
-	4700 3000 4700 3150
-Wire Wire Line
-	4700 2900 4700 3000
-Wire Wire Line
-	5300 3000 5450 3000
-$Comp
-L Device:Jumper JP?
-U 1 1 5CCA5D7B
-P 5000 3850
-AR Path="/5CCA5D7B" Ref="JP?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D7B" Ref="JP2"  Part="1" 
-AR Path="/5CCC856A/5CCA5D7B" Ref="JP8"  Part="1" 
-F 0 "JP8" H 5000 4114 50  0000 C CNN
-F 1 "Jumper" H 5000 4023 50  0000 C CNN
-F 2 "" H 5000 3850 50  0001 C CNN
-F 3 "~" H 5000 3850 50  0001 C CNN
-	1    5000 3850
-	1    0    0    -1  
-$EndComp
-Connection ~ 4700 3850
-Wire Wire Line
-	4700 3850 4700 3950
-Wire Wire Line
-	5300 3850 5450 3850
-$Comp
-L Device:Jumper JP?
-U 1 1 5CCA5D85
-P 6800 3400
-AR Path="/5CCA5D85" Ref="JP?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D85" Ref="JP5"  Part="1" 
-AR Path="/5CCC856A/5CCA5D85" Ref="JP11"  Part="1" 
-F 0 "JP11" H 6800 3664 50  0000 C CNN
-F 1 "Jumper" H 6800 3573 50  0000 C CNN
-F 2 "" H 6800 3400 50  0001 C CNN
-F 3 "~" H 6800 3400 50  0001 C CNN
-	1    6800 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper JP?
-U 1 1 5CCA5D8C
-P 6800 3500
-AR Path="/5CCA5D8C" Ref="JP?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D8C" Ref="JP6"  Part="1" 
-AR Path="/5CCC856A/5CCA5D8C" Ref="JP12"  Part="1" 
-F 0 "JP12" H 6800 3750 50  0000 C CNN
-F 1 "Jumper" H 6800 3650 50  0000 C CNN
-F 2 "" H 6800 3500 50  0001 C CNN
-F 3 "~" H 6800 3500 50  0001 C CNN
-	1    6800 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:Jumper JP?
-U 1 1 5CCA5D93
-P 5700 2550
-AR Path="/5CCA5D93" Ref="JP?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D93" Ref="JP3"  Part="1" 
-AR Path="/5CCC856A/5CCA5D93" Ref="JP9"  Part="1" 
-F 0 "JP9" H 5700 2814 50  0000 C CNN
-F 1 "Jumper" H 5700 2723 50  0000 C CNN
-F 2 "" H 5700 2550 50  0001 C CNN
-F 3 "~" H 5700 2550 50  0001 C CNN
-	1    5700 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5400 2550 4700 2550
-Wire Wire Line
-	4700 2550 4700 2900
-Connection ~ 4700 2900
-Wire Wire Line
-	6000 2550 7100 2550
-Wire Wire Line
-	7100 2550 7100 3400
-$Comp
-L Device:Jumper JP?
-U 1 1 5CCA5D9F
-P 5700 4650
-AR Path="/5CCA5D9F" Ref="JP?"  Part="1" 
-AR Path="/5CC8A1AA/5CCA5D9F" Ref="JP4"  Part="1" 
-AR Path="/5CCC856A/5CCA5D9F" Ref="JP10"  Part="1" 
-F 0 "JP10" H 5700 4425 50  0000 C CNN
-F 1 "Jumper" H 5700 4516 50  0000 C CNN
-F 2 "" H 5700 4650 50  0001 C CNN
-F 3 "~" H 5700 4650 50  0001 C CNN
-	1    5700 4650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6000 4650 7100 4650
-Wire Wire Line
-	7100 4650 7100 3500
-Wire Wire Line
-	5400 4650 4700 4650
-Wire Wire Line
-	4700 4650 4700 3950
-Connection ~ 4700 3950
-Wire Wire Line
-	6600 2900 6600 2850
-Wire Wire Line
-	6600 2850 6350 2850
-Wire Wire Line
-	6550 4050 6550 4000
-Wire Wire Line
-	6550 4000 6350 4000
 Text HLabel 9750 3400 2    50   Input ~ 0
 O+
 Text HLabel 9750 3500 2    50   Input ~ 0
@@ -329,10 +107,22 @@ Text HLabel 2750 3450 0    50   Input ~ 0
 I2H
 Text HLabel 2750 3550 0    50   Input ~ 0
 I2L
-Connection ~ 7100 3400
-Connection ~ 7100 3500
 Wire Wire Line
-	7100 3400 9750 3400
+	4700 2900 4700 3000
 Wire Wire Line
-	7100 3500 9750 3500
+	4700 3700 4700 3850
+Connection ~ 4700 3000
+Wire Wire Line
+	4700 3000 4700 3150
+Connection ~ 4700 3850
+Wire Wire Line
+	4700 3850 4700 3950
+Wire Wire Line
+	4700 3850 6500 3850
+Wire Wire Line
+	4700 3000 6500 3000
+Wire Wire Line
+	6500 3400 9750 3400
+Wire Wire Line
+	6500 3500 9750 3500
 $EndSCHEMATC
