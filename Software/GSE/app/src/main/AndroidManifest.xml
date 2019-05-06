@@ -22,7 +22,10 @@
         </activity>
         <activity android:name=".BatteryScreen" />
         <activity android:name=".PopActivity"></activity>
-
+        <service
+            android:name="com.example.jennifer.app_practice.UsbService"
+            android:enabled="true">
+        </service>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB3NCkcJmzg5SxL3B6CqSEdQp2TK-JNLY8"/>

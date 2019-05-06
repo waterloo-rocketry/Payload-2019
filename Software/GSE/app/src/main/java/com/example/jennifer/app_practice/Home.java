@@ -35,6 +35,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
     private int altitude = 0;
     private int temperature = 0;
     private int speed = 0;
+    private String dataString = null;
     GoogleMap mGoogleMap;
     MapView mMapview;
 
@@ -42,8 +43,8 @@ public class Home extends Fragment implements OnMapReadyCallback{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.home, container, false);
-
-         //armed button
+        runUpdateInfoThread();
+        //armed button
         final Button button_armed = (Button)view.findViewById(R.id.armed_button);
         try {
             ArmState = this.getArguments().getString("ArmState");
@@ -391,7 +392,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
                             @Override
                             public void run() {
                                 int temp = getBattery();
-                                ((Button)view.findViewById(R.id.battery_button)).setText("Battery Remaining " + temp);
+                                ((Button)view.findViewById(R.id.battery_button)).setText(dataString);//temp
                                 System.out.println("Battery Thread");
                             }
                         });
@@ -526,6 +527,30 @@ public class Home extends Fragment implements OnMapReadyCallback{
             }
         }.start();
     }
+
+    private void runUpdateInfoThread() {
+        new Thread() {
+            public void run() {
+                String str = ((Button)view.findViewById(R.id.armed_button)).getText().toString();
+                while (running) {
+                    try {
+                        getActivity().runOnUiThread(new Runnable() {
+
+                            @Override
+                            public void run() {
+                                dataString = ((MainActivity)getActivity()).returnDataStringFromMainActivity();
+                                System.out.println("Update Thread");
+                            }
+                        });
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }.start();
+    }
+
 
     private String getArmState() {
         return ArmState;
