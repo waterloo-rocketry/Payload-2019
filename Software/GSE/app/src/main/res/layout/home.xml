@@ -219,8 +219,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/diagnostics_button"
             app:layout_constraintEnd_toEndOf="@+id/diagnostics_button"></ImageView>
 
-       <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
+        <org.osmdroid.views.MapView
+            android:id="@+id/map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"

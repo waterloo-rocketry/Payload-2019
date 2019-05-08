@@ -1,6 +1,10 @@
 package com.example.jennifer.app_practice;
 
+import android.Manifest;
+import android.content.Context;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
 import android.widget.ImageButton;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,16 +17,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
+import org.osmdroid.api.IMapController;
+import org.osmdroid.config.Configuration;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
+
+import java.io.File;
 
 
-public class Home extends Fragment implements OnMapReadyCallback{
+public class Home extends Fragment {
     View view;
     private volatile boolean checkConnection = true;
     private volatile boolean connection = true;
@@ -36,16 +40,40 @@ public class Home extends Fragment implements OnMapReadyCallback{
     private int temperature = 0;
     private int speed = 0;
     private String dataString = null;
-    GoogleMap mGoogleMap;
-    MapView mMapview;
+    MapView map = null;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+
+        Context ctx = getActivity();
+        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
+        Configuration.getInstance().setOsmdroidBasePath((new File("/sdcard/osmdroid/")));
+        Configuration.getInstance().setOsmdroidTileCache((new File("/sdcard/osmdroid/tiles/")));
+        System.out.println("BASEPATH: " + Configuration.getInstance().getOsmdroidBasePath());
+        System.out.println("TILECACHEPATH: " + Configuration.getInstance().getOsmdroidTileCache());
+
+
         view = inflater.inflate(R.layout.home, container, false);
         runUpdateInfoThread();
+
+        //map stuff
+        map = (MapView) view.findViewById(R.id.map);
+
+        map.setBuiltInZoomControls(true);
+        map.setMultiTouchControls(true);
+        map.setUseDataConnection(false); //false sets to completely offline mode (no caches)
+        map.setTileSource(TileSourceFactory.MAPNIK);
+        IMapController mapController = map.getController();
+        mapController.setZoom(15.0);
+        GeoPoint startPoint = new GeoPoint(49.268701, -123.088074);
+        mapController.setCenter(startPoint);
+        runMapThread(); //rn this basically just repeatedly puts you back at the starting position, so
+        // it's just a placeholder for now!
+
         //armed button
-        final Button button_armed = (Button)view.findViewById(R.id.armed_button);
+        final Button button_armed = (Button) view.findViewById(R.id.armed_button);
         try {
             ArmState = this.getArguments().getString("ArmState");
             setArmedOnClick(button_armed, ArmState);
@@ -57,106 +85,24 @@ public class Home extends Fragment implements OnMapReadyCallback{
         }
         runArmedThread();
 
-/*
-        final ImageButton armed_red_dot = (ImageButton)view.findViewById(R.id.armreddot);
-        armed_red_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                armed_red_dot.setX((float) (button_armed.getX() + 0.75 * button_armed.getWidth()));
-                armed_red_dot.setY((float) (button_armed.getY() + 0.5 * button_armed.getHeight()));
-
-            }
-        });
-
-        final ImageButton armed_green_dot = (ImageButton)view.findViewById(R.id.armgreendot);
-        armed_green_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                armed_green_dot.setX((float) (button_armed.getX() + 0.75 * button_armed.getWidth()));
-                armed_green_dot.setY((float) (button_armed.getY() + 0.5 * button_armed.getHeight()));
-
-            }
-        });
-*/
-
         //Radio Contact
-        final Button button_radio_contact = (Button)view.findViewById(R.id.contact_button);
+        final Button button_radio_contact = (Button) view.findViewById(R.id.contact_button);
         setRadioContactOnClick(button_radio_contact);
         runRadioThread();
 
-/*        final ImageButton radio_red_dot = (ImageButton)view.findViewById(R.id.radioreddot);
-        radio_red_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                radio_red_dot.setX((float) (button_radio_contact.getX() + 0.75 * button_radio_contact.getWidth()));
-                radio_red_dot.setY((float) (button_radio_contact.getY() + 0.5 * button_radio_contact.getHeight()));
-
-            }
-        });
-
-        final ImageButton radio_green_dot = (ImageButton)view.findViewById(R.id.radiogreendot);
-        radio_green_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                radio_green_dot.setX((float) (button_radio_contact.getX() + 0.75 * button_radio_contact.getWidth()));
-                radio_green_dot.setY((float) (button_radio_contact.getY() + 0.5 * button_radio_contact.getHeight()));
-
-            }
-        });*/
-
-        final Button button_sd = (Button)view.findViewById(R.id.sd_button);
+        final Button button_sd = (Button) view.findViewById(R.id.sd_button);
         setSDOnClick(button_sd);
         runSDCardThread();
 
-/*        final ImageButton sd1_red_dot = (ImageButton)view.findViewById(R.id.sd1reddot);
-        sd1_red_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                sd1_red_dot.setX((float) (button_sd.getX() + 0.75 * button_sd.getWidth()));
-                sd1_red_dot.setY((float) (button_sd.getY() + 0.25 * button_sd.getHeight()));
-
-            }
-        });
-
-        final ImageButton sd1_green_dot = (ImageButton)view.findViewById(R.id.sd1greendot);
-        sd1_green_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                sd1_green_dot.setX((float) (button_sd.getX() + 0.75 * button_sd.getWidth()));
-                sd1_green_dot.setY((float) (button_sd.getY() + 0.25 * button_sd.getHeight()));
-
-            }
-        });
-
-        final ImageButton sd2_red_dot = (ImageButton)view.findViewById(R.id.sd2reddot);
-        sd2_red_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                sd2_red_dot.setX((float) (button_sd.getX() + 0.75 * button_sd.getWidth()));
-                sd2_red_dot.setY((float) (button_sd.getY() + 0.75 * button_sd.getHeight()));
-
-            }
-        });
-
-        final ImageButton sd2_green_dot = (ImageButton)view.findViewById(R.id.sd2greendot);
-        sd2_green_dot.post(new Runnable() {
-            @Override
-            public void run() {
-                sd2_green_dot.setX((float) (button_sd.getX() + 0.75 * button_sd.getWidth()));
-                sd2_green_dot.setY((float) (button_sd.getY() + 0.75 * button_sd.getHeight()));
-
-            }
-        });*/
-
-        Button button_battery = (Button)view.findViewById(R.id.battery_button);
+        Button button_battery = (Button) view.findViewById(R.id.battery_button);
         setBatteryOnClick(button_battery);
         runBatteryThread();
 
-        Button button_diagnostics = (Button)view.findViewById(R.id.diagnostics_button);
+        Button button_diagnostics = (Button) view.findViewById(R.id.diagnostics_button);
         setDiagnosticsOnClick(button_diagnostics);
         runDiagnosticsThread();
 
-        Button button_state = (Button)view.findViewById(R.id.state_button);
+        Button button_state = (Button) view.findViewById(R.id.state_button);
         setStateOnClick(button_state);
         runStateThread();
 
@@ -169,7 +115,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
         return view;
     }
 
-    private void setArmedOnClick(final Button btn, final String str){
+    private void setArmedOnClick(final Button btn, final String str) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,7 +123,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
                 Armed fragment = new Armed();
                 String state = str;
                 Bundle arguments = new Bundle();
-                arguments.putString( "ArmState" , state);
+                arguments.putString("ArmState", state);
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
@@ -186,14 +132,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
         });
     }
 
-    private void setRadioContactOnClick(final Button btn){
+    private void setRadioContactOnClick(final Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 running = false;
                 Radio_Contact fragment = new Radio_Contact();
                 Bundle arguments = new Bundle();
-                arguments.putString( "ArmState" , ArmState);
+                arguments.putString("ArmState", ArmState);
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
@@ -202,14 +148,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
         });
     }
 
-    private void setSDOnClick(final Button btn){
+    private void setSDOnClick(final Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 running = false;
                 SD fragment = new SD();
                 Bundle arguments = new Bundle();
-                arguments.putString( "ArmState" , ArmState);
+                arguments.putString("ArmState", ArmState);
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
@@ -218,14 +164,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
         });
     }
 
-    private void setBatteryOnClick(final Button btn){
+    private void setBatteryOnClick(final Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 running = false;
                 Battery fragment = new Battery();
                 Bundle arguments = new Bundle();
-                arguments.putString( "ArmState" , ArmState);
+                arguments.putString("ArmState", ArmState);
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
@@ -234,14 +180,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
         });
     }
 
-    private void setDiagnosticsOnClick(final Button btn){
+    private void setDiagnosticsOnClick(final Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 running = false;
                 Diagnostics fragment = new Diagnostics();
                 Bundle arguments = new Bundle();
-                arguments.putString( "ArmState" , ArmState);
+                arguments.putString("ArmState", ArmState);
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
@@ -250,14 +196,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
         });
     }
 
-    private void setStateOnClick(final Button btn){
+    private void setStateOnClick(final Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 running = false;
                 State fragment = new State();
                 Bundle arguments = new Bundle();
-                arguments.putString( "ArmState" , ArmState);
+                arguments.putString("ArmState", ArmState);
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
@@ -269,7 +215,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
     private void runArmedThread() {//this thread update the state of the payload (Armed or not)
         new Thread() {
             public void run() {
-                String str = ((Button)view.findViewById(R.id.armed_button)).getText().toString();
+                String str = ((Button) view.findViewById(R.id.armed_button)).getText().toString();
                 while (running) {
                     try {
                         getActivity().runOnUiThread(new Runnable() {
@@ -282,10 +228,10 @@ public class Home extends Fragment implements OnMapReadyCallback{
                                 reddot.setVisibility(View.GONE);
 
                                 if (!connection) {
-                                    ((Button)view.findViewById(R.id.armed_button)).setText("ERR");
+                                    ((Button) view.findViewById(R.id.armed_button)).setText("ERR");
                                     reddot.setVisibility(View.VISIBLE);
                                 } else {
-                                    ((Button)view.findViewById(R.id.armed_button)).setText(ArmState);
+                                    ((Button) view.findViewById(R.id.armed_button)).setText(ArmState);
                                     if (getArmState() == "ARMED") {
                                         reddot.setVisibility(View.VISIBLE);
                                         System.out.println("red button");
@@ -349,7 +295,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
                             @Override
                             public void run() {
                                 if (!connection) {
-                                    ((Button)view.findViewById(R.id.armed_button)).setText("ERR");
+                                    ((Button) view.findViewById(R.id.armed_button)).setText("ERR");
                                     //update RED DOT HERE
                                 } else {
                                     //change buttons
@@ -392,7 +338,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
                             @Override
                             public void run() {
                                 int temp = getBattery();
-                                ((Button)view.findViewById(R.id.battery_button)).setText(dataString);//temp
+                                ((Button) view.findViewById(R.id.battery_button)).setText(dataString);//temp
                                 System.out.println("Battery Thread");
                             }
                         });
@@ -414,7 +360,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
                             @Override
                             public void run() {
                                 if (!connection) {
-                                    ((Button)view.findViewById(R.id.armed_button)).setText("ERR");
+                                    ((Button) view.findViewById(R.id.armed_button)).setText("ERR");
                                     //update RED DOT HERE
                                 } else {
                                     //change buttons
@@ -437,6 +383,57 @@ public class Home extends Fragment implements OnMapReadyCallback{
                 }
             }
         }.start();
+    }
+
+    private void runMapThread() {
+        new Thread() {
+            public void run() {
+                while (running) {
+                    try {
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                double[] coordinates = getCoords();
+                                setCoords(coordinates[0], coordinates[1]);
+                                System.out.println("Map Thread");
+                            }
+                        });
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }.start();
+    }
+
+    private double[] getCoords() {
+        double[] arr = {49.268701, -123.088074};
+        return arr;
+    }
+
+    private void setCoords(double lat, double lon) {
+        IMapController mapController = map.getController();
+        GeoPoint startPoint = new GeoPoint(lat, lon);
+        mapController.setCenter(startPoint);
+    }
+
+    public void onResume() {
+        super.onResume();
+        //this will refresh the osmdroid configuration on resuming.
+        //if you make changes to the configuration, use
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
+        map.onResume(); //needed for compass, my location overlays, v6.0.0 and up
+    }
+
+    public void onPause() {
+        super.onPause();
+        //this will refresh the osmdroid configuration on resuming.
+        //if you make changes to the configuration, use
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //Configuration.getInstance().save(this, prefs);
+        map.onPause();  //needed for compass, my location overlays, v6.0.0 and up
     }
 
     private void runStateThread() {
@@ -470,7 +467,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
 
                             @Override
                             public void run() {
-                                ((Button)view.findViewById(R.id.altitude_button)).setText("ALTITUDE (AGL): " + getAltitude() + "ft");
+                                ((Button) view.findViewById(R.id.altitude_button)).setText("ALTITUDE (AGL): " + getAltitude() + "ft");
                                 System.out.println("Altitude Thread");
                             }
                         });
@@ -492,7 +489,7 @@ public class Home extends Fragment implements OnMapReadyCallback{
 
                             @Override
                             public void run() {
-                                ((Button)view.findViewById(R.id.spd_button)).setText("SPEED: " + getSpeed() + "M/S");
+                                ((Button) view.findViewById(R.id.spd_button)).setText("SPEED: " + getSpeed() + "M/S");
                                 System.out.println("Speed Thread");
                             }
                         });
@@ -508,14 +505,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
     private void runTemperatureThread() {
         new Thread() {
             public void run() {
-                String str = ((Button)view.findViewById(R.id.armed_button)).getText().toString();
+                String str = ((Button) view.findViewById(R.id.armed_button)).getText().toString();
                 while (running) {
                     try {
                         getActivity().runOnUiThread(new Runnable() {
 
                             @Override
                             public void run() {
-                                ((Button)view.findViewById(R.id.temp_button)).setText("TEMPERATURE: " + getTemperature() + "C");
+                                ((Button) view.findViewById(R.id.temp_button)).setText("TEMPERATURE: " + getTemperature() + "C");
                                 System.out.println("Temperature Thread");
                             }
                         });
@@ -531,14 +528,14 @@ public class Home extends Fragment implements OnMapReadyCallback{
     private void runUpdateInfoThread() {
         new Thread() {
             public void run() {
-                String str = ((Button)view.findViewById(R.id.armed_button)).getText().toString();
+                String str = ((Button) view.findViewById(R.id.armed_button)).getText().toString();
                 while (running) {
                     try {
                         getActivity().runOnUiThread(new Runnable() {
 
                             @Override
                             public void run() {
-                                dataString = ((MainActivity)getActivity()).returnDataStringFromMainActivity();
+                                dataString = ((MainActivity) getActivity()).returnDataStringFromMainActivity();
                                 System.out.println("Update Thread");
                             }
                         });
@@ -564,18 +561,20 @@ public class Home extends Fragment implements OnMapReadyCallback{
         return sd_state2;
     }
 
-    private Boolean getDiagnostics() { return diagnostics; }
+    private Boolean getDiagnostics() {
+        return diagnostics;
+    }
 
     private int getBattery() {
-        return  battery++;
+        return battery++;
     }
 
     private int getStateEst() {
         return 1;
     }
 
-    private  int getAltitude() {
-        return  altitude++;
+    private int getAltitude() {
+        return altitude++;
     }
 
     private int getSpeed() {
@@ -590,28 +589,4 @@ public class Home extends Fragment implements OnMapReadyCallback{
         return true;
     }
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        mMapview = (MapView) view.findViewById(R.id.mapView);
-        if (mMapview != null) {
-            mMapview.onCreate(null);
-            mMapview.onResume();
-            mMapview.getMapAsync(this );
-        }
-
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-
-        MapsInitializer.initialize(getContext());
-
-        mGoogleMap = googleMap;
-        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-        CameraPosition Liberty = CameraPosition.builder().target(new LatLng(40.689247, -75.044502)).zoom(16).bearing(0).tilt(45).build();
-        googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
-    }
 }
