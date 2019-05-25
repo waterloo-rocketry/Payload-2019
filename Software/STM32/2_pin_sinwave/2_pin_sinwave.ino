@@ -14,30 +14,46 @@ float sinVals[pwmFreq/sinFreq];
 uint8_t sinCount;
 uint8_t pwmRes;
 
-uint8_t count;
-uint8_t count2 = 0;
+uint8_t pin1_pwm_cycle_count;
+uint8_t pin1_pwm_count = 0;
+uint8_t pin2_pwm_cycle_count;
+uint8_t pin2_pwm_count = 0;
+
 bool zeroCount;
-bool high = 1;
+bool zeroCount2;
+bool dir1 = 1;
+bool dir2 = 1;
 
 void setup() {
   pwmRes = clkFreq/pwmFreq;
   sinCount = pwmFreq/sinFreq;
+  zeroCount2 = sinCount/4;    //set the second pin to be 90 degrees out of phase
   for (int i = 0; i < sinCount; i++) {
     sinVals[i] = sin(3.141*((float)i/sinCount));
   }
-  pinMode(A0, OUTPUT);  
-  pinMode(A1, OUTPUT);  
+  pinMode(PA0, OUTPUT);  
+  pinMode(PA1, OUTPUT);  
+  pinMode(PA2, OUTPUT);  
+  pinMode(PA3, OUTPUT);  
 }
 
 void loop() { 
-  zeroCount = !count;                 //zeroCount will be 0 unless count is 0, then it is 1
-  PORTC ^= zeroCount & high;          //set PORTC offset 0, on when high = 1 (first half wave), only changes value when count = 0
-  PORTC ^= (zeroCount & !high) << 1;  //set PORTC offset 1, on when high = 0 (second half wave), only changes value when count = 0
-  high = (count2 > sinCount)? !high : high; //inverts its value every half sine wave
-  count2 = count2 > sinCount ? 0: count2 + zeroCount; //count2 increments by one every time zeroCount = 1; i.e. every time the value of a pin changes. Resets its value every half sign wave
+  zeroCount = !pin1_pwm_cycle_count;                 //zeroCount will be 0 unless count is 0, then it is 1
+  zeroCount2 = !pin2_pwm_cycle_count;                 //zeroCount will be 0 unless count is 0, then it is 1
+ 
+  GPIOA->regs->ODR ^= zeroCount | (zeroCount2 << 1);// & high;          //set PORTC offset 0, on when high = 1 (first half wave), only changes value when count = 0
+  //PORTC ^= (zeroCount// & !high) << 1;  //set PORTC offset 1, on when high = 0 (second half wave), only changes value when count = 0
+  dir1 = (pin1_pwm_count > sinCount)? !dir1 : dir1; //inverts its value every half sine wave
+  dir2 = (pin2_pwm_count > sinCount)? !dir2 : dir2; //inverts its value every half sine wave
 
+  GPIOA->regs->ODR ^= dir1 << 2 | dir2 << 3;
+  
+  pin1_pwm_count = pin1_pwm_count > sinCount ? 0: pin1_pwm_count + zeroCount; //count2 increments by one every time zeroCount = 1; i.e. every time the value of a pin changes. Resets its value every half sign wave
+  pin2_pwm_count = pin2_pwm_count > sinCount ? 0: pin2_pwm_count + zeroCount2; //count2 increments by one every time zeroCount = 1; i.e. every time the value of a pin changes. Resets its value every half sign wave
+   
   //Reset count when ZeroCount = 1 (i.e. count = 0), otherwise decrement the count
   //if either pin is set to one, set count to the number of cycles that the pin should be held at 0( pwmRes*sinVals[count2])
   //otherwise, set count to the number of cycles that the pin should be held at one ( pwmRes*(1-sinVals[count2]))
-  count = zeroCount ? ((PORTC & 0x01) || (PORTC & 0x02)? pwmRes*sinVals[count2] : pwmRes*(1-sinVals[count2])) : count - 1;
+  pin1_pwm_cycle_count = zeroCount ? ((GPIOA->regs->ODR & 0x01) ? pwmRes*sinVals[pin1_pwm_count] : pwmRes*(1-sinVals[pin1_pwm_count])) : pin1_pwm_cycle_count - 1;
+  pin2_pwm_cycle_count = zeroCount2 ? ((GPIOA->regs->ODR & 0x02)? pwmRes*sinVals[pin2_pwm_count] : pwmRes*(1-sinVals[pin2_pwm_count])) : pin2_pwm_cycle_count - 1;
 }
