@@ -23,11 +23,12 @@ bool zeroCount;
 bool zeroCount2;
 bool dir1 = 1;
 bool dir2 = 1;
-
+bool olddir1 = 0;
+bool olddir2 = 0;
 void setup() {
   pwmRes = clkFreq/pwmFreq;
   sinCount = pwmFreq/sinFreq;
-  zeroCount2 = sinCount/4;    //set the second pin to be 90 degrees out of phase
+  pin2_pwm_count = sinCount/4;    //set the second pin to be 90 degrees out of phase
   for (int i = 0; i < sinCount; i++) {
     sinVals[i] = sin(3.141*((float)i/sinCount));
   }
@@ -46,7 +47,15 @@ void loop() {
   dir1 = (pin1_pwm_count > sinCount)? !dir1 : dir1; //inverts its value every half sine wave
   dir2 = (pin2_pwm_count > sinCount)? !dir2 : dir2; //inverts its value every half sine wave
 
-  GPIOA->regs->ODR ^= dir1 << 2 | dir2 << 3;
+  if (olddir1 != dir1) {
+    GPIOA->regs->ODR ^= 1 << 2;
+    olddir1 = dir1;
+  }
+  if (olddir2 != dir2) {
+    GPIOA->regs->ODR ^= 1 << 3;
+    olddir2 = dir2;
+  }
+  //GPIOA->regs->ODR |= 1 << 2;
   
   pin1_pwm_count = pin1_pwm_count > sinCount ? 0: pin1_pwm_count + zeroCount; //count2 increments by one every time zeroCount = 1; i.e. every time the value of a pin changes. Resets its value every half sign wave
   pin2_pwm_count = pin2_pwm_count > sinCount ? 0: pin2_pwm_count + zeroCount2; //count2 increments by one every time zeroCount = 1; i.e. every time the value of a pin changes. Resets its value every half sign wave
