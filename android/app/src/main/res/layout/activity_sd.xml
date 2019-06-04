@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:text="back"/>
+
+    <TextView
+        android:id="@+id/SD_CARD_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/back_button"
+        android:layout_centerHorizontal="true"
+        android:text="SD CARD ONE"
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/free_space_1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SD_CARD_1"
+        android:layout_centerHorizontal="true"
+        android:text="Free Space: "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+
+
+    <ImageView
+        android:id="@+id/greendot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/SD_CARD_1"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/SD_CARD_1"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/reddot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/SD_CARD_1"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/SD_CARD_1"
+        android:src="@drawable/reddot" />
+
+    <Button
+        android:id="@+id/button_transfer_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="TRANSFER ALL DATA" />
+
+    <Button
+        android:id="@+id/button_erase_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text="ERASE ALL DATA" />
+
+
+    <TextView
+        android:id="@+id/SD_CARD_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_erase_1"
+        android:layout_centerHorizontal="true"
+        android:text="SD CARD 2"
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/free_space_2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SD_CARD_2"
+        android:layout_centerHorizontal="true"
+        android:text="Free Space: "
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/greendot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/button_erase_1"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/free_space_1_text"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/reddot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/button_erase_1"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/free_space_1_text"
+        android:src="@drawable/reddot" />
+
+
+    <Button
+        android:id="@+id/button_erase_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_dump_2"
+        android:layout_centerHorizontal="true"
+        android:text="Erase All Data" />
+
+    <Button
+        android:id="@+id/button_dump_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/free_space_2_text"
+        android:layout_centerHorizontal="true"
+        android:text="Dump All Data" />
+
+
+
+</RelativeLayout>

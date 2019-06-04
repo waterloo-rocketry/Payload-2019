@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:text="back"/>
+
+    <TextView
+        android:id="@+id/armed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/back_button"
+        android:layout_centerHorizontal="true"
+        android:text="SLEEP"
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/greendot"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/armed_text"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/armed_text"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/reddot"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/armed_text"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/armed_text"
+        android:src="@drawable/reddot" />
+
+    <Button
+        android:id="@+id/button_wakeup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Wake Up" />
+
+    <Button
+        android:id="@+id/button_arm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Arm For Flight" />
+
+    <Button
+        android:id="@+id/button_disarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="Disarm" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="Hard Reset" />
+
+    <Button
+        android:id="@+id/button_shutdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:text="Shutdown" />
+
+
+
+</RelativeLayout>

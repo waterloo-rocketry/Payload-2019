@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:text="back"/>
+
+    <TextView
+        android:id="@+id/State_Estimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/back_button"
+        android:layout_centerHorizontal="true"
+        android:text="STATE ESTIMATION"
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/greendot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/State_Estimation"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/State_Estimation"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/yellowdot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/back_button"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/State_Estimation"
+        android:src="@drawable/yellowdot" />
+
+    <ImageView
+        android:id="@+id/reddot1"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/State_Estimation"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/State_Estimation"
+        android:src="@drawable/reddot" />
+
+    <TextView
+        android:id="@+id/Accelerometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/State_Estimation"
+        android:layout_centerHorizontal="true"
+        android:text="ACCELEROMETER"
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/greendot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Accelerometer"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Accelerometer"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/yellowdot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Accelerometer"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Accelerometer"
+        android:src="@drawable/yellowdot" />
+
+    <ImageView
+        android:id="@+id/reddot2"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Accelerometer"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Accelerometer"
+        android:src="@drawable/reddot" />
+
+
+    <TextView
+        android:id="@+id/Gyro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Accelerometer"
+        android:layout_centerHorizontal="true"
+        android:text="GYRO"
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/greendot3"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Gyro"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Gyro"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/yellowdot3"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Gyro"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Gyro"
+        android:src="@drawable/yellowdot" />
+
+    <ImageView
+        android:id="@+id/reddot3"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Gyro"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Gyro"
+        android:src="@drawable/reddot" />
+
+    <TextView
+        android:id="@+id/Altimeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Gyro"
+        android:layout_centerHorizontal="true"
+        android:text="Altimeter"
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/greendot4"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Altimeter"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Altimeter"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/yellowdot4"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Altimeter"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Altimeter"
+        android:src="@drawable/yellowdot" />
+
+    <ImageView
+        android:id="@+id/reddot4"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Altimeter"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Altimeter"
+        android:src="@drawable/reddot" />
+
+    <TextView
+        android:id="@+id/GPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Altimeter"
+        android:layout_centerHorizontal="true"
+        android:text="GPS"
+        android:textColor="#404040"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/greendot5"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/GPS"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/GPS"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/yellowdot5"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/GPS"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/GPS"
+        android:src="@drawable/yellowdot" />
+
+    <ImageView
+        android:id="@+id/reddot5"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/GPS"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/GPS"
+        android:src="@drawable/reddot" />
+
+    <TextView
+        android:id="@+id/Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/GPS"
+        android:layout_centerHorizontal="true"
+        android:text="TEMPERATURE"
+        android:textColor="#404040"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/greendot6"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Temperature"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Temperature"
+        android:src="@drawable/greendot" />
+
+    <ImageView
+        android:id="@+id/yellowdot6"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Temperature"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Temperature"
+        android:src="@drawable/yellowdot" />
+
+    <ImageView
+        android:id="@+id/reddot6"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/Temperature"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/Temperature"
+        android:src="@drawable/reddot" />
+
+
+
+</RelativeLayout>
