@@ -2,6 +2,7 @@ package com.example.jennifer.app_practice;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
@@ -119,7 +120,10 @@ public class Home extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                running = false;
+                Intent menuIntent = new Intent(getActivity(), MyReactActivity.class);
+                startActivity(menuIntent);
+
+                /*running = false;
                 Armed fragment = new Armed();
                 String state = str;
                 Bundle arguments = new Bundle();
@@ -127,7 +131,7 @@ public class Home extends Fragment {
                 fragment.setArguments(arguments);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, fragment);
-                ft.commit();
+                ft.commit();*/
             }
         });
     }
